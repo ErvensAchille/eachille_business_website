@@ -146,8 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", updateImageProgress);
   updateImageProgress();
 });
+// Intersection Observer for platform icons
+// This script uses Intersection Observer to fade in platform icons as they come into view
+// It applies a fade-in effect to all platform icons with the class "platform"
+document.addEventListener("DOMContentLoaded", () => {
+  const platforms = document.querySelectorAll(".platform");
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-0", "translate-y-5");
+        entry.target.classList.add("opacity-100", "translate-y-0");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
 
+  platforms.forEach((el) => observer.observe(el));
+});
 
 
 
