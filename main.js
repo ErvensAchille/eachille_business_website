@@ -67,5 +67,64 @@ const swiper = new Swiper('.mySwiper', {
     });
   });
 
+  // js to handle logo fading effect
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fadeInUp");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    document.querySelectorAll(".platform-icon").forEach((el) => {
+      observer.observe(el);
+    });
+  });
+// Intersection Observer for fading in sections on scroll
+// This script uses Intersection Observer to fade in sections as they come into view
+// It applies a fade-in effect to all sections except those with the "no-fade"
+  document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section:not(.no-fade)");
+
+  sections.forEach(section => {
+    const children = Array.from(section.children);
+
+    // Hide children initially
+    children.forEach(child => {
+      child.style.opacity = 0;
+      child.style.transform = "translateY(24px)";
+      child.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+    });
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            children.forEach((child, index) => {
+              setTimeout(() => {
+                child.style.opacity = 1;
+                child.style.transform = "translateY(0)";
+              }, index * 150); // stagger delay in ms
+            });
+            observer.unobserve(entry.target); // animate once
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(section);
+  });
+});
+
+
 
 
