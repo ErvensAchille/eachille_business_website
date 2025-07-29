@@ -125,6 +125,29 @@ const swiper = new Swiper('.mySwiper', {
   });
 });
 
+// Zoom Blur Effect on Images
+// This script applies a zoom blur effect to images as they come into view
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".zoom-blur");
+
+  const updateImageProgress = () => {
+    images.forEach(img => {
+      const rect = img.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      let progress = 1 - (rect.top / windowHeight);
+      progress = Math.min(Math.max(progress, 0), 1);
+
+      img.style.setProperty("--progress", progress);
+    });
+  };
+
+  window.addEventListener("scroll", updateImageProgress);
+  window.addEventListener("resize", updateImageProgress);
+  updateImageProgress();
+});
+
+
 
 
 

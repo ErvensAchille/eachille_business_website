@@ -145,20 +145,32 @@
       </div>
 
       <!-- Right: 4-Image Tiles -->
-      <div class="grid grid-cols-2 gap-4">
-        <div class="grid grid-rows-2 gap-4">
-          <img src="img/bluelogo.PNG" alt="Achille Industries Blue Logo"
-            class="w-full aspect-[4/4] object-cover rounded-xl shadow-md" />
-          <img src="img/white.jpg" alt="Ervens Achille - Web designer"
-            class="w-full aspect-[4/4] object-cover rounded-xl shadow-md" />
-        </div>
-        <div class="grid grid-rows-2 gap-4">
-          <img src="img/black.jpg" alt="Ervens Achille - Web designer"
-            class="w-full aspect-[4/4] object-cover rounded-xl shadow-md" />
-          <img src="img/OG.PNG" alt="Ervens Achille - OG Logo"
-            class="w-full aspect-[4/4] object-cover rounded-xl shadow-md" />
-        </div>
-      </div>
+<div class="grid grid-cols-2 gap-4">
+  <div class="grid grid-rows-2 gap-4">
+    <img src="img/bluelogo.PNG" alt="Achille Industries Blue Logo"
+      class="w-full aspect-[4/4] object-cover rounded-xl shadow-md transition-all duration-200 ease-out" />
+      
+    <!-- white.jpg WITH faster fade effect -->
+    <img src="img/white.jpg" alt="Ervens Achille - Web designer"
+      class="zoom-blur w-full aspect-[4/4] object-cover rounded-xl shadow-md transition-all duration-200 ease-out"
+      style="--progress:0; opacity:calc(min(var(--progress) * 2, 1)); transform:scale(calc(1.1 - (0.2 * var(--progress)))); filter:blur(calc(15px - (15px * var(--progress) * 2)));"
+    />
+  </div>
+  <div class="grid grid-rows-2 gap-4">
+    <!-- black.jpg WITHOUT fade effect -->
+    <img src="img/black.jpg" alt="Ervens Achille - Web designer"
+      class="w-full aspect-[4/4] object-cover rounded-xl shadow-md transition-all duration-200 ease-out" />
+      
+    <!-- OG.PNG WITH faster fade effect -->
+    <img src="img/OG.PNG" alt="Ervens Achille - OG Logo"
+      class="zoom-blur w-full aspect-[4/4] object-cover rounded-xl shadow-md transition-all duration-200 ease-out"
+      style="--progress:0; opacity:calc(min(var(--progress) * 2, 1)); transform:scale(calc(1.1 - (0.2 * var(--progress)))); filter:blur(calc(15px - (15px * var(--progress) * 2)));"
+    />
+  </div>
+</div>
+
+
+
 
     </div>
   </section>
