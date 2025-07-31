@@ -5,15 +5,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ervens Achille - Web Design Agency</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Preload Tailwind CSS (compiled & hosted locally for speed) -->
+  <link rel="preload" href="/css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/tailwind.css"></noscript>
+
+  <!-- If I still want to use CDN Tailwind as fallback -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <!-- Load Alpine.js (non-blocking) -->
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- Preload Swiper CSS asynchronously -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="Ervens Achille – Full-Stack Software Engineer" />
-  <meta property="og:description"
-    content="Helping businesses grow through web development, SEO, and design at Achille Industries." />
+  <meta property="og:description" content="Helping businesses grow through web development, SEO, and design at Achille Industries." />
   <meta property="og:image" content="https://www.ervensachille.com/img/whitelogo.png" />
   <meta property="og:url" content="https://www.ervensachille.com" />
   <meta property="og:type" content="website" />
@@ -21,14 +33,13 @@
   <!-- SEO Meta Tags -->
   <meta name="description" content="Achille Industries builds high-performing websites for small businesses and nonprofits. Offering web design, development, and SEO to help you stand out online.">
 
-
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="Ervens Achille – Full-Stack Software Engineer" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ervens Achille – Full-Stack Software Engineer" />
-  <meta name="twitter:description"
-    content="Helping businesses grow through web development, SEO, and design at Achille Industries." />
+  <meta name="twitter:description" content="Helping businesses grow through web development, SEO, and design at Achille Industries." />
   <meta name="twitter:image" content="https://www.ervensachille.com/img/whitelogo.png" />
 </head>
+
 
 <body class="bg-gray-50 text-gray-800">
   <!-- Header -->
