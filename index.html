@@ -954,96 +954,102 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="relative text-black py-20 px-6 scroll-mt-24 overflow-hidden min-h-[calc(100vh-4rem)]">
-    <!-- 🔹 Background Video -->
-    <video class="absolute top-0 left-0 w-full h-full object-cover -z-10" autoplay muted loop playsinline>
-      <source src="img/hallways.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+  <section id="contact" class="relative py-20 px-6 scroll-mt-24 overflow-hidden min-h-[calc(100vh-4rem)]">
+  <!-- 🔹 Background Video -->
+  <video class="absolute top-0 left-0 w-full h-full object-cover -z-20" autoplay muted loop playsinline>
+    <source src="img/hallways.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-    <!-- 🔹 Content Overlay -->
-    <div class="relative z-10">
-      <div class="max-w-2xl mx-auto text-center mb-12">
-        <h2 class="text-4xl font-extrabold mb-4">Let’s Work Together</h2>
-        <p class="text-lg mb-6">
-          Ready to build something great? Reach out via email or fill out the
-          form below.
-        </p>
+  <!-- 🔹 Dark Overlay for Contrast -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 -z-10"></div>
 
-        <!-- Email Me Button -->
-        <a href="mailto:ervensachille@gmail.com"
-          class="inline-block bg-white text-blue-800 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition mb-4">
-          Email Me Directly
-        </a>
-        <div class="text-sm text-white opacity-70">~ or ~</div>
+  <!-- 🔹 Content Overlay -->
+  <div class="relative z-10">
+    <!-- Header Text -->
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-white mb-4">Let’s Work Together</h2>
+      <p class="text-lg text-gray-200 mb-6">
+        Ready to build something great? Reach out via email or fill out the form below.
+      </p>
+
+      <!-- Email Me Button -->
+      <a href="mailto:ervensachille@gmail.com"
+        class="inline-block bg-blue-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 transition mb-4">
+        Email Me Directly
+      </a>
+      <div class="text-sm text-gray-200 opacity-80">~ or ~</div>
+    </div>
+
+    <!-- Contact Form in a Solid Background -->
+    <form name="contact" method="POST" data-netlify="true" netlify
+      class="bg-white bg-opacity-95 text-gray-800 rounded-xl shadow-lg max-w-xl mx-auto p-8 space-y-6"
+      data-netlify-recaptcha="true">
+      <input type="hidden" name="form-name" value="contact" />
+
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+        <input type="text" id="name" name="name" required
+          class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition" />
       </div>
 
-      <!-- Contact Form -->
-      <form name="contact" method="POST" data-netlify="true" netlify
-        class="bg-white text-gray-800 rounded-xl shadow-lg max-w-xl mx-auto p-8 space-y-6"
-        data-netlify-recaptcha="true">
-        <input type="hidden" name="form-name" value="contact" />
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input type="email" id="email" name="email" required
+          class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition" />
+      </div>
 
-        <!-- Name -->
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-          <input type="text" id="name" name="name" required
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition" />
-        </div>
+      <!-- Project Type -->
+      <div>
+        <label for="project-type" class="block text-sm font-medium text-gray-700 mb-1">Project Type</label>
+        <select id="project-type" name="project-type" required
+          class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition">
+          <option value="">Select a service</option>
+          <option value="web-design">Web Design</option>
+          <option value="ecommerce">E-commerce</option>
+          <option value="seo">SEO</option>
+          <option value="branding">Branding</option>
+          <option value="consulting">Consulting</option>
+        </select>
+      </div>
 
-        <!-- Email -->
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-          <input type="email" id="email" name="email" required
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition" />
-        </div>
+      <!-- Budget -->
+      <div>
+        <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Budget</label>
+        <select id="budget" name="budget" required
+          class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition">
+          <option value="">Select a range</option>
+          <option value="under-1k">Under $1,000</option>
+          <option value="1k-5k">$1,000 – $5,000</option>
+          <option value="5k-10k">$5,000 – $10,000</option>
+          <option value="10k+">$10,000+</option>
+        </select>
+      </div>
 
-        <!-- Project Type -->
-        <div>
-          <label for="project-type" class="block text-sm font-medium text-gray-700 mb-1">Project Type</label>
-          <select id="project-type" name="project-type" required
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition">
-            <option value="">Select a service</option>
-            <option value="web-design">Web Design</option>
-            <option value="ecommerce">E-commerce</option>
-            <option value="seo">SEO</option>
-            <option value="branding">Branding</option>
-            <option value="consulting">Consulting</option>
-          </select>
-        </div>
+      <!-- Message -->
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+        <textarea id="message" name="message" rows="4" required
+          class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition"
+          placeholder="Tell me about your project..."></textarea>
+      </div>
 
-        <!-- Budget -->
-        <div>
-          <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Budget</label>
-          <select id="budget" name="budget" required
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition">
-            <option value="">Select a range</option>
-            <option value="under-1k">Under $1,000</option>
-            <option value="1k-5k">$1,000 – $5,000</option>
-            <option value="5k-10k">$5,000 – $10,000</option>
-            <option value="10k+">$10,000+</option>
-          </select>
-        </div>
+      <!-- Recaptcha -->
+      <div data-netlify-recaptcha="true"></div>
 
-        <!-- Message -->
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-          <textarea id="message" name="message" rows="4" required
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition"
-            placeholder="Tell me about your project..."></textarea>
-        </div>
+      <!-- Submit Button -->
+      <div>
+        <button type="submit"
+          class="w-full rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
 
-        <!-- Recaptcha -->
-        <div data-netlify-recaptcha="true"></div>
-        <!-- Submit Button -->
-        <div>
-          <button type="submit"
-            class="w-full rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 transition shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-            Send Message
-          </button>
-        </div>
-      </form>
-  </section>
 
   <!-- Calendly badge widget begin -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
