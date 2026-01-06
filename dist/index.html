@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================
+       META / SEO
+  ========================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Achille Industries | Web & Software Studio in Boston, MA</title>
+
+  <meta name="description"
+        content="Achille Industries is a Boston-based web and software studio helping businesses, nonprofits, and founders build reliable, scalable digital platforms." />
+
+  <meta name="keywords"
+        content="Boston web design agency, Boston marketing agency, graphic design Boston, software development Boston, Achille Industries" />
+
+  <meta name="author" content="Achille Industries" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Achille Industries — Web & Software Studio" />
+  <meta property="og:description"
+        content="Founder-led web and software solutions built for clarity, performance, and long-term growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- =========================
+       FONTS
+  ========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" 
+        rel="stylesheet" 
+        media="print" 
+        onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" 
+          rel="stylesheet" />
+  </noscript>
+
+  <!-- =========================
+       TAILWIND CDN
+  ========================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2d3e67',   // navy (can be darkened later)
+            dark: '#1d1e21',
+            light: '#f4fff3',
+            accent: '#BDA266',    // gold (logo-aligned)
+            sand: '#f8e9db'
+          },
+          fontFamily: {
+            primary: ['Inter', 'sans-serif'],
+            secondary: ['Playfair Display', 'serif']
+          },
+          animation: {
+            'marquee': 'marquee 30s linear infinite',
+            'marquee-reverse': 'marquee-reverse 35s linear infinite',
+            'float': 'float 3s ease-in-out infinite',
+            'float-reverse': 'float-reverse 3s ease-in-out infinite'
+          },
+          keyframes: {
+            'marquee': {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' }
+            },
+            'marquee-reverse': {
+              '0%': { transform: 'translateX(-50%)' },
+              '100%': { transform: 'translateX(0)' }
+            },
+            'float': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            'float-reverse': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Calendly CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+
+  <style>
+    .process-tab {
+      padding-bottom: 0.75rem;
+      font-weight: 600;
+      color: rgba(244, 255, 243, 0.5); /* light text with 50% opacity */
+      transition: color .3s, border .3s;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+    }
+    .process-tab:hover {
+      color: #f4fff3; /* light color on hover */
+    }
+    .process-tab.active {
+      color: #f4fff3; /* light color when active */
+      border-bottom: 2px solid #BDA266; /* Using accent color */
+    }
+
+    .sticky-video-container {
+      position: sticky;
+      top: 100px;
+      height: calc(100vh - 140px);
+      overflow: hidden;
+    }
+
+    .feature-grid-item {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 0;
+      scroll-snap-align: start;
+    }
+
+    .feature-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .sticky-video-container {
+        position: relative;
+        height: 400px;
+        top: 0;
+        margin-bottom: 3rem;
+      }
+      .feature-grid-item {
+        min-height: auto;
+        padding: 3rem 0;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .feature-section {
+        min-height: auto;
+        padding: 4rem 0;
+      }
+    }
+
+    /* Enhance reveal transitions */
+    [data-reveal] {
+      will-change: transform, opacity;
+    }
+
+    /* Ensure transitions complete before removing transform */
+    [data-reveal].revealed {
+      transform: translateY(0) !important;
+    }
+
+    /* Pause animation on hover */
+    .animate-marquee:hover,
+    .animate-marquee-reverse:hover {
+      animation-play-state: paused;
+    }
+
+    /* Gradient overlays for smooth edges */
+    .platforms-carousel {
+      position: relative;
+    }
+
+    .platforms-carousel::before,
+    .platforms-carousel::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .platforms-carousel::before {
+      left: 0;
+      background: linear-gradient(to right, #1d1e21, transparent);
+    }
+
+    .platforms-carousel::after {
+      right: 0;
+      background: linear-gradient(to left, #1d1e21, transparent);
+    }
+
+    /* Platform logo hover effects */
+    .platform-item {
+      transition: all 0.3s ease;
+    }
+
+    .platform-item:hover {
+      transform: translateY(-5px) scale(1.1);
+      filter: drop-shadow(0 10px 15px rgba(189, 162, 102, 0.2));
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-light font-primary antialiased">
+
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-accent focus:text-dark focus:rounded-lg">
+    Skip to main content
+  </a>
+
+  <!-- =========================
+       HEADER / NAV
+  ========================== -->
+  <header class="border-b border-white/10 relative z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-4" aria-label="Achille Industries home">
+        <img
+          src="./img/logo.svg"
+          alt="Achille Industries logo"
+          class="h-10 w-10 md:h-12 md:w-12"
+        />
+        <span class="font-semibold tracking-wide">
+          Achille Industries
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex gap-8 text-sm font-semibold">
+          <li><a href="services.html" class="hover:text-accent transition-colors duration-200">Services</a></li>
+        <li><a href="about.html" class="hover:text-accent transition-colors duration-200">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition-colors duration-200">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-button"
+        class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 hidden bg-black/95 text-white transform transition-transform duration-300 ease-in-out -translate-x-full"
+      aria-hidden="true"
+    >
+      <!-- Mobile Menu Header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+        <span class="font-semibold tracking-wide">
+          Achille Industries
+        </span>
+        <button
+          id="close-menu"
+          class="text-2xl p-2 hover:text-accent transition-colors duration-200"
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav class="flex flex-col items-center justify-center h-full gap-10 text-lg font-semibold">
+        <a href="services.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">Services</a>
+        <a href="about.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">About</a>
+        <a href="contact.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">Contact</a>
+
+        <a
+          href="contact.html"
+          class="mt-6 inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-black hover:bg-accent/90 transition-colors duration-200"
+          onclick="closeMobileMenu()"
+          data-cta="mobile-consultation"
+        >
+          Free Consultation
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT - CONVERSION OPTIMIZED FLOW
+  ========================== -->
+  <main id="main-content">
+    
+    <!-- =========================
+         1. HERO SECTION
+    ========================== -->
+    <section class="min-h-screen flex items-center pt-16 md:pt-0">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center w-full">
+
+        <!-- Left -->
+        <div>
+          <h1 class="font-secondary text-4xl md:text-5xl lg:text-6xl leading-tight opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+            Web & Software Solutions<br class="hidden sm:block" />
+            Built for Growth
+          </h1>
+
+          <p class="mt-6 text-lg text-sand max-w-xl opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="150">
+            Achille Industries is a Boston-based web and software studio helping
+            businesses, nonprofits, and founders build reliable digital platforms
+            that scale with clarity and confidence.
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-4 md:gap-6 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="300">
+            <a
+              href="#contact"
+              class="inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-dark font-semibold rounded-lg hover:bg-accent/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
+              data-cta="hero-consultation"
+              data-event="conversion"
+            >
+              Schedule a Free Consultation
+            </a>
+
+            <a
+              href="#work"
+              class="inline-block px-6 py-3 md:px-8 md:py-4 border border-white/20 rounded-lg hover:border-accent hover:text-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
+              data-cta="view-work"
+            >
+              View Our Work
+            </a>
+          </div>
+
+          <!-- Animated Quote -->
+          <p
+            id="hero-quote"
+            class="mt-10 text-xl md:text-2xl font-secondary text-sand max-w-xl opacity-0 translate-y-6 transition-all duration-700 ease-out"
+          >
+            Crafting High-Converting Websites That Elevate Your Brand Online
+          </p>
+        </div>
+
+        <!-- Right -->
+        <div class="flex justify-center md:justify-end md:items-start md:pt-6 lg:pt-0">
+          <img
+            src="./img/logo.svg"
+            alt="Achille Industries brand mark"
+            class="w-72 md:w-[420px] lg:w-[480px] opacity-95"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         2. SERVICES (WHAT WE DO)
+    ========================== -->
+    <section id="what-we-do" class="py-24 bg-dark text-light">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Header -->
+        <div class="max-w-3xl mx-auto text-center mb-20">
+          <h2 class="font-secondary text-4xl mb-4 text-light">
+            Why Partner With Us for Your Website?
+          </h2>
+          <p class="text-lg text-sand">
+            We design, build, and optimize websites that turn visitors into customers and scale with your business.
+          </p>
+        </div>
+
+        <!-- Mobile Image Card (visible only on mobile) -->
+        <div class="lg:hidden mb-12">
+          <div class="w-full rounded-2xl shadow-xl border border-white/10 overflow-hidden h-[400px] relative">
+            
+            <!-- Dynamic Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');"></div>
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-dark/70"></div>
+
+            <!-- Content -->
+            <div class="relative p-8 flex flex-col h-full justify-between">
+              <!-- Icon -->
+              <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center">
+                <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              
+              <!-- Main Text -->
+              <div>
+                <h3 class="text-2xl font-secondary mb-4 text-light leading-tight">
+                  Discover our website design and development services
+                </h3>
+                
+                <p class="text-sand text-lg leading-relaxed">
+                  Full-service agency support with ongoing optimization and management capabilities tailored to your unique business needs.
+                </p>
+              </div>
+
+              <!-- Footer -->
+              <div>
+                <div class="w-16 h-0.5 bg-accent/50 mb-4"></div>
+                <p class="text-sand/80 text-sm">
+                  Every project begins with a comprehensive strategy session to ensure alignment with your business objectives and target audience.
+                </p>
+                
+                <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-accent hover:text-accent/80 transition-colors duration-200 mt-6 group">
+                  <span>Start your project</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+          <!-- LEFT: Sticky Image Card (hidden on mobile) -->
+          <div class="hidden lg:block lg:sticky lg:top-12 flex items-start">
+            <div class="w-full rounded-2xl shadow-xl border border-white/10 overflow-hidden h-[75vh] relative">
+              
+              <!-- Dynamic Background Image -->
+              <div id="sticky-image" class="absolute inset-0 bg-cover bg-center transition-all duration-700" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');"></div>
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-dark/70"></div>
+
+              <!-- Content -->
+              <div class="relative p-8 flex flex-col h-full justify-between">
+                <!-- Icon -->
+                <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center">
+                  <svg id="sticky-icon" class="w-8 h-8 text-accent transition-all duration-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                
+                <!-- Main Text -->
+                <div>
+                  <h3 id="sticky-title" class="text-2xl md:text-3xl font-secondary mb-4 text-light leading-tight transition-all duration-500">
+                    Discover our website design and development services
+                  </h3>
+                  
+                  <p id="sticky-description" class="text-sand text-lg leading-relaxed transition-all duration-500">
+                    Full-service agency support with ongoing optimization and management capabilities tailored to your unique business needs.
+                  </p>
+                </div>
+
+                <!-- Footer -->
+                <div>
+                  <div class="w-16 h-0.5 bg-accent/50 mb-4"></div>
+                  <p id="sticky-footer" class="text-sand/80 text-sm transition-all duration-500">
+                    Every project begins with a comprehensive strategy session to ensure alignment with your business objectives and target audience.
+                  </p>
+                  
+                  <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-accent hover:text-accent/80 transition-colors duration-200 mt-6 group">
+                    <span>Start your project</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Scrolling Content -->
+          <div id="features-column" class="space-y-0">
+
+            <!-- Feature 1: User-Centric Design -->
+            <div class="feature-section" data-feature="design">
+              <div class="flex gap-6 items-start p-6 rounded-xl transition-all duration-300 hover:bg-white/5">
+                <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/20 text-accent flex-shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-xl mb-3 text-light">User-Centric Design</h3>
+                  <div class="space-y-3">
+                    <div>
+                      <p class="text-light/80 text-sm font-medium mb-1">What We Deliver</p>
+                      <p class="text-sand">
+                        Expert-led UX/UI design, brand integration, responsive frameworks, and accessibility compliance that creates seamless experiences across all devices.
+                      </p>
+                    </div>
+                    <div>
+                      <p class="text-light/80 text-sm font-medium mb-1">Your Benefit</p>
+                      <p class="text-sand">
+                        A beautiful, functional website that resonates with your audience, builds trust, and converts visitors into loyal customers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 2: Strategic Development -->
+            <div class="feature-section" data-feature="development">
+              <div class="flex gap-6 items-start p-6 rounded-xl transition-all duration-300 hover:bg-white/5">
+                <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/20 text-accent flex-shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-xl mb-3 text-light">Strategic Development</h3>
+                  <div class="space-y-3">
+                    <div>
+                      <p class="text-light/80 text-sm font-medium mb-1">What We Deliver</p>
+                      <p class="text-sand">
+                        Platform selection (WordPress, Shopify, Wix, custom solutions), full migration, comprehensive testing, and seamless deployment with zero downtime.
+                      </p>
+                    </div>
+                    <div>
+                      <p class="text-light/80 text-sm font-medium mb-1">Your Benefit</p>
+                      <p class="text-sand">
+                        A fast, secure, and scalable website built on the right foundation, delivered efficiently and ready to grow with your business.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 3: Growth & Support -->
+            <div class="feature-section" data-feature="growth">
+              <div class="flex gap-6 items-start p-6 rounded-xl transition-all duration-300 hover:bg-white/5">
+                <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/20 text-accent flex-shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-xl mb-3 text-light">Growth & Support</h3>
+                  <div class="space-y-3">
+                    <div>
+                      <p class="text-light/80 text-sm font-medium mb-1">What We Deliver</p>
+                      <p class="text-sand">
+                        SEO optimization, conversion rate optimization, performance analytics, comprehensive CMS training, and dedicated technical support when you need it.
+                      </p>
+                    </div>
+                    <div>
+                      <p class="text-light/80 text-sm font-medium mb-1">Your Benefit</p>
+                      <p class="text-sand">
+                        A high-performing digital asset that drives measurable results, with expert guidance for continuous improvement and growth.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 4: Full-Service Partner -->
+            <div class="feature-section" data-feature="partner">
+              <div class="flex gap-6 items-start p-6 rounded-xl transition-all duration-300 hover:bg-white/5">
+                <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/20 text-accent flex-shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-xl mb-3 text-light">Full-Service Partner</h3>
+                  <div class="space-y-3">
+                    <div>
+                      <p class="text-light/80 text-sm font-medium mb-1">What We Deliver</p>
+                      <p class="text-sand">
+                        From competitor analysis and UX research to content creation, conversion rate optimization, performance monitoring, SEO strategies, and ongoing maintenance.
+                      </p>
+                    </div>
+                    <div>
+                      <p class="text-light/80 text-sm font-medium mb-1">Your Benefit</p>
+                      <p class="text-sand">
+                        One trusted partner for all your digital needs, ensuring consistency, quality, and strategic alignment across every touchpoint.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         3. PORTFOLIO (SELECTED WORK)
+    ========================== -->
+    <section id="work" class="py-24 bg-dark/50">
+      <div class="max-w-7xl mx-auto px-6 text-center mb-12 md:mb-16">
+        <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+          Selected Work
+        </h2>
+        <p class="text-sand text-lg opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+          Digital Solutions Tailored to Meet Your Goals
+        </p>
+      </div>
+
+      <!-- Proof Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2">
+
+        <!-- Coy Collective -->
+        <a
+          href="https://coycollective.com"
+          target="_blank"
+          class="group relative overflow-hidden min-h-[60vh]"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            style="background-image:url('img/coycollective.png');"
+          ></div>
+          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8">
+            <h3 class="text-3xl md:text-4xl font-secondary mb-3">
+              Coy Collective
+            </h3>
+            <span class="text-sand opacity-0 group-hover:opacity-100 transition text-sm">
+              View Project →
+            </span>
+          </div>
+        </a>
+
+        <!-- TM TV World -->
+        <a
+          href="https://tmtv.world"
+          target="_blank"
+          class="group relative overflow-hidden min-h-[60vh]"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            style="background-image:url('img/tmtv.png');"
+          ></div>
+          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8">
+            <h3 class="text-3xl md:text-4xl font-secondary mb-3">
+              The Museum TV
+            </h3>
+            <span class="text-sand opacity-0 group-hover:opacity-100 transition text-sm">
+              View Project →
+            </span>
+          </div>
+        </a>
+
+        <!-- Joe Fouché -->
+        <a
+          href="https://fouchelawfirm.com/"
+          target="_blank"
+          class="group relative overflow-hidden min-h-[60vh]"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            style="background-image:url('img/fouche.png');"
+          ></div>
+          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8">
+            <h3 class="text-3xl md:text-4xl font-secondary mb-3">
+              The Law Offices of Joe Fouché
+            </h3>
+            <span class="text-sand opacity-0 group-hover:opacity-100 transition text-sm">
+              View Project →
+            </span>
+          </div>
+        </a>
+
+        <!-- NXT Era Panthers -->
+        <a
+          href="https://nxterapanthers.com"
+          target="_blank"
+          class="group relative overflow-hidden min-h-[60vh]"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            style="background-image:url('img/nxtera.png');"
+          ></div>
+          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8">
+            <h3 class="text-3xl md:text-4xl font-secondary mb-3">
+              NXT Era Panthers
+            </h3>
+            <span class="text-sand opacity-0 group-hover:opacity-100 transition text-sm">
+              View Project →
+            </span>
+          </div>
+        </a>
+
+      </div>
+      
+      <!-- Portfolio CTA -->
+      <div class="text-center mt-16">
+        <a
+          href="#contact"
+          class="inline-block px-8 py-4 border border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-dark transition-all duration-200"
+          data-cta="portfolio-cta"
+        >
+          Start Your Project Today
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================
+         4. PROCESS (HOW IT WORKS)
+    ========================== -->
+    <section id="process" class="py-24 bg-dark text-light overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+        id="process-wrapper"
+      >
+
+        <!-- LEFT -->
+        <div>
+
+          <!-- Eyebrow -->
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block w-12 h-px bg-light/40"></span>
+            <span class="text-xs tracking-widest uppercase text-sand">
+              How It Works
+            </span>
+          </div>
+
+          <!-- Heading -->
+          <h2 class="font-secondary text-3xl md:text-4xl leading-tight mb-8 md:mb-10 text-light">
+            Our website design and<br />
+            development process
+          </h2>
+
+          <!-- Tabs -->
+          <div class="flex gap-4 md:gap-8 border-b border-white/20 mb-8 md:mb-10 overflow-x-auto pb-1">
+            <button class="process-tab active whitespace-nowrap" data-step="discover">Discover</button>
+            <button class="process-tab whitespace-nowrap" data-step="design">Design</button>
+            <button class="process-tab whitespace-nowrap" data-step="develop">Develop</button>
+            <button class="process-tab whitespace-nowrap" data-step="deploy">Deploy</button>
+          </div>
+
+          <!-- Content -->
+          <div id="process-content" class="transition-all duration-500">
+            <h3 class="text-2xl md:text-3xl font-secondary mb-4 md:mb-6 text-light" id="process-title">
+              Discover
+            </h3>
+
+            <p class="mb-4 md:mb-6 text-base md:text-lg text-sand" id="process-text-1">
+              We'll audit your existing site, understand technical and performance
+              requirements, and explore your ambitions through research and
+              workshops.
+            </p>
+
+            <p class="mb-8 md:mb-10 text-base md:text-lg text-sand" id="process-text-2">
+              This ensures the website is perfectly aligned with your business
+              goals before design begins.
+            </p>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-3 font-semibold border-b border-accent pb-1 hover:text-accent hover:border-accent transition-colors duration-200 text-light"
+            >
+              Talk to us about your website requirements
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="relative h-64 md:h-[420px] mt-8 md:mt-0">
+          <img
+            id="process-image"
+            src="./img/discover.jpg"
+            alt="Process example"
+            class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl transition-all duration-700 opacity-100"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </section>
+
+   <!-- =========================
+         5. ABOUT SECTION
+    ========================== -->
+    <section id="about" class="py-24 bg-dark">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Top Content -->
+        <div class="grid lg:grid-cols-2 gap-16 items-start mb-20">
+
+          <!-- Left Copy -->
+          <div>
+            <!-- Eyebrow -->
+            <div class="flex items-center gap-4 mb-6 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+              <span class="block w-12 h-px bg-accent"></span>
+              <span class="text-xs tracking-widest uppercase text-accent">
+                About Us
+              </span>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="font-secondary text-4xl md:text-5xl leading-tight mb-8 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+              Your marketing challenges?<br />
+              Accepted.
+            </h2>
+
+            <!-- Body -->
+            <p class="text-sand text-lg leading-relaxed max-w-xl opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+              Achille Industries is a founder-led digital studio that helps organizations
+              turn complex ideas into clear, high-performing websites and software.
+              Our work spans strategy, design, and development — always focused on outcomes,
+              not vanity.
+            </p>
+
+            <!-- About Page Button -->
+            <div class="mt-10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="300">
+              <a href="/about.html" class="inline-flex items-center gap-2 px-6 py-3 border border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-dark transition-all duration-200 group">
+                <span>Learn More About Us</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Spacer (intentional negative space like reference) -->
+          <div class="hidden lg:block"></div>
+        </div>
+
+        <!-- Stats / Cards -->
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <!-- Card 1 -->
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-8 shadow-xl hover:bg-white/10 transition opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="400">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <!-- Stopwatch icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z" />
+              </svg>
+            </div>
+
+            <h3 class="text-2xl font-secondary mb-3">
+              8+ years' experience
+            </h3>
+
+            <p class="text-sand text-sm leading-relaxed">
+              Founded with a focus on clarity and execution, we've spent the last
+              eight years helping businesses grow through thoughtful digital systems
+              that adapt as they scale.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-8 shadow-xl hover:bg-white/10 transition opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="500">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <!-- Map icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 20l-5-2V4l5 2 6-2 5 2v14l-5-2-6 2z" />
+              </svg>
+            </div>
+
+            <h3 class="text-2xl font-secondary mb-3">
+              National clients
+            </h3>
+
+            <p class="text-sand text-sm leading-relaxed">
+              We partner with organizations across the U.S. — from nonprofits
+              to professional services and emerging brands — delivering consistent,
+              reliable results regardless of location.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-8 shadow-xl hover:bg-white/10 transition opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="600">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <!-- Trophy icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8 21h8M12 17v4M7 4h10v3a5 5 0 01-10 0V4zM5 4h14" />
+              </svg>
+            </div>
+
+            <h3 class="text-2xl font-secondary mb-3">
+              Service excellence
+            </h3>
+
+            <p class="text-sand text-sm leading-relaxed">
+              We're known for direct communication, honest guidance, and a hands-on
+              approach that treats your project like a long-term investment —
+              not a one-off deliverable.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         6. CONTACT CTA
+    ========================== -->
+    <section id="contact" class="bg-dark/50 py-28 overflow-hidden border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6">
+    
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+    
+          <!-- LEFT: Visual -->
+          <div
+            class="relative w-full h-[460px] rounded-2xl overflow-hidden border border-white/10 shadow-xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out"
+          >
+            <!-- Background image -->
+            <div
+              id="cta-image"
+              class="absolute inset-0 bg-cover bg-center scale-110 transition-transform duration-700"
+              style="background-image:url('img/phonemockupcollage.png');">
+            </div>
+
+            <!-- Accent detail -->
+            <div class="absolute bottom-8 left-8 w-24 h-0.5 bg-accent"></div>
+          </div>
+    
+          <!-- RIGHT: Content -->
+          <div class="max-w-xl">
+    
+            <!-- Eyebrow -->
+            <div class="flex items-center gap-4 mb-6">
+              <span class="block w-12 h-px bg-accent"></span>
+              <span class="text-xs tracking-widest uppercase text-accent">
+                Contact
+              </span>
+            </div>
+    
+            <!-- Headline -->
+            <h2
+              class="font-secondary text-4xl md:text-5xl leading-tight mb-6 text-light opacity-0 translate-y-6 transition-all duration-700 ease-out"
+            >
+              Let's build something that works.
+            </h2>
+    
+            <!-- Supporting copy -->
+            <p
+              class="text-sand text-lg leading-relaxed mb-10 opacity-0 translate-y-6 transition-all duration-700 ease-out"
+            >
+              Ready to talk about your project? Whether you need a new website,
+              a redesign, or a long-term digital partner, we'd love to hear from you.
+            </p>
+    
+            <!-- CTA -->
+            <a
+              href="contact.html"
+              class="inline-flex items-center gap-3 font-semibold text-accent group opacity-0 translate-y-6 transition-all duration-700 ease-out"
+            >
+              <span class="relative">
+                Get in touch
+                <span class="absolute left-0 -bottom-1 w-full h-px bg-accent scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300"></span>
+              </span>
+    
+              <svg
+                class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              </svg>
+            </a>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="bg-dark text-sand border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
+
+      <!-- Company Mission -->
+      <div>
+        <h2 class="text-light text-xl font-semibold mb-4">
+          Achille Industries
+        </h2>
+        <p class="text-sm mb-6 text-sand">
+          Helping businesses stand out through thoughtful design,
+          scalable development, and long-term digital strategy.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4">
+          <!-- GitHub -->
+          <a href="https://github.com/ErvensAchille" target="_blank" aria-label="GitHub" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008.03 10.95c.58.1.79-.25.79-.56v-2.03c-3.27.71-3.96-1.57-3.96-1.57-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.7.08-.70 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.56-2.61-.3-5.36-1.3-5.36-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.53.12-3.18 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.88.12 3.18a4.5 4.5 0 011.2 3.15c0 4.52-2.75 5.5-5.38 5.8.42.36.78 1.07.78 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ervens-achille-profile/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5C3.33 3.5 2 4.82 2 6.48c0 1.64 1.33 2.98 2.98 2.98S7.97 8.12 7.97 6.48C7.97 4.82 6.63 3.5 4.98 3.5zM2.4 20h5.15V9.53H2.4V20zM9.75 9.53V20h5.15v-5.67c0-3.03 3.87-3.28 3.87 0V20H24v-6.64c0-6.56-7.13-6.31-8.99-3.09V9.53H9.75z" />
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:ervensmachille@gmail.com" aria-label="Email"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13l8-6.99V6H4zm16 2.1l-7.5 5.24a1 1 0 01-1 0L4 8.1V18h16V8.1z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/achilleindustries" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1.5 1.5 0 11-3 .001A1.5 1.5 0 0117.5 6.5z" />
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a href="https://x.com/achilleervens" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Solutions -->
+      <div>
+        <h3 class="text-light font-semibold mb-4">Solutions</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Web Design</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Brand Systems</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Consulting</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">E-commerce</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Strategy</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-light font-semibold mb-4">Support</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#contact" class="hover:text-light transition-colors duration-200">Contact</a></li>
+          <li><a href="#process" class="hover:text-light transition-colors duration-200">Process</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="text-light font-semibold mb-4">Company</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-light transition-colors duration-200">About</a></li>
+          <li><a href="#" class="hover:text-light transition-colors duration-200">Blog</a></li>
+          <li><a href="/privacy.html" class="hover:text-light transition-colors duration-200">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 text-center text-sm py-4 px-6">
+      &copy; <span id="year"></span> Achille Industries · Boston, MA
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- Year Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const openMenu = document.getElementById('menu-button');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('#mobile-menu a');
+
+    function openMobileMenu() {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => {
+        mobileMenu.classList.remove('-translate-x-full');
+      }, 10);
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      openMenu.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('-translate-x-full');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      openMenu.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    openMenu.addEventListener('click', openMobileMenu);
+    closeMenu.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on links
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        closeMobileMenu();
+      }
+    });
+  </script>
+
+  <!-- Process Section Script -->
+  <script>
+    const processData = {
+      discover: {
+        title: "Discover",
+        text1: "We'll audit your existing site, understand technical and performance requirements, and explore your ambitions through research and workshops.",
+        text2: "This ensures the website is perfectly aligned with your business goals before design begins.",
+        image: "./img/discover.jpg"
+      },
+      design: {
+        title: "Design",
+        text1: "We design intuitive, brand-aligned interfaces focused on clarity, usability, and conversion.",
+        text2: "Every decision is intentional, informed by research and validated through feedback.",
+        image: "./img/design.jpg"
+      },
+      develop: {
+        title: "Develop",
+        text1: "Your site is built using modern, reliable technologies with performance and scalability in mind.",
+        text2: "We test across devices and browsers to ensure stability and speed.",
+        image: "./img/develop.jpg"
+      },
+      deploy: {
+        title: "Deploy",
+        text1: "After final testing, we launch confidently with monitoring and support in place.",
+        text2: "You'll receive documentation and guidance to manage your site going forward.",
+        image: "./img/deploy.jpg"
+      }
+    };
+
+    const tabs = document.querySelectorAll(".process-tab");
+    const title = document.getElementById("process-title");
+    const text1 = document.getElementById("process-text-1");
+    const text2 = document.getElementById("process-text-2");
+    const image = document.getElementById("process-image");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const step = processData[tab.dataset.step];
+
+        // Animate text out
+        title.classList.add("opacity-0", "translate-y-4");
+        text1.classList.add("opacity-0", "translate-y-4");
+        text2.classList.add("opacity-0", "translate-y-4");
+        image.classList.add("opacity-0");
+
+        setTimeout(() => {
+          title.textContent = step.title;
+          text1.textContent = step.text1;
+          text2.textContent = step.text2;
+          image.src = step.image;
+
+          title.classList.remove("opacity-0", "translate-y-4");
+          text1.classList.remove("opacity-0", "translate-y-4");
+          text2.classList.remove("opacity-0", "translate-y-4");
+          image.classList.remove("opacity-0");
+        }, 300);
+      });
+    });
+
+    // Scroll animation
+    const processWrapper = document.getElementById("process-wrapper");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          processWrapper.classList.remove("opacity-0", "translate-y-10");
+          observer.unobserve(processWrapper);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (processWrapper) {
+      observer.observe(processWrapper);
+    }
+  </script>
+
+  <!-- What We Do Sticky Scroll Script -->
+  <script>
+    // Feature content data for sticky section
+    const featureContent = {
+      design: {
+        title: "Beautiful, Intuitive User Experiences",
+        description: "We craft interfaces that not only look stunning but guide users naturally through their journey, creating memorable interactions that drive engagement.",
+        footer: "Every design decision is backed by research and testing to ensure it serves both your users and business goals.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+        icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />`
+      },
+      development: {
+        title: "Built for Performance and Scale",
+        description: "Clean, efficient code built on modern frameworks that load fast, run smoothly, and handle growth seamlessly as your business expands.",
+        footer: "We choose technologies based on your specific needs, not trends, ensuring long-term stability and maintainability.",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+        icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`
+      },
+      growth: {
+        title: "Continuous Optimization and Growth",
+        description: "Data-driven strategies that improve your site's performance over time, turning insights into actions that increase conversions and revenue.",
+        footer: "Monthly analytics reviews and performance reports keep you informed and in control of your digital success.",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />`
+      },
+      partner: {
+        title: "Your Long-Term Digital Partner",
+        description: "More than just a vendor, we become an extension of your team, invested in your success and ready to tackle any digital challenge together.",
+        footer: "Direct access to our team means faster decisions, clearer communication, and solutions that truly understand your business.",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+        icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />`
+      }
+    };
+
+    // Initialize sticky section functionality after DOM loads
+    document.addEventListener('DOMContentLoaded', function() {
+      const stickyImage = document.getElementById('sticky-image');
+      const stickyTitle = document.getElementById('sticky-title');
+      const stickyDescription = document.getElementById('sticky-description');
+      const stickyFooter = document.getElementById('sticky-footer');
+      const stickyIcon = document.getElementById('sticky-icon');
+      const featureSections = document.querySelectorAll('.feature-section');
+
+      // Track current feature
+      let currentFeature = 'design';
+
+      // Update sticky content
+      function updateStickyContent(feature) {
+        if (!stickyTitle || currentFeature === feature) return;
+        
+        currentFeature = feature;
+        const content = featureContent[feature];
+
+        // Fade out
+        stickyTitle.style.opacity = '0';
+        stickyDescription.style.opacity = '0';
+        stickyFooter.style.opacity = '0';
+        stickyIcon.style.opacity = '0';
+        stickyImage.style.opacity = '0';
+
+        // Update content after fade
+        setTimeout(() => {
+          if (stickyTitle) stickyTitle.textContent = content.title;
+          if (stickyDescription) stickyDescription.textContent = content.description;
+          if (stickyFooter) stickyFooter.textContent = content.footer;
+          if (stickyImage) stickyImage.style.backgroundImage = `url('${content.image}')`;
+          if (stickyIcon) stickyIcon.innerHTML = content.icon;
+
+          // Fade in
+          setTimeout(() => {
+            stickyTitle.style.opacity = '1';
+            stickyDescription.style.opacity = '1';
+            stickyFooter.style.opacity = '1';
+            stickyIcon.style.opacity = '1';
+            stickyImage.style.opacity = '1';
+          }, 50);
+        }, 300);
+      }
+
+      // Intersection Observer for feature sections
+      if (featureSections.length > 0) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '-50% 0px -50% 0px',
+          threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const feature = entry.target.getAttribute('data-feature');
+              updateStickyContent(feature);
+            }
+          });
+        }, observerOptions);
+
+        // Observe all feature sections
+        featureSections.forEach(section => observer.observe(section));
+
+        // Initial load
+        updateStickyContent('design');
+      }
+    });
+  </script>
+
+  <!-- Contact CTA Section Animation -->
+  <script>
+    // Add scroll animation for contact CTA elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const ctaElements = document.querySelectorAll('#contact .opacity-0');
+      
+      const ctaObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.remove('opacity-0', 'translate-y-6');
+              }, index * 150);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      ctaElements.forEach(el => ctaObserver.observe(el));
+    });
+  </script>
+
+  <!-- Calendly Script - LOADS IMMEDIATELY ON PAGE LOAD -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    // Initialize Calendly immediately on page load
+    window.onload = function() {
+      Calendly.initBadgeWidget({
+        url: "https://calendly.com/ervensmachille",
+        text: "Schedule Project Consultation",
+        color: "#BDA266",
+        textColor: "#1d1e21",
+        branding: false,
+      });
+    };
+  </script>
+
+  <!-- Hero quote animation -->
+  <script>
+    const heroQuote = document.getElementById('hero-quote');
+
+    if (heroQuote) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            heroQuote.classList.remove('opacity-0', 'translate-y-6');
+            heroQuote.classList.add('opacity-100', 'translate-y-0');
+            observer.unobserve(heroQuote);
+          }
+        },
+        { threshold: 0.4 }
+      );
+
+      observer.observe(heroQuote);
+    }
+  </script>
+
+  <!-- Smooth scrolling for anchor links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Skip if it's just "#"
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Update URL without scrolling
+          history.pushState(null, null, href);
+        }
+      });
+    });
+  </script>
+
+  <!-- Video play functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const videoPlayButton = document.querySelector('.sticky-video-container button');
+      if (videoPlayButton) {
+        videoPlayButton.addEventListener('click', function() {
+          // This is where you would integrate your actual video
+          // For now, we'll just show an alert
+          alert('Video player would open here. In production, integrate with YouTube, Vimeo, or a custom video player.');
+        });
+      }
+    });
+  </script>
+
+  <!-- Feature Items Scroll Reveal -->
+  <script>
+    const featureItems = document.querySelectorAll('.feature-item');
+
+    const featureObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.remove('opacity-0', 'translate-y-6');
+            }, index * 120); // stagger
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    featureItems.forEach(item => featureObserver.observe(item));
+  </script>
+
+  <!-- Unified Scroll Reveal System -->
+  <script>
+    (function() {
+      'use strict';
+      
+      /**
+       * Unified Scroll Reveal Utility
+       * Creates premium, calm fade-in-up animations for marked elements
+       */
+      class ScrollReveal {
+        constructor() {
+          this.animatedClass = 'revealed';
+          this.elements = document.querySelectorAll('[data-reveal]');
+          this.mobileBreakpoint = 768;
+          this.desktopThreshold = 0.3;  // 30% of element visible
+          this.mobileThreshold = 0.15;  // 15% of element visible (earlier trigger)
+          
+          this.init();
+        }
+        
+        /**
+         * Get appropriate threshold based on viewport
+         */
+        getThreshold() {
+          return window.innerWidth < this.mobileBreakpoint 
+            ? this.mobileThreshold 
+            : this.desktopThreshold;
+        }
+        
+        /**
+         * Initialize the reveal system
+         */
+        init() {
+          if (!this.elements.length) return;
+          
+          // Create a single IntersectionObserver instance
+          this.observer = new IntersectionObserver(
+            (entries) => this.handleIntersect(entries),
+            {
+              root: null,
+              rootMargin: '0px',
+              threshold: this.getThreshold()
+            }
+          );
+          
+          // Observe all reveal elements
+          this.elements.forEach(element => {
+            this.observer.observe(element);
+          });
+          
+          // Update threshold on resize
+          window.addEventListener('resize', this.debounce(() => {
+            this.updateThreshold();
+          }, 150));
+        }
+        
+        /**
+         * Update observer threshold on viewport change
+         */
+        updateThreshold() {
+          if (this.observer) {
+            // Disconnect and recreate with new threshold
+            this.observer.disconnect();
+            
+            this.observer = new IntersectionObserver(
+              (entries) => this.handleIntersect(entries),
+              {
+                root: null,
+                rootMargin: '0px',
+                threshold: this.getThreshold()
+              }
+            );
+            
+            // Re-observe elements
+            this.elements.forEach(element => {
+              this.observer.observe(element);
+            });
+          }
+        }
+        
+        /**
+         * Handle intersection events
+         */
+        handleIntersect(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              this.revealElement(entry.target);
+              this.observer.unobserve(entry.target); // Stop observing once revealed
+            }
+          });
+        }
+        
+        /**
+         * Animate element into view
+         */
+        revealElement(element) {
+          // Get custom delay if specified
+          const delay = element.getAttribute('data-reveal-delay') || 0;
+          
+          // Use setTimeout for staggered reveals
+          setTimeout(() => {
+            // Remove opacity and translate classes
+            element.classList.remove('opacity-0');
+            element.classList.remove('translate-y-6');
+            
+            // Mark as revealed
+            element.classList.add(this.animatedClass);
+          }, delay);
+        }
+        
+        /**
+         * Simple debounce utility for resize events
+         */
+        debounce(func, wait) {
+          let timeout;
+          return function executedFunction(...args) {
+            const later = () => {
+              clearTimeout(timeout);
+              func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+          };
+        }
+      }
+      
+      // Initialize on DOM ready
+      document.addEventListener('DOMContentLoaded', () => {
+        new ScrollReveal();
+      });
+      
+    })();
+  </script>
+</body>
+</html>

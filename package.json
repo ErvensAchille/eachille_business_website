@@ -1,25 +1,29 @@
 {
+  "name": "eachille_business_website",
+  "version": "1.0.0",
+  "description": "A responsive personal portfolio website for Ervens Achille, built with Tailwind CSS and HTML. This project showcases my web development work, current projects, and contact information — styled with utility-first CSS for fast, scalable UI design. Built using the Tailwind CLI (v4+).",
+  "author": "Ervens Achille",
+  "license": "ISC",
+
   "dependencies": {
     "@tailwindcss/cli": "^4.1.10",
     "tailwindcss": "^4.1.10"
   },
-  "name": "eachille_business_website",
-  "version": "1.0.0",
-  "description": "A responsive personal portfolio website for Ervens Achille, built with Tailwind CSS and HTML. This project showcases my web development work, current projects, and contact information — styled with utility-first CSS for fast, scalable UI design. Built using the Tailwind CLI (v4+).",
-  "main": "index.js",
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
-  "build": "mkdir -p dist && npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify && cp index.html dist/index.html && cp -r img dist/img && cp -r public dist/public"
-},
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build": "mkdir -p dist && npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify && cp *.html dist/ && cp -r img dist/img && cp -r public dist/public"
+  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ErvensAchille/business_portfolio_website.git"
   },
-  "author": "Ervens Achille",
-  "license": "ISC",
+
   "bugs": {
     "url": "https://github.com/ErvensAchille/business_portfolio_website/issues"
   },
+
   "homepage": "https://github.com/ErvensAchille/business_portfolio_website#readme"
 }
