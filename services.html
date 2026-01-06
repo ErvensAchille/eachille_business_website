@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================
+       META / SEO
+  ========================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Services | Web Design & Development | Achille Industries</title>
+
+  <meta name="description"
+        content="Complete web design, development, and digital marketing services for businesses, nonprofits, and founders. Boston-based agency offering strategic solutions." />
+
+  <meta name="keywords"
+        content="web design services, web development services, digital marketing, SEO services, Boston web agency, e-commerce development" />
+
+  <meta name="author" content="Achille Industries" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Services — Web Design & Development | Achille Industries" />
+  <meta property="og:description"
+        content="Strategic web design, development, and digital marketing solutions built for measurable results and long-term growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- =========================
+       FONTS
+  ========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" 
+        rel="stylesheet" 
+        media="print" 
+        onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" 
+          rel="stylesheet" />
+  </noscript>
+
+  <!-- =========================
+       TAILWIND CDN
+  ========================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2d3e67',
+            dark: '#1d1e21',
+            light: '#f4fff3',
+            accent: '#BDA266',
+            sand: '#f8e9db'
+          },
+          fontFamily: {
+            primary: ['Inter', 'sans-serif'],
+            secondary: ['Playfair Display', 'serif']
+          },
+          animation: {
+            'marquee': 'marquee 30s linear infinite',
+            'marquee-reverse': 'marquee-reverse 35s linear infinite',
+            'float': 'float 3s ease-in-out infinite',
+            'float-reverse': 'float-reverse 3s ease-in-out infinite'
+          },
+          keyframes: {
+            'marquee': {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' }
+            },
+            'marquee-reverse': {
+              '0%': { transform: 'translateX(-50%)' },
+              '100%': { transform: 'translateX(0)' }
+            },
+            'float': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            'float-reverse': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Process tabs */
+    .process-tab {
+      padding-bottom: 0.75rem;
+      font-weight: 600;
+      color: rgba(244, 255, 243, 0.5);
+      transition: color .3s, border .3s;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+    }
+    .process-tab:hover {
+      color: #f4fff3;
+    }
+    .process-tab.active {
+      color: #f4fff3;
+      border-bottom: 2px solid #BDA266;
+    }
+
+    /* Service cards hover effect */
+    .service-card {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #BDA266;
+      box-shadow: 0 20px 40px rgba(189, 162, 102, 0.1);
+    }
+
+    /* Gradient overlays */
+    .platforms-carousel::before,
+    .platforms-carousel::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .platforms-carousel::before {
+      left: 0;
+      background: linear-gradient(to right, #1d1e21, transparent);
+    }
+    .platforms-carousel::after {
+      right: 0;
+      background: linear-gradient(to left, #1d1e21, transparent);
+    }
+
+    /* Platform logo hover */
+    .platform-item {
+      transition: all 0.3s ease;
+    }
+    .platform-item:hover {
+      transform: translateY(-5px) scale(1.1);
+      filter: drop-shadow(0 10px 15px rgba(189, 162, 102, 0.2));
+    }
+
+    /* Instagram overlay */
+    .ig-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+    .group:hover .ig-overlay {
+      opacity: 1;
+    }
+
+    /* Enhance reveal transitions */
+    [data-reveal] {
+      will-change: transform, opacity;
+    }
+    [data-reveal].revealed {
+      transform: translateY(0) !important;
+    }
+
+    /* Pause animation on hover */
+    .animate-marquee:hover,
+    .animate-marquee-reverse:hover {
+      animation-play-state: paused;
+    }
+
+    /* Hero image styles */
+    .hero-image {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .hero-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(29, 30, 33, 0.85), rgba(29, 30, 33, 0.7));
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-light font-primary antialiased">
+
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-accent focus:text-dark focus:rounded-lg">
+    Skip to main content
+  </a>
+
+  <!-- =========================
+       HEADER / NAV
+  ========================== -->
+  <header class="border-b border-white/10 relative z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-4" aria-label="Achille Industries home">
+        <img
+          src="./img/logo.svg"
+          alt="Achille Industries logo"
+          class="h-10 w-10 md:h-12 md:w-12"
+        />
+        <span class="font-semibold tracking-wide">
+          Achille Industries
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex gap-8 text-sm font-semibold">
+        <li><a href="index.html" class="hover:text-accent transition-colors duration-200">Home</a></li>
+        <li><a href="services.html" class="hover:text-accent transition-colors duration-200 text-accent font-bold">Services</a></li>
+        <li><a href="about.html" class="hover:text-accent transition-colors duration-200">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition-colors duration-200">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-button"
+        class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 hidden bg-black/95 text-white transform transition-transform duration-300 ease-in-out -translate-x-full"
+      aria-hidden="true"
+    >
+      <!-- Mobile Menu Header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+        <span class="font-semibold tracking-wide">
+          Achille Industries
+        </span>
+        <button
+          id="close-menu"
+          class="text-2xl p-2 hover:text-accent transition-colors duration-200"
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav class="flex flex-col items-center justify-center h-full gap-10 text-lg font-semibold">
+        <a href="index.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">Home</a>
+        <a href="services.html" class="hover:text-accent transition-colors duration-200 text-accent font-bold" onclick="closeMobileMenu()">Services</a>
+        <a href="about.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">About</a>
+        <a href="contact.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">Contact</a>
+        <a
+          href="contact.html"
+          class="mt-6 inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-black hover:bg-accent/90 transition-colors duration-200"
+          onclick="closeMobileMenu()"
+          data-cta="mobile-consultation"
+        >
+          Free Consultation
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+  <main id="main-content">
+    
+    <!-- =========================
+         1. HERO SECTION (Image Only - No Video)
+    ========================== -->
+    <section class="hero-image">
+      <!-- Image Background -->
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=1920&q=80');"></div>
+      
+      <!-- Overlay -->
+      <div class="hero-overlay"></div>
+      
+      <!-- Content -->
+      <div class="relative h-full flex items-center">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+          <div class="max-w-3xl">
+            <!-- Eyebrow -->
+            <div class="flex items-center gap-4 mb-6 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+              <span class="block w-12 h-px bg-accent"></span>
+              <span class="text-xs tracking-widest uppercase text-accent">
+                Visionary Design
+              </span>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="font-secondary text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+              Where Design Meets Purpose
+            </h1>
+
+            <!-- Upgraded Quote -->
+            <div class="mb-10 max-w-2xl opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+              <p class="text-xl md:text-2xl font-secondary text-light mb-4">
+                At Achille Industries, design transcends aesthetics
+              </p>
+              <p class="text-lg text-sand">
+                We create brands that resonate deeply, inspire action, and evolve alongside the communities they serve—transforming visions into enduring digital experiences.
+              </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex flex-wrap gap-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="300">
+              <a
+                href="#services"
+                class="inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-dark font-semibold rounded-lg hover:bg-accent/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
+                data-cta="services-explore"
+              >
+                Explore Our Services
+              </a>
+
+              <a
+                href="/#contact"
+                class="inline-block px-6 py-3 md:px-8 md:py-4 border border-white/20 rounded-lg hover:border-accent hover:text-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
+              >
+                Start Your Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         2. SERVICES GRID
+    ========================== -->
+    <section id="services" class="py-24 bg-dark/50">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16 md:mb-20">
+          <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+            Comprehensive Digital Services
+          </h2>
+          <p class="text-sand text-lg opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+            Tailored solutions for businesses of all sizes
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Web Design -->
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+            <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-secondary mb-4">Web Design</h3>
+            <p class="text-sand mb-6">Custom, responsive designs that engage users and reflect your brand identity.</p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Custom UI/UX Design</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Brand Identity Integration</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Mobile-First Responsive Design</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Wireframing & Prototyping</span>
+              </li>
+            </ul>
+            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+              <span>Get Started</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Web Development -->
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+            <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-secondary mb-4">Web Development</h3>
+            <p class="text-sand mb-6">Robust, scalable websites and applications built with modern technologies.</p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Custom Web Applications</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>E-commerce Solutions</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>API Integration</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Performance Optimization</span>
+              </li>
+            </ul>
+            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+              <span>Get Started</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Digital Marketing -->
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+            <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-secondary mb-4">Digital Marketing</h3>
+            <p class="text-sand mb-6">Data-driven strategies to increase visibility, engagement, and conversions.</p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>SEO Optimization</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Content Strategy</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Social Media Marketing</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Conversion Rate Optimization</span>
+              </li>
+            </ul>
+            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+              <span>Get Started</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Brand Strategy -->
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="300">
+            <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-secondary mb-4">Brand Strategy</h3>
+            <p class="text-sand mb-6">Develop a cohesive brand identity that resonates with your target audience.</p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Brand Identity Development</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Market Research & Analysis</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Competitive Analysis</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Brand Messaging</span>
+              </li>
+            </ul>
+            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+              <span>Get Started</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Ongoing Support -->
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="400">
+            <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-secondary mb-4">Ongoing Support</h3>
+            <p class="text-sand mb-6">Continuous maintenance, updates, and optimization to keep your site running smoothly.</p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Website Maintenance</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Security Updates</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Performance Monitoring</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Technical Support</span>
+              </li>
+            </ul>
+            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+              <span>Get Started</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Consulting -->
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="500">
+            <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-secondary mb-4">Consulting</h3>
+            <p class="text-sand mb-6">Expert guidance to help you make informed decisions about your digital strategy.</p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Digital Strategy Sessions</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Technology Recommendations</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Team Training</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm">
+                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Process Optimization</span>
+              </li>
+            </ul>
+            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+              <span>Get Started</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         3. PLATFORMS CAROUSEL (from index.html)
+    ========================== -->
+    <section id="platforms" class="py-24 bg-dark/50 border-t border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+            Trusted by Industry Leaders
+          </h2>
+          <p class="text-sand text-lg opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+            We build on the platforms that power today's most successful businesses
+          </p>
+        </div>
+
+        <!-- Platforms Carousel Container -->
+        <div class="platforms-carousel">
+          <div class="relative overflow-hidden py-6">
+            
+            <!-- Desktop Marquee (hidden on mobile) -->
+            <div class="hidden md:block">
+              <!-- First Row -->
+              <div class="flex mb-8 animate-marquee whitespace-nowrap pl-2 md:pl-6">
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="https://static.cdnlogo.com/logos/w/95/wix-com-website.svg" alt="Wix" class="h-14 md:h-18 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/shopify-svgrepo-com.svg" alt="Shopify" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/Ecwid.svg" alt="Ecwid" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/html5-svgrepo-com.svg" alt="HTML5" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/squarespace-svgrepo-com.svg" alt="Squarespace" class="h-14 md:h-18 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/aws-svgrepo-com.svg" alt="AWS" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/hubspot-svgrepo-com.svg" alt="HubSpot" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+              </div>
+
+              <!-- Second Row -->
+              <div class="flex animate-marquee-reverse whitespace-nowrap pl-2 md:pl-6">
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/shopify-svgrepo-com.svg" alt="Shopify" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/html5-svgrepo-com.svg" alt="HTML5" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/hubspot-svgrepo-com.svg" alt="HubSpot" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="https://static.cdnlogo.com/logos/w/95/wix-com-website.svg" alt="Wix" class="h-14 md:h-18 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/squarespace-svgrepo-com.svg" alt="Squarespace" class="h-14 md:h-18 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/aws-svgrepo-com.svg" alt="AWS" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="mx-5 platform-item flex items-center">
+                  <img src="img/Ecwid.svg" alt="Ecwid" class="h-16 md:h-20 w-auto opacity-90" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Static Grid (hidden on desktop) -->
+            <div class="md:hidden">
+              <div class="grid grid-cols-4 gap-6 px-4">
+                <div class="platform-item flex items-center justify-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" class="h-16 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="platform-item flex items-center justify-center">
+                  <img src="https://static.cdnlogo.com/logos/w/95/wix-com-website.svg" alt="Wix" class="h-14 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="platform-item flex items-center justify-center">
+                  <img src="img/shopify-svgrepo-com.svg" alt="Shopify" class="h-16 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="platform-item flex items-center justify-center">
+                  <img src="img/Ecwid.svg" alt="Ecwid" class="h-16 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="platform-item flex items-center justify-center">
+                  <img src="img/html5-svgrepo-com.svg" alt="HTML5" class="h-16 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="platform-item flex items-center justify-center">
+                  <img src="img/squarespace-svgrepo-com.svg" alt="Squarespace" class="h-14 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="platform-item flex items-center justify-center">
+                  <img src="img/aws-svgrepo-com.svg" alt="AWS" class="h-16 w-auto opacity-90" loading="lazy" />
+                </div>
+                <div class="platform-item flex items-center justify-center">
+                  <img src="img/hubspot-svgrepo-com.svg" alt="HubSpot" class="h-16 w-auto opacity-90" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CTA below carousel -->
+        <div class="text-center mt-12 md:mt-16 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+          <p class="text-sand mb-6">
+            Not sure which platform is right for your business?
+          </p>
+          <a
+            href="/#contact"
+            class="inline-block px-6 py-3 border border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-dark transition-all duration-200"
+          >
+            Get a Platform Recommendation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         4. PROCESS SECTION (from index.html)
+    ========================== -->
+    <section id="process" class="py-24 bg-dark text-light overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+        id="process-wrapper"
+      >
+
+        <!-- LEFT -->
+        <div>
+
+          <!-- Eyebrow -->
+          <div class="flex items-center gap-4 mb-6">
+            <span class="block w-12 h-px bg-light/40"></span>
+            <span class="text-xs tracking-widest uppercase text-sand">
+              How It Works
+            </span>
+          </div>
+
+          <!-- Heading -->
+          <h2 class="font-secondary text-3xl md:text-4xl leading-tight mb-8 md:mb-10 text-light">
+            Our website design and<br />
+            development process
+          </h2>
+
+          <!-- Tabs -->
+          <div class="flex gap-4 md:gap-8 border-b border-white/20 mb-8 md:mb-10 overflow-x-auto pb-1">
+            <button class="process-tab active whitespace-nowrap" data-step="discover">Discover</button>
+            <button class="process-tab whitespace-nowrap" data-step="design">Design</button>
+            <button class="process-tab whitespace-nowrap" data-step="develop">Develop</button>
+            <button class="process-tab whitespace-nowrap" data-step="deploy">Deploy</button>
+          </div>
+
+          <!-- Content -->
+          <div id="process-content" class="transition-all duration-500">
+            <h3 class="text-2xl md:text-3xl font-secondary mb-4 md:mb-6 text-light" id="process-title">
+              Discover
+            </h3>
+
+            <p class="mb-4 md:mb-6 text-base md:text-lg text-sand" id="process-text-1">
+              We'll audit your existing site, understand technical and performance
+              requirements, and explore your ambitions through research and
+              workshops.
+            </p>
+
+            <p class="mb-8 md:mb-10 text-base md:text-lg text-sand" id="process-text-2">
+              This ensures the website is perfectly aligned with your business
+              goals before design begins.
+            </p>
+
+            <a
+              href="/#contact"
+              class="inline-flex items-center gap-3 font-semibold border-b border-accent pb-1 hover:text-accent hover:border-accent transition-colors duration-200 text-light"
+            >
+              Talk to us about your website requirements
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="relative h-64 md:h-[420px] mt-8 md:mt-0">
+          <img
+            id="process-image"
+            src="./img/discover.jpg"
+            alt="Process example"
+            class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl transition-all duration-700 opacity-100"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         5. HORIZONTAL SCROLL CAROUSEL SECTION
+    ========================== -->
+    <section class="py-24 bg-dark">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-4 mb-10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+          <span class="block w-12 h-px bg-accent"></span>
+          <span class="text-xs tracking-widest uppercase text-accent">
+            Behind the Scenes
+          </span>
+        </div>
+
+        <!-- Section Header -->
+        <div class="mb-12 md:mb-16 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+          <h2 class="font-secondary text-3xl md:text-4xl lg:text-5xl mb-4 text-light">
+            Our Work in Motion
+          </h2>
+          <p class="text-sand text-lg max-w-2xl">
+            Scroll horizontally to explore our latest projects and behind-the-scenes moments
+          </p>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="flex items-center gap-3 mb-8 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="150">
+          <span class="text-xs tracking-widest uppercase text-sand">Scroll →</span>
+          <div class="h-px w-16 bg-accent/30"></div>
+        </div>
+
+      </div>
+
+      <!-- Horizontal Scroll Container -->
+      <div class="relative overflow-x-hidden cursor-grab active:cursor-grabbing">
+        <div class="flex gap-6 md:gap-8 px-6 md:px-12 pb-6 md:pb-8 overflow-x-auto scrollbar-hide" id="horizontal-scroll-track">
+          
+          <!-- Card 1 -->
+          <div class="group relative h-[450px] w-[450px] flex-shrink-0 overflow-hidden rounded-3xl transition-transform duration-500 hover:scale-[1.02]">
+            <div 
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              style="background-image: url('/img/realtyimage.png');">
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="group relative h-[450px] w-[450px] flex-shrink-0 overflow-hidden rounded-3xl transition-transform duration-500 hover:scale-[1.02]">
+            <div 
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              style="background-image: url('/img/taxSite.png');">
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="group relative h-[450px] w-[450px] flex-shrink-0 overflow-hidden rounded-3xl transition-transform duration-500 hover:scale-[1.02]">
+            <div 
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              style="background-image: url('/img/phoneMockUpCollage2.png');">
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="group relative h-[450px] w-[450px] flex-shrink-0 overflow-hidden rounded-3xl transition-transform duration-500 hover:scale-[1.02]">
+            <div 
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              style="background-image: url('/img/mockup.png');">
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="group relative h-[450px] w-[450px] flex-shrink-0 overflow-hidden rounded-3xl transition-transform duration-500 hover:scale-[1.02]">
+            <div 
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              style="background-image: url('/img/schoolAd1.png');">
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="group relative h-[450px] w-[450px] flex-shrink-0 overflow-hidden rounded-3xl transition-transform duration-500 hover:scale-[1.02]">
+            <div 
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              style="background-image: url('/img/schoolAd2.png');">
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="group relative h-[450px] w-[450px] flex-shrink-0 overflow-hidden rounded-3xl transition-transform duration-500 hover:scale-[1.02]">
+            <div 
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+              style="background-image: url('/img/schoolAd4.png');">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Follow CTA -->
+      <div class="max-w-7xl mx-auto px-6 mt-12 text-center opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+        <p class="text-sand mb-4">Want to see more of our daily work?</p>
+        <a 
+          href="https://www.instagram.com/achilleindustries" 
+          target="_blank" 
+          class="inline-flex items-center gap-2 text-accent font-semibold hover:text-accent/80 transition-colors duration-200"
+        >
+          <span>Follow us on Instagram</span>
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+<!-- =========================
+     6. UPDATED CONTACT CTA (Full Width Spread Out)
+========================== -->
+<div class="bg-dark">
+  <div class="mx-auto max-w-[1920px] py-32 sm:px-8 lg:px-16">
+    <div class="relative isolate overflow-hidden bg-gray-800 px-8 pt-20 shadow-2xl sm:rounded-3xl sm:px-12 md:pt-28 lg:flex lg:gap-x-32 lg:px-20 lg:pt-0">
+      <!-- Background SVG -->
+      <svg viewBox="0 0 1024 1024" aria-hidden="true" class="absolute top-1/2 left-1/2 -z-10 h-[72rem] w-[72rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-96 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0">
+        <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
+        <defs>
+          <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+            <stop stop-color="#BDA266" />
+            <stop offset="1" stop-color="#2d3e67" />
+          </radialGradient>
+        </defs>
+      </svg>
+      
+      <!-- Left Content -->
+      <div class="mx-auto max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-40 lg:text-left lg:pl-12">
+        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Boost your productivity.<br>Start your project today.</h2>
+        <p class="mt-8 text-xl leading-9 text-gray-300 max-w-2xl">Transform your vision into reality with strategic web solutions that drive growth and engage your audience.</p>
+        <div class="mt-12 flex items-center justify-center gap-x-8 lg:justify-start">
+          <a href="/#contact" class="rounded-lg bg-accent px-6 py-3.5 text-base font-semibold text-dark shadow-lg hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200">Get started</a>
+          <a href="#services" class="text-base font-semibold leading-6 text-white hover:text-gray-100 transition-colors duration-200">
+            Explore services <span aria-hidden="true" class="ml-2">→</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Right Image Area -->
+      <div class="relative mt-20 lg:mt-0 lg:flex-shrink-0 lg:self-center lg:pr-12">
+        <div class="relative lg:h-[32rem] lg:w-[64rem]">
+          <!-- Image container -->
+          <div class="absolute inset-0 flex items-center justify-center rounded-xl bg-gray-900/50 ring-1 ring-white/10 shadow-2xl">
+            <!-- Your image goes here -->
+            <div class="relative h-full w-full overflow-hidden rounded-xl">
+              <!-- Phone Collection Image -->
+              <img 
+                src="./img/phonecollection.png" 
+                alt="Phone collection showing responsive web designs" 
+                class="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <!-- Optional overlay for better text readability -->
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+
+  <!-- =========================
+       FOOTER (from index.html)
+  ========================== -->
+  <footer class="bg-dark text-sand border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
+
+      <!-- Company Mission -->
+      <div>
+        <h2 class="text-light text-xl font-semibold mb-4">
+          Achille Industries
+        </h2>
+        <p class="text-sm mb-6 text-sand">
+          Helping businesses stand out through thoughtful design,
+          scalable development, and long-term digital strategy.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4">
+          <!-- GitHub -->
+          <a href="https://github.com/ErvensAchille" target="_blank" aria-label="GitHub" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008.03 10.95c.58.1.79-.25.79-.56v-2.03c-3.27.71-3.96-1.57-3.96-1.57-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.7.08-.70 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.56-2.61-.3-5.36-1.3-5.36-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.53.12-3.18 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.88.12 3.18a4.5 4.5 0 011.2 3.15c0 4.52-2.75 5.5-5.38 5.8.42.36.78 1.07.78 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ervens-achille-profile/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5C3.33 3.5 2 4.82 2 6.48c0 1.64 1.33 2.98 2.98 2.98S7.97 8.12 7.97 6.48C7.97 4.82 6.63 3.5 4.98 3.5zM2.4 20h5.15V9.53H2.4V20zM9.75 9.53V20h5.15v-5.67c0-3.03 3.87-3.28 3.87 0V20H24v-6.64c0-6.56-7.13-6.31-8.99-3.09V9.53H9.75z" />
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:ervensmachille@gmail.com" aria-label="Email"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13l8-6.99V6H4zm16 2.1l-7.5 5.24a1 1 0 01-1 0L4 8.1V18h16V8.1z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/achilleindustries" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1.5 1.5 0 11-3 .001A1.5 1.5 0 0117.5 6.5z" />
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a href="https://x.com/achilleervens" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Solutions -->
+      <div>
+        <h3 class="text-light font-semibold mb-4">Solutions</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200 text-accent font-bold">Web Design</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Brand Systems</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Consulting</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">E-commerce</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Strategy</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-light font-semibold mb-4">Support</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/#contact" class="hover:text-light transition-colors duration-200">Contact</a></li>
+          <li><a href="/#process" class="hover:text-light transition-colors duration-200">Process</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="text-light font-semibold mb-4">Company</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/#about" class="hover:text-light transition-colors duration-200">About</a></li>
+          <li><a href="#" class="hover:text-light transition-colors duration-200">Blog</a></li>
+          <li><a href="/privacy.html" class="hover:text-light transition-colors duration-200">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 text-center text-sm py-4 px-6">
+      &copy; <span id="year"></span> Achille Industries · Boston, MA
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- Year Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Mobile Menu Script (same as index.html) -->
+  <script>
+    const openMenu = document.getElementById('menu-button');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('#mobile-menu a');
+
+    function openMobileMenu() {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => {
+        mobileMenu.classList.remove('-translate-x-full');
+      }, 10);
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      openMenu.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('-translate-x-full');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      openMenu.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    openMenu.addEventListener('click', openMobileMenu);
+    closeMenu.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on links
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        closeMobileMenu();
+      }
+    });
+  </script>
+
+  <!-- Process Section Script (same as index.html) -->
+  <script>
+    const processData = {
+      discover: {
+        title: "Discover",
+        text1: "We'll audit your existing site, understand technical and performance requirements, and explore your ambitions through research and workshops.",
+        text2: "This ensures the website is perfectly aligned with your business goals before design begins.",
+        image: "./img/discover.jpg"
+      },
+      design: {
+        title: "Design",
+        text1: "We design intuitive, brand-aligned interfaces focused on clarity, usability, and conversion.",
+        text2: "Every decision is intentional, informed by research and validated through feedback.",
+        image: "./img/design.jpg"
+      },
+      develop: {
+        title: "Develop",
+        text1: "Your site is built using modern, reliable technologies with performance and scalability in mind.",
+        text2: "We test across devices and browsers to ensure stability and speed.",
+        image: "./img/develop.jpg"
+      },
+      deploy: {
+        title: "Deploy",
+        text1: "After final testing, we launch confidently with monitoring and support in place.",
+        text2: "You'll receive documentation and guidance to manage your site going forward.",
+        image: "./img/deploy.jpg"
+      }
+    };
+
+    const tabs = document.querySelectorAll(".process-tab");
+    const title = document.getElementById("process-title");
+    const text1 = document.getElementById("process-text-1");
+    const text2 = document.getElementById("process-text-2");
+    const image = document.getElementById("process-image");
+
+    if (tabs.length > 0) {
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          tabs.forEach(t => t.classList.remove("active"));
+          tab.classList.add("active");
+
+          const step = processData[tab.dataset.step];
+
+          // Animate text out
+          title.classList.add("opacity-0", "translate-y-4");
+          text1.classList.add("opacity-0", "translate-y-4");
+          text2.classList.add("opacity-0", "translate-y-4");
+          image.classList.add("opacity-0");
+
+          setTimeout(() => {
+            title.textContent = step.title;
+            text1.textContent = step.text1;
+            text2.textContent = step.text2;
+            image.src = step.image;
+
+            title.classList.remove("opacity-0", "translate-y-4");
+            text1.classList.remove("opacity-0", "translate-y-4");
+            text2.classList.remove("opacity-0", "translate-y-4");
+            image.classList.remove("opacity-0");
+          }, 300);
+        });
+      });
+
+      // Scroll animation
+      const processWrapper = document.getElementById("process-wrapper");
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            processWrapper.classList.remove("opacity-0", "translate-y-10");
+            observer.unobserve(processWrapper);
+          }
+        },
+        { threshold: 0.3 }
+      );
+
+      if (processWrapper) {
+        observer.observe(processWrapper);
+      }
+    }
+  </script>
+
+  <!-- Unified Scroll Reveal System (from index.html) -->
+  <script>
+    (function() {
+      'use strict';
+      
+      /**
+       * Unified Scroll Reveal Utility
+       * Creates premium, calm fade-in-up animations for marked elements
+       */
+      class ScrollReveal {
+        constructor() {
+          this.animatedClass = 'revealed';
+          this.elements = document.querySelectorAll('[data-reveal]');
+          this.mobileBreakpoint = 768;
+          this.desktopThreshold = 0.3;  // 30% of element visible
+          this.mobileThreshold = 0.15;  // 15% of element visible (earlier trigger)
+          
+          this.init();
+        }
+        
+        /**
+         * Get appropriate threshold based on viewport
+         */
+        getThreshold() {
+          return window.innerWidth < this.mobileBreakpoint 
+            ? this.mobileThreshold 
+            : this.desktopThreshold;
+        }
+        
+        /**
+         * Initialize the reveal system
+         */
+        init() {
+          if (!this.elements.length) return;
+          
+          // Create a single IntersectionObserver instance
+          this.observer = new IntersectionObserver(
+            (entries) => this.handleIntersect(entries),
+            {
+              root: null,
+              rootMargin: '0px',
+              threshold: this.getThreshold()
+            }
+          );
+          
+          // Observe all reveal elements
+          this.elements.forEach(element => {
+            this.observer.observe(element);
+          });
+          
+          // Update threshold on resize
+          window.addEventListener('resize', this.debounce(() => {
+            this.updateThreshold();
+          }, 150));
+        }
+        
+        /**
+         * Update observer threshold on viewport change
+         */
+        updateThreshold() {
+          if (this.observer) {
+            // Disconnect and recreate with new threshold
+            this.observer.disconnect();
+            
+            this.observer = new IntersectionObserver(
+              (entries) => this.handleIntersect(entries),
+              {
+                root: null,
+                rootMargin: '0px',
+                threshold: this.getThreshold()
+              }
+            );
+            
+            // Re-observe elements
+            this.elements.forEach(element => {
+              this.observer.observe(element);
+            });
+          }
+        }
+        
+        /**
+         * Handle intersection events
+         */
+        handleIntersect(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              this.revealElement(entry.target);
+              this.observer.unobserve(entry.target); // Stop observing once revealed
+            }
+          });
+        }
+        
+        /**
+         * Animate element into view
+         */
+        revealElement(element) {
+          // Get custom delay if specified
+          const delay = element.getAttribute('data-reveal-delay') || 0;
+          
+          // Use setTimeout for staggered reveals
+          setTimeout(() => {
+            // Remove opacity and translate classes
+            element.classList.remove('opacity-0');
+            element.classList.remove('translate-y-6');
+            
+            // Mark as revealed
+            element.classList.add(this.animatedClass);
+          }, delay);
+        }
+        
+        /**
+         * Simple debounce utility for resize events
+         */
+        debounce(func, wait) {
+          let timeout;
+          return function executedFunction(...args) {
+            const later = () => {
+              clearTimeout(timeout);
+              func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+          };
+        }
+      }
+      
+      // Initialize on DOM ready
+      document.addEventListener('DOMContentLoaded', () => {
+        new ScrollReveal();
+      });
+      
+    })();
+  </script>
+
+  <!-- Horizontal Scroll Carousel Script - FIXED VERSION -->
+  <script>
+    (function() {
+      'use strict';
+      
+      class HorizontalScrollCarousel {
+        constructor() {
+          this.scrollTrack = document.getElementById('horizontal-scroll-track');
+          
+          if (!this.scrollTrack) {
+            console.error('Horizontal scroll track not found');
+            return;
+          }
+          
+          this.isDragging = false;
+          this.startX = 0;
+          this.scrollLeft = 0;
+          
+          this.init();
+        }
+        
+        init() {
+          // Add scroll event listener for horizontal scrolling
+          this.scrollTrack.addEventListener('wheel', (e) => {
+            // Check if we're at the edges of the scroll
+            const isAtLeftEdge = this.scrollTrack.scrollLeft <= 0;
+            const isAtRightEdge = this.scrollTrack.scrollLeft + this.scrollTrack.clientWidth >= this.scrollTrack.scrollWidth - 1;
+            
+            // Only intercept vertical scroll to convert to horizontal when:
+            // 1. We're NOT at the right edge AND scrolling down (positive deltaY)
+            // 2. We're NOT at the left edge AND scrolling up (negative deltaY)
+            // 3. We're in the middle of the carousel
+            
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+              // If we're at the right edge and trying to scroll down, allow vertical scroll
+              if (isAtRightEdge && e.deltaY > 0) {
+                return; // Allow default vertical scrolling
+              }
+              
+              // If we're at the left edge and trying to scroll up, allow vertical scroll
+              if (isAtLeftEdge && e.deltaY < 0) {
+                return; // Allow default vertical scrolling
+              }
+              
+              // Otherwise, convert vertical scroll to horizontal
+              e.preventDefault();
+              this.scrollTrack.scrollLeft += e.deltaY;
+            }
+          });
+          
+          // Add drag functionality for desktop
+          this.scrollTrack.addEventListener('mousedown', (e) => {
+            this.isDragging = true;
+            this.startX = e.pageX - this.scrollTrack.offsetLeft;
+            this.scrollLeft = this.scrollTrack.scrollLeft;
+            this.scrollTrack.style.cursor = 'grabbing';
+          });
+          
+          // Mouse move
+          document.addEventListener('mousemove', (e) => {
+            if (!this.isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - this.scrollTrack.offsetLeft;
+            const walk = (x - this.startX) * 2; // Multiply for faster scrolling
+            this.scrollTrack.scrollLeft = this.scrollLeft - walk;
+          });
+          
+          // Mouse up
+          document.addEventListener('mouseup', () => {
+            this.isDragging = false;
+            this.scrollTrack.style.cursor = 'grab';
+          });
+          
+          // Mouse leave
+          document.addEventListener('mouseleave', () => {
+            this.isDragging = false;
+            this.scrollTrack.style.cursor = 'grab';
+          });
+          
+          // Touch events for mobile
+          let touchStartX = 0;
+          let scrollLeftStart = 0;
+          let isTouchScrolling = false;
+          
+          this.scrollTrack.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].pageX;
+            scrollLeftStart = this.scrollTrack.scrollLeft;
+            isTouchScrolling = true;
+          });
+          
+          this.scrollTrack.addEventListener('touchmove', (e) => {
+            if (!touchStartX) return;
+            e.preventDefault();
+            const touchX = e.touches[0].pageX;
+            const walk = touchX - touchStartX;
+            this.scrollTrack.scrollLeft = scrollLeftStart - walk;
+          });
+          
+          this.scrollTrack.addEventListener('touchend', () => {
+            touchStartX = 0;
+            isTouchScrolling = false;
+          });
+          
+          // Initialize cursor
+          this.scrollTrack.style.cursor = 'grab';
+          
+          // Add a small buffer to allow easier vertical scrolling at edges
+          this.scrollTrack.addEventListener('scroll', () => {
+            // Add a small invisible padding at the ends to make vertical scrolling easier
+            const buffer = 10;
+            const isNearRightEdge = this.scrollTrack.scrollLeft + this.scrollTrack.clientWidth >= this.scrollTrack.scrollWidth - buffer;
+            const isNearLeftEdge = this.scrollTrack.scrollLeft <= buffer;
+            
+            if (isNearRightEdge || isNearLeftEdge) {
+              this.scrollTrack.style.pointerEvents = 'none';
+              setTimeout(() => {
+                this.scrollTrack.style.pointerEvents = 'auto';
+              }, 100);
+            }
+          });
+        }
+      }
+      
+      // Initialize on DOM ready
+      document.addEventListener('DOMContentLoaded', () => {
+        new HorizontalScrollCarousel();
+      });
+      
+    })();
+  </script>
+
+  <!-- Smooth scrolling for anchor links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Skip if it's just "#"
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Update URL without scrolling
+          history.pushState(null, null, href);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

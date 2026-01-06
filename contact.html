@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================
+       META / SEO
+  ========================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Achille Industries | Web & Software Studio</title>
+
+  <meta name="description"
+        content="Get in touch with Achille Industries, a Boston-based web and software studio. Let's discuss your project and create digital solutions that drive growth." />
+
+  <meta name="keywords"
+        content="contact web design agency, Boston web studio, website consultation, software development contact, project inquiry" />
+
+  <meta name="author" content="Achille Industries" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Us — Achille Industries" />
+  <meta property="og:description"
+        content="Ready to transform your digital presence? Contact Achille Industries for web design, development, and software solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- =========================
+       FONTS
+  ========================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" 
+        rel="stylesheet" 
+        media="print" 
+        onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" 
+          rel="stylesheet" />
+  </noscript>
+
+  <!-- =========================
+       TAILWIND CDN
+  ========================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2d3e67',
+            dark: '#1d1e21',
+            light: '#f4fff3',
+            accent: '#BDA266',
+            sand: '#f8e9db'
+          },
+          fontFamily: {
+            primary: ['Inter', 'sans-serif'],
+            secondary: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Mobile-first responsive styles */
+    .contact-input {
+      transition: all 0.3s ease;
+      font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+    
+    .contact-input:focus {
+      border-color: #BDA266;
+      box-shadow: 0 0 0 3px rgba(189, 162, 102, 0.1);
+    }
+    
+    /* Improved touch targets for mobile */
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Form styling */
+    .form-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Contact info cards */
+    .info-card {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .info-card:hover {
+      border-color: #BDA266;
+      transform: translateY(-5px);
+    }
+    
+    /* Mobile-specific improvements */
+    @media (max-width: 768px) {
+      .mobile-stack {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .mobile-padding {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      
+      .mobile-text-center {
+        text-align: center;
+      }
+      
+      .mobile-full-width {
+        width: 100%;
+      }
+    }
+    
+    /* Video container for mobile */
+    .video-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    
+    /* Prevent horizontal overflow on mobile */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+    
+    /* Scroll reveal animations */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.7s ease-out;
+    }
+    
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Social icon hover effect */
+    .social-icon {
+      transition: all 0.2s ease;
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Netlify honeypot field - hidden from users but visible to bots */
+    .netlify-honeypot {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 0;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-light font-primary antialiased overflow-x-hidden">
+
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-accent focus:text-dark focus:rounded-lg">
+    Skip to main content
+  </a>
+
+  <!-- =========================
+       HEADER / NAV
+  ========================== -->
+  <header class="border-b border-white/10 relative z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3" aria-label="Achille Industries home">
+        <img
+          src="./img/logo.svg"
+          alt="Achille Industries logo"
+          class="h-8 w-8 sm:h-10 sm:w-10"
+        />
+        <span class="font-semibold tracking-wide text-sm sm:text-base">
+          Achille Industries
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex gap-6 text-sm font-semibold">
+        <li><a href="index.html" class="hover:text-accent transition-colors duration-200">Home</a></li>
+        <li><a href="services.html" class="hover:text-accent transition-colors duration-200">Services</a></li>
+        <li><a href="about.html" class="hover:text-accent transition-colors duration-200">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition-colors duration-200 text-accent font-bold">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-button"
+        class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8 touch-target"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+        <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 hidden bg-black/95 text-white transform transition-transform duration-300 ease-in-out -translate-x-full z-50"
+      aria-hidden="true"
+    >
+      <!-- Mobile Menu Header -->
+      <div class="flex items-center justify-between px-4 py-4 border-b border-white/10">
+        <span class="font-semibold tracking-wide">
+          Achille Industries
+        </span>
+        <button
+          id="close-menu"
+          class="text-2xl p-2 hover:text-accent transition-colors duration-200 touch-target"
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav class="flex flex-col items-center justify-center h-full gap-8 text-lg font-semibold mobile-padding">
+        <a href="index.html" class="hover:text-accent transition-colors duration-200 w-full text-center py-3" onclick="closeMobileMenu()">Home</a>
+        <a href="services.html" class="hover:text-accent transition-colors duration-200 w-full text-center py-3" onclick="closeMobileMenu()">Services</a>
+        <a href="about.html" class="hover:text-accent transition-colors duration-200 w-full text-center py-3" onclick="closeMobileMenu()">About</a>
+        <a href="contact.html" class="hover:text-accent transition-colors duration-200 text-accent font-bold w-full text-center py-3" onclick="closeMobileMenu()">Contact</a>
+
+        <a
+          href="mailto:ervensmachille@gmail.com"
+          class="mt-6 inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-black hover:bg-accent/90 transition-colors duration-200 touch-target mobile-full-width text-center"
+          onclick="closeMobileMenu()"
+        >
+          Email Us
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+  <main id="main-content">
+    
+    <!-- =========================
+         1. CONTACT HERO
+    ========================== -->
+    <section class="py-12 md:py-20 mobile-padding">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-3xl">
+          <!-- Eyebrow -->
+          <div class="flex items-center gap-4 mb-6" data-reveal>
+            <span class="block w-8 sm:w-12 h-px bg-accent"></span>
+            <span class="text-xs tracking-widest uppercase text-accent">
+              Get in Touch
+            </span>
+          </div>
+
+          <!-- Heading -->
+          <h1 class="font-secondary text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 md:mb-8 mobile-text-center md:text-left" data-reveal data-reveal-delay="100">
+            Let's Build Something<br class="hidden sm:block" />
+            Extraordinary Together
+          </h1>
+
+          <!-- Description -->
+          <p class="text-base sm:text-lg text-sand mb-8 md:mb-10 max-w-2xl mobile-text-center md:text-left" data-reveal data-reveal-delay="200">
+            Ready to transform your digital presence? We're here to help. Whether you need a new website, ongoing support, or strategic guidance, let's start a conversation about how we can help your business grow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         2. TWO COLUMN CONTACT LAYOUT
+    ========================== -->
+    <section id="contact" class="pb-16 md:pb-24 mobile-padding">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mobile-stack">
+          
+          <!-- LEFT COLUMN: Contact Form -->
+          <div class="order-2 lg:order-1">
+            <div class="form-card rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-10">
+              <h2 class="text-xl md:text-2xl lg:text-3xl font-secondary mb-2 mobile-text-center lg:text-left" data-reveal>
+                Send us a message
+              </h2>
+              <p class="text-sand mb-6 md:mb-8 mobile-text-center lg:text-left" data-reveal data-reveal-delay="100">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
+              
+              <!-- NETLIFY FORM INTEGRATION -->
+              <!-- 
+                Netlify Forms Configuration:
+                - method="POST": Required for Netlify form processing
+                - data-netlify="true": Tells Netlify to process this form
+                - netlify-honeypot: Spam protection (hidden from users, visible to bots)
+                - data-netlify-recaptcha: Optional CAPTCHA (only shown when necessary)
+                - hidden form-name input: Required by Netlify to identify form submissions
+              -->
+              <form 
+                id="contact-form" 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-recaptcha="true"
+                class="space-y-4 md:space-y-6"
+                netlify-honeypot="bot-field"
+              >
+                <!-- NETLIFY HIDDEN FIELDS -->
+                <!-- Hidden form name field - required by Netlify for form identification -->
+                <input type="hidden" name="form-name" value="contact" />
+                
+                <!-- Netlify honeypot field for spam protection -->
+                <!-- Hidden from users but visible to bots - if filled, submission is marked as spam -->
+                <div class="netlify-honeypot">
+                  <label>
+                    Don't fill this out if you're human:
+                    <input name="bot-field" />
+                  </label>
+                </div>
+                <!-- END NETLIFY HIDDEN FIELDS -->
+                
+                <div data-reveal data-reveal-delay="200">
+                  <label for="name" class="block text-sm font-medium text-light mb-2">
+                    Your Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="contact-input w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-light placeholder:text-sand/50 focus:outline-none focus:border-accent transition-colors duration-200 touch-target"
+                    placeholder="John Smith"
+                  />
+                </div>
+                
+                <div data-reveal data-reveal-delay="250">
+                  <label for="email" class="block text-sm font-medium text-light mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="contact-input w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-light placeholder:text-sand/50 focus:outline-none focus:border-accent transition-colors duration-200 touch-target"
+                    placeholder="john@example.com"
+                  />
+                </div>
+                
+                <div data-reveal data-reveal-delay="300">
+                  <label for="company" class="block text-sm font-medium text-light mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    class="contact-input w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-light placeholder:text-sand/50 focus:outline-none focus:border-accent transition-colors duration-200 touch-target"
+                    placeholder="Your Company"
+                  />
+                </div>
+                
+                <div data-reveal data-reveal-delay="350">
+                  <label for="service" class="block text-sm font-medium text-light mb-2">
+                    Service Interested In
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    class="contact-input w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-light focus:outline-none focus:border-accent transition-colors duration-200 touch-target"
+                  >
+                    <option value="" class="bg-dark">Select a service</option>
+                    <option value="web-design" class="bg-dark">Web Design</option>
+                    <option value="web-development" class="bg-dark">Web Development</option>
+                    <option value="digital-marketing" class="bg-dark">Digital Marketing</option>
+                    <option value="brand-strategy" class="bg-dark">Brand Strategy</option>
+                    <option value="consulting" class="bg-dark">Consulting</option>
+                    <option value="ongoing-support" class="bg-dark">Ongoing Support</option>
+                    <option value="not-sure" class="bg-dark">Not Sure Yet</option>
+                  </select>
+                </div>
+                
+                <div data-reveal data-reveal-delay="400">
+                  <label for="message" class="block text-sm font-medium text-light mb-2">
+                    Your Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    class="contact-input w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-light placeholder:text-sand/50 focus:outline-none focus:border-accent transition-colors duration-200 resize-none touch-target"
+                    placeholder="Tell us about your project, timeline, and goals..."
+                  ></textarea>
+                </div>
+                
+                <!-- NETLIFY CAPTCHA -->
+                <!-- 
+                  Optional reCAPTCHA - Netlify will only show this when it detects
+                  potential spam. Regular users typically won't see it.
+                -->
+                <div data-reveal data-reveal-delay="450">
+                  <div data-netlify-recaptcha="true"></div>
+                </div>
+                <!-- END NETLIFY CAPTCHA -->
+                
+                <div data-reveal data-reveal-delay="500">
+                  <button
+                    type="submit"
+                    class="w-full py-3 md:py-4 bg-accent text-dark font-semibold rounded-lg hover:bg-accent/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark touch-target"
+                  >
+                    Send Message
+                  </button>
+                </div>
+                
+                <p class="text-xs sm:text-sm text-sand/70 text-center mt-4 md:mt-6" data-reveal data-reveal-delay="550">
+                  We respect your privacy. Your information will never be shared with third parties.
+                </p>
+              </form>
+            </div>
+          </div>
+          
+          <!-- RIGHT COLUMN: Contact Information -->
+          <div class="order-1 lg:order-2">
+            <!-- Contact Info Cards -->
+            <div class="space-y-6 md:space-y-8 mb-8 md:mb-12">
+              <div class="info-card rounded-xl p-5 md:p-6" data-reveal>
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-lg bg-accent/20 text-accent flex-shrink-0">
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-lg md:text-xl font-secondary mb-2">Email</h3>
+                    <p class="text-sand mb-2 text-sm md:text-base">For project inquiries and consultations</p>
+                    <a href="mailto:ervensmachille@gmail.com" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 text-sm md:text-base break-all">
+                      ervensmachille@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- SOCIAL MEDIA CARD (Replaced Phone Number) -->
+              <div class="info-card rounded-xl p-5 md:p-6" data-reveal data-reveal-delay="100">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-lg bg-accent/20 text-accent flex-shrink-0">
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008.03 10.95c.58.1.79-.25.79-.56v-2.03c-3.27.71-3.96-1.57-3.96-1.57-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.7.08-.70 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.56-2.61-.3-5.36-1.3-5.36-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.53.12-3.18 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.88.12 3.18a4.5 4.5 0 011.2 3.15c0 4.52-2.75 5.5-5.38 5.8.42.36.78 1.07.78 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-lg md:text-xl font-secondary mb-2">Connect With Us</h3>
+                    <p class="text-sand mb-3 text-sm md:text-base">Follow us for updates, tips, and insights</p>
+                    <div class="flex gap-3 md:gap-4">
+                      <!-- GitHub -->
+                      <a href="https://github.com/ErvensAchille" target="_blank" aria-label="GitHub" rel="noopener noreferrer"
+                         class="social-icon text-sand hover:text-accent transition-colors duration-200">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008.03 10.95c.58.1.79-.25.79-.56v-2.03c-3.27.71-3.96-1.57-3.96-1.57-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.7.08-.70 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.56-2.61-.3-5.36-1.3-5.36-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.53.12-3.18 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.88.12 3.18a4.5 4.5 0 011.2 3.15c0 4.52-2.75 5.5-5.38 5.8.42.36.78 1.07.78 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
+                        </svg>
+                      </a>
+                      
+                      <!-- LinkedIn -->
+                      <a href="https://www.linkedin.com/in/ervens-achille-profile/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
+                         class="social-icon text-sand hover:text-accent transition-colors duration-200">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M4.98 3.5C3.33 3.5 2 4.82 2 6.48c0 1.64 1.33 2.98 2.98 2.98S7.97 8.12 7.97 6.48C7.97 4.82 6.63 3.5 4.98 3.5zM2.4 20h5.15V9.53H2.4V20zM9.75 9.53V20h5.15v-5.67c0-3.03 3.87-3.28 3.87 0V20H24v-6.64c0-6.56-7.13-6.31-8.99-3.09V9.53H9.75z" />
+                        </svg>
+                      </a>
+                      
+                      <!-- Instagram -->
+                      <a href="https://www.instagram.com/achilleindustries" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
+                         class="social-icon text-sand hover:text-accent transition-colors duration-200">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1.5 1.5 0 11-3 .001A1.5 1.5 0 0117.5 6.5z" />
+                        </svg>
+                      </a>
+                      
+                      <!-- Twitter/X -->
+                      <a href="https://x.com/achilleervens" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
+                         class="social-icon text-sand hover:text-accent transition-colors duration-200">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                        </svg>
+                      </a>
+                      
+                      <!-- Email -->
+                      <a href="mailto:ervensmachille@gmail.com" aria-label="Email"
+                         class="social-icon text-sand hover:text-accent transition-colors duration-200">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13l8-6.99V6H4zm16 2.1l-7.5 5.24a1 1 0 01-1 0L4 8.1V18h16V8.1z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="info-card rounded-xl p-5 md:p-6" data-reveal data-reveal-delay="150">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-lg bg-accent/20 text-accent flex-shrink-0">
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-lg md:text-xl font-secondary mb-2">Location</h3>
+                    <p class="text-sand mb-2 text-sm md:text-base">Based in Boston, serving clients nationwide</p>
+                    <address class="not-italic text-sand text-sm md:text-base">
+                      Boston, Massachusetts<br />
+                      United States
+                    </address>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Additional Info -->
+            <div class="space-y-4 md:space-y-6" data-reveal data-reveal-delay="200">
+              <h3 class="text-lg md:text-xl font-secondary">Response Time</h3>
+              <p class="text-sand text-sm md:text-base">
+                We typically respond to all inquiries within <strong class="text-accent">24 hours</strong> during business days. For urgent matters, please include "URGENT" in your email subject line.
+              </p>
+              
+              <h3 class="text-lg md:text-xl font-secondary mt-6 md:mt-8">Schedule a Call</h3>
+              <p class="text-sand mb-4 text-sm md:text-base">
+                Prefer to schedule a specific time to chat? Click below to book a 30-minute consultation call.
+              </p>
+              <a
+                href="https://calendly.com/ervensmachille"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 px-5 md:px-6 py-3 border border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-dark transition-all duration-200 touch-target mobile-full-width text-sm md:text-base"
+              >
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Book a Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         3. FAQ & VIDEO SECTION
+    ========================== -->
+    <section class="py-16 md:py-24 bg-dark/50 border-t border-white/10 mobile-padding">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-10 md:mb-16">
+          <h2 class="font-secondary text-2xl sm:text-3xl md:text-4xl mb-4" data-reveal>
+            Frequently Asked Questions
+          </h2>
+          <p class="text-sand text-base md:text-lg" data-reveal data-reveal-delay="100">
+            Common questions about working with us
+          </p>
+        </div>
+        
+        <!-- Two Column Layout: FAQs & Video -->
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mobile-stack">
+          
+          <!-- Left Column: FAQs -->
+          <div class="order-2 lg:order-1">
+            <div class="space-y-6">
+              <!-- FAQ 1 -->
+              <div class="border-b border-white/10 pb-6" data-reveal>
+                <button class="faq-question flex items-center justify-between w-full text-left touch-target">
+                  <h3 class="text-lg md:text-xl font-secondary pr-4">What's your typical project timeline?</h3>
+                  <svg class="w-5 h-5 md:w-6 md:h-6 text-accent flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="faq-answer mt-4 text-sand text-sm md:text-base hidden">
+                  <p>Project timelines vary based on scope and complexity. A typical website project takes 4-8 weeks from discovery to launch. We'll provide a detailed timeline after our initial consultation and project scoping.</p>
+                </div>
+              </div>
+              
+              <!-- FAQ 2 -->
+              <div class="border-b border-white/10 pb-6" data-reveal data-reveal-delay="100">
+                <button class="faq-question flex items-center justify-between w-full text-left touch-target">
+                  <h3 class="text-lg md:text-xl font-secondary pr-4">Do you work with businesses outside of Boston?</h3>
+                  <svg class="w-5 h-5 md:w-6 md:h-6 text-accent flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="faq-answer mt-4 text-sand text-sm md:text-base hidden">
+                  <p>Absolutely! While we're based in Boston, we serve clients nationwide and have experience working with organizations across the United States. Our remote collaboration process is streamlined for effective communication regardless of location.</p>
+                </div>
+              </div>
+              
+              <!-- FAQ 3 -->
+              <div class="border-b border-white/10 pb-6" data-reveal data-reveal-delay="150">
+                <button class="faq-question flex items-center justify-between w-full text-left touch-target">
+                  <h3 class="text-lg md:text-xl font-secondary pr-4">What's included in your ongoing support?</h3>
+                  <svg class="w-5 h-5 md:w-6 md:h-6 text-accent flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="faq-answer mt-4 text-sand text-sm md:text-base hidden">
+                  <p>Our ongoing support includes regular updates, security monitoring, performance optimization, backup management, and technical support. We offer tiered support plans to match your specific needs and budget.</p>
+                </div>
+              </div>
+              
+              <!-- FAQ 4 -->
+              <div class="border-b border-white/10 pb-6" data-reveal data-reveal-delay="200">
+                <button class="faq-question flex items-center justify-between w-full text-left touch-target">
+                  <h3 class="text-lg md:text-xl font-secondary pr-4">Do you provide design mockups before development?</h3>
+                  <svg class="w-5 h-5 md:w-6 md:h-6 text-accent flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="faq-answer mt-4 text-sand text-sm md:text-base hidden">
+                  <p>Yes! We provide detailed design mockups and prototypes for your review before any development begins. This ensures we're aligned on vision, user experience, and aesthetics before moving forward.</p>
+                </div>
+              </div>
+              
+              <!-- FAQ 5 -->
+              <div class="pb-6" data-reveal data-reveal-delay="250">
+                <button class="faq-question flex items-center justify-between w-full text-left touch-target">
+                  <h3 class="text-lg md:text-xl font-secondary pr-4">What's your revision process?</h3>
+                  <svg class="w-5 h-5 md:w-6 md:h-6 text-accent flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="faq-answer mt-4 text-sand text-sm md:text-base hidden">
+                  <p>We include 2-3 rounds of revisions in our standard process, depending on the project scope. We believe in getting it right, so we work collaboratively until you're completely satisfied with the final product.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column: Video -->
+          <div class="order-1 lg:order-2">
+            <div class="lg:sticky lg:top-24">
+              <!-- Simple Video Box -->
+              <div class="bg-dark rounded-xl md:rounded-2xl overflow-hidden border border-white/10 shadow-xl video-container" data-reveal>
+                <!-- Video Container -->
+                <div class="aspect-video relative">
+                  <!-- Silent Looping Video -->
+                  <video 
+                    class="w-full h-full object-cover"
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    poster="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&q=80"
+                  >
+                    <source src="img/5083554-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                    <!-- Fallback image -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-dark to-gray-900 flex items-center justify-center">
+                      <p class="text-sand text-center p-8">Video not supported</p>
+                    </div>
+                  </video>
+                  
+                  <!-- Subtle gradient overlay for better readability -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="bg-dark text-sand border-t border-white/10 mobile-padding">
+    <div class="max-w-7xl mx-auto py-8 md:py-12 grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
+      <!-- Company Mission -->
+      <div>
+        <h2 class="text-light text-lg md:text-xl font-semibold mb-3 md:mb-4">
+          Achille Industries
+        </h2>
+        <p class="text-xs md:text-sm mb-4 md:mb-6 text-sand">
+          Helping businesses stand out through thoughtful design,
+          scalable development, and long-term digital strategy.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-3 md:gap-4">
+          <!-- GitHub -->
+          <a href="https://github.com/ErvensAchille" target="_blank" aria-label="GitHub" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200 touch-target p-1">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008.03 10.95c.58.1.79-.25.79-.56v-2.03c-3.27.71-3.96-1.57-3.96-1.57-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.7.08-.70 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.56-2.61-.3-5.36-1.3-5.36-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.53.12-3.18 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.88.12 3.18a4.5 4.5 0 011.2 3.15c0 4.52-2.75 5.5-5.38 5.8.42.36.78 1.07.78 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ervens-achille-profile/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200 touch-target p-1">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5C3.33 3.5 2 4.82 2 6.48c0 1.64 1.33 2.98 2.98 2.98S7.97 8.12 7.97 6.48C7.97 4.82 6.63 3.5 4.98 3.5zM2.4 20h5.15V9.53H2.4V20zM9.75 9.53V20h5.15v-5.67c0-3.03 3.87-3.28 3.87 0V20H24v-6.64c0-6.56-7.13-6.31-8.99-3.09V9.53H9.75z" />
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:ervensmachille@gmail.com" aria-label="Email"
+             class="text-sand hover:text-accent transition-colors duration-200 touch-target p-1">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13l8-6.99V6H4zm16 2.1l-7.5 5.24a1 1 0 01-1 0L4 8.1V18h16V8.1z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/achilleindustries" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200 touch-target p-1">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1.5 1.5 0 11-3 .001A1.5 1.5 0 0117.5 6.5z" />
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a href="https://x.com/achilleervens" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
+             class="text-sand hover:text-accent transition-colors duration-200 touch-target p-1">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Solutions -->
+      <div>
+        <h3 class="text-light font-semibold mb-3 md:mb-4 text-sm md:text-base">Solutions</h3>
+        <ul class="space-y-1 md:space-y-2 text-xs md:text-sm">
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200 block py-1">Web Design</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200 block py-1">Brand Systems</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200 block py-1">Consulting</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200 block py-1">E-commerce</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200 block py-1">Strategy</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-light font-semibold mb-3 md:mb-4 text-sm md:text-base">Support</h3>
+        <ul class="space-y-1 md:space-y-2 text-xs md:text-sm">
+          <li><a href="#contact" class="hover:text-light transition-colors duration-200 text-accent font-bold block py-1">Contact</a></li>
+          <li><a href="#faq" class="hover:text-light transition-colors duration-200 block py-1">FAQ</a></li>
+          <li><a href="/services.html" class="hover:text-light transition-colors duration-200 block py-1">Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="text-light font-semibold mb-3 md:mb-4 text-sm md:text-base">Company</h3>
+        <ul class="space-y-1 md:space-y-2 text-xs md:text-sm">
+          <li><a href="/#about" class="hover:text-light transition-colors duration-200 block py-1">About</a></li>
+          <li><a href="/#work" class="hover:text-light transition-colors duration-200 block py-1">Portfolio</a></li>
+          <li><a href="/privacy.html" class="hover:text-light transition-colors duration-200 block py-1">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 text-center text-xs md:text-sm py-4 px-4 md:px-6">
+      &copy; <span id="year"></span> Achille Industries · Boston, MA
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- Year Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const openMenu = document.getElementById('menu-button');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('#mobile-menu a');
+
+    function openMobileMenu() {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => {
+        mobileMenu.classList.remove('-translate-x-full');
+      }, 10);
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      openMenu.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('-translate-x-full');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      openMenu.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    openMenu.addEventListener('click', openMobileMenu);
+    closeMenu.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on links
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        closeMobileMenu();
+      }
+    });
+  </script>
+
+  <!-- Form Submission -->
+  <script>
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+      // NETLIFY FORM HANDLING - REMOVED CLIENT-SIDE SUBMISSION
+      // Netlify will handle the form submission automatically
+      // when the site is deployed to Netlify
+      
+      // We're keeping the alert for user feedback, but Netlify will
+      // redirect to a success page or show inline success message
+      contactForm.addEventListener('submit', async (e) => {
+        // Netlify handles the submission automatically
+        // We'll just show a loading state for better UX
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        // Show loading state
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Netlify will handle the actual submission
+        // The form will redirect to Netlify's success page
+        // or show inline success based on Netlify configuration
+        
+        // Reset button after a timeout (in case submission fails)
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }, 5000);
+      });
+    }
+  </script>
+
+  <!-- FAQ Accordion -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('svg');
+        
+        // Toggle answer visibility
+        answer.classList.toggle('hidden');
+        
+        // Rotate icon
+        icon.style.transform = answer.classList.contains('hidden') 
+          ? 'rotate(0deg)' 
+          : 'rotate(180deg)';
+      });
+    });
+  </script>
+
+  <!-- Scroll Reveal Animation -->
+  <script>
+    (function() {
+      'use strict';
+      
+      class ScrollReveal {
+        constructor() {
+          this.animatedClass = 'revealed';
+          this.elements = document.querySelectorAll('[data-reveal]');
+          this.threshold = window.innerWidth < 768 ? 0.1 : 0.2;
+          
+          this.init();
+        }
+        
+        init() {
+          if (!this.elements.length) return;
+          
+          this.observer = new IntersectionObserver(
+            (entries) => this.handleIntersect(entries),
+            { 
+              threshold: this.threshold,
+              rootMargin: '50px' // Load slightly before they enter viewport
+            }
+          );
+          
+          this.elements.forEach(element => {
+            this.observer.observe(element);
+          });
+          
+          // Adjust threshold on resize
+          window.addEventListener('resize', this.debounce(() => {
+            this.updateThreshold();
+          }, 150));
+        }
+        
+        updateThreshold() {
+          if (this.observer) {
+            this.threshold = window.innerWidth < 768 ? 0.1 : 0.2;
+            
+            // Disconnect and recreate with new threshold
+            this.observer.disconnect();
+            
+            this.observer = new IntersectionObserver(
+              (entries) => this.handleIntersect(entries),
+              { 
+                threshold: this.threshold,
+                rootMargin: '50px'
+              }
+            );
+            
+            // Re-observe elements
+            this.elements.forEach(element => {
+              this.observer.observe(element);
+            });
+          }
+        }
+        
+        handleIntersect(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const delay = entry.target.getAttribute('data-reveal-delay') || 0;
+              
+              setTimeout(() => {
+                entry.target.classList.add(this.animatedClass);
+                this.observer.unobserve(entry.target);
+              }, delay);
+            }
+          });
+        }
+        
+        debounce(func, wait) {
+          let timeout;
+          return function executedFunction(...args) {
+            const later = () => {
+              clearTimeout(timeout);
+              func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+          };
+        }
+      }
+      
+      // Initialize on DOM ready
+      document.addEventListener('DOMContentLoaded', () => {
+        new ScrollReveal();
+      });
+    })();
+  </script>
+
+  <!-- Smooth scrolling for anchor links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Skip if it's just "#"
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Update URL without scrolling
+          history.pushState(null, null, href);
+        }
+      });
+    });
+  </script>
+
+  <!-- Mobile video optimization -->
+  <script>
+    // Pause video when not in viewport on mobile
+    if (window.innerWidth < 768) {
+      const video = document.querySelector('video');
+      if (video) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                video.play();
+              } else {
+                video.pause();
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+        observer.observe(video);
+      }
+    }
+  </script>
+</body>
+</html>
