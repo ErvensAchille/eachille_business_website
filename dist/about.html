@@ -42,6 +42,9 @@
   ========================== -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Calendly CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+
   <script>
     tailwind.config = {
       theme: {
@@ -234,7 +237,7 @@
     ========================== -->
     <section class="relative min-h-[80vh] flex items-center pt-16 md:pt-0">
       <!-- Background Image -->
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=80');"></div>
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('img/aboutHero.jpg');"></div>
       <div class="absolute inset-0 hero-overlay"></div>
       
       <div class="relative max-w-7xl mx-auto px-6 py-20 md:py-32">
@@ -573,8 +576,8 @@
               Let's discuss how Achille Industries can help you achieve your digital goals with our unique blend of strategic thinking and technical excellence.
             </p>
             <div class="mt-12 flex items-center justify-center gap-x-8 lg:justify-start">
-              <a href="/#contact" class="rounded-lg bg-accent px-6 py-3.5 text-base font-semibold text-dark shadow-lg hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200">Get Started</a>
-              <a href="/work.html" class="text-base font-semibold leading-6 text-white hover:text-gray-100 transition-colors duration-200">
+              <a href="contact.html" class="rounded-lg bg-accent px-6 py-3.5 text-base font-semibold text-dark shadow-lg hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200">Get Started</a>
+              <a href="index.html" class="text-base font-semibold leading-6 text-white hover:text-gray-100 transition-colors duration-200">
                 View Our Work <span aria-hidden="true" class="ml-2">→</span>
               </a>
             </div>
@@ -710,6 +713,9 @@
   <!-- JavaScript Libraries -->
   <!-- Typed.js for typing effect -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Calendly Script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
   <!-- JavaScript -->
   <!-- Year Script -->
@@ -863,6 +869,20 @@
         }
       });
     });
+  </script>
+
+  <!-- Calendly Widget Initialization -->
+  <script type="text/javascript">
+    // Initialize Calendly immediately on page load
+    window.onload = function() {
+      Calendly.initBadgeWidget({
+        url: "https://calendly.com/ervensmachille",
+        text: "Schedule Project Consultation",
+        color: "#BDA266",
+        textColor: "#1d1e21",
+        branding: false,
+      });
+    };
   </script>
 
 </body>

@@ -97,6 +97,39 @@
       transform: translateY(-5px);
     }
     
+    /* Video styling - hide all controls and ensure it plays */
+    .silent-video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Hide all video controls and play button */
+    .silent-video::-webkit-media-controls {
+      display: none !important;
+    }
+    
+    .silent-video::-webkit-media-controls-enclosure {
+      display: none !important;
+    }
+    
+    .silent-video::-webkit-media-controls-panel {
+      display: none !important;
+    }
+    
+    .silent-video::-webkit-media-controls-play-button {
+      display: none !important;
+    }
+    
+    .silent-video::-webkit-media-controls-start-playback-button {
+      display: none !important;
+    }
+    
+    /* Firefox */
+    .silent-video::-moz-media-controls {
+      display: none !important;
+    }
+    
     /* Mobile-specific improvements */
     @media (max-width: 768px) {
       .mobile-stack {
@@ -115,6 +148,11 @@
       
       .mobile-full-width {
         width: 100%;
+      }
+      
+      /* Ensure video plays on mobile */
+      .video-container video {
+        -webkit-tap-highlight-color: transparent;
       }
     }
     
@@ -161,6 +199,17 @@
       height: 0;
       width: 0;
       z-index: -1;
+    }
+    
+    /* Video overlay to prevent accidental clicks */
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -652,13 +701,19 @@
               <div class="bg-dark rounded-xl md:rounded-2xl overflow-hidden border border-white/10 shadow-xl video-container" data-reveal>
                 <!-- Video Container -->
                 <div class="aspect-video relative">
-                  <!-- Silent Looping Video -->
+                  <!-- Silent Looping Video - UPDATED FOR IMMEDIATE PLAYBACK -->
                   <video 
-                    class="w-full h-full object-cover"
+                    class="silent-video"
                     autoplay 
                     muted 
                     loop 
                     playsinline
+                    preload="auto"
+                    webkit-playsinline
+                    x5-playsinline
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="true"
+                    x5-video-orientation="portrait"
                     poster="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&q=80"
                   >
                     <source src="img/5083554-uhd_4096_2160_25fps.mp4" type="video/mp4">
@@ -667,6 +722,9 @@
                       <p class="text-sand text-center p-8">Video not supported</p>
                     </div>
                   </video>
+                  
+                  <!-- Video overlay to prevent interactions -->
+                  <div class="video-overlay"></div>
                   
                   <!-- Subtle gradient overlay for better readability -->
                   <div class="absolute inset-0 bg-gradient-to-t from-dark/30 via-transparent to-transparent"></div>
@@ -979,6 +1037,49 @@
     })();
   </script>
 
+  <!-- Video Playback Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.querySelector('.silent-video');
+      
+      if (video) {
+        // Force video to play immediately and hide all controls
+        video.setAttribute('controls', 'false');
+        video.removeAttribute('controls');
+        
+        // Additional attributes to ensure autoplay works
+        video.setAttribute('playsinline', 'true');
+        video.setAttribute('webkit-playsinline', 'true');
+        video.setAttribute('x5-playsinline', 'true');
+        video.setAttribute('x5-video-player-type', 'h5');
+        
+        // Try to play the video
+        const playVideo = () => {
+          video.play().catch(error => {
+            console.log('Video autoplay failed:', error);
+            // If autoplay fails, try playing on user interaction
+            document.addEventListener('click', function playOnInteraction() {
+              video.play().catch(() => {});
+              document.removeEventListener('click', playOnInteraction);
+            }, { once: true });
+          });
+        };
+        
+        // Try playing immediately
+        playVideo();
+        
+        // Also try when page is fully loaded
+        window.addEventListener('load', playVideo);
+        
+        // Ensure video loops properly
+        video.addEventListener('ended', function() {
+          this.currentTime = 0;
+          this.play().catch(() => {});
+        });
+      }
+    });
+  </script>
+
   <!-- Smooth scrolling for anchor links -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1003,25 +1104,42 @@
     });
   </script>
 
-  <!-- Mobile video optimization -->
+  <!-- Mobile video optimization - UPDATED TO ENSURE PLAYBACK -->
   <script>
-    // Pause video when not in viewport on mobile
+    // Ensure video plays on mobile and doesn't get paused
     if (window.innerWidth < 768) {
-      const video = document.querySelector('video');
+      const video = document.querySelector('.silent-video');
       if (video) {
+        // More aggressive play policy for mobile
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
-                video.play();
+                video.play().catch(() => {
+                  // If autoplay fails, wait for any user interaction
+                  document.addEventListener('touchstart', function playOnTouch() {
+                    video.play().catch(() => {});
+                    document.removeEventListener('touchstart', playOnTouch);
+                  }, { once: true });
+                });
               } else {
-                video.pause();
+                // Don't pause on mobile - let it continue playing
+                // This ensures the video doesn't stop when slightly scrolled
+                video.play().catch(() => {});
               }
             });
           },
-          { threshold: 0.5 }
+          { threshold: 0.1 } // Very low threshold to keep playing
         );
         observer.observe(video);
+        
+        // Also try to play on page load
+        video.play().catch(() => {
+          // Fallback if autoplay fails
+          setTimeout(() => {
+            video.play().catch(() => {});
+          }, 1000);
+        });
       }
     }
   </script>

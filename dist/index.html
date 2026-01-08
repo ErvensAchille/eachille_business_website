@@ -375,13 +375,10 @@
           <div class="w-full rounded-2xl shadow-xl border border-white/10 overflow-hidden h-[400px] relative">
             
             <!-- Dynamic Background Image -->
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('img/phonecollection.png');"></div>
 
-            <!-- Overlay -->
-            <div class="absolute inset-0 bg-dark/70"></div>
-
-            <!-- Content -->
-            <div class="relative p-8 flex flex-col h-full justify-between">
+            <!-- Content (hidden on mobile, visible on desktop) -->
+            <div class="relative p-8 flex flex-col h-full justify-between hidden lg:flex">
               <!-- Icon -->
               <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center">
                 <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -426,7 +423,7 @@
             <div class="w-full rounded-2xl shadow-xl border border-white/10 overflow-hidden h-[75vh] relative">
               
               <!-- Dynamic Background Image -->
-              <div id="sticky-image" class="absolute inset-0 bg-cover bg-center transition-all duration-700" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');"></div>
+              <div id="sticky-image" class="absolute inset-0 bg-cover bg-center transition-all duration-500" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');"></div>
 
               <!-- Overlay -->
               <div class="absolute inset-0 bg-dark/70"></div>
@@ -435,18 +432,18 @@
               <div class="relative p-8 flex flex-col h-full justify-between">
                 <!-- Icon -->
                 <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center">
-                  <svg id="sticky-icon" class="w-8 h-8 text-accent transition-all duration-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <svg id="sticky-icon" class="w-8 h-8 text-accent transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 
                 <!-- Main Text -->
                 <div>
-                  <h3 id="sticky-title" class="text-2xl md:text-3xl font-secondary mb-4 text-light leading-tight transition-all duration-500">
+                  <h3 id="sticky-title" class="text-2xl md:text-3xl font-secondary mb-4 text-light leading-tight transition-all duration-300">
                     Discover our website design and development services
                   </h3>
                   
-                  <p id="sticky-description" class="text-sand text-lg leading-relaxed transition-all duration-500">
+                  <p id="sticky-description" class="text-sand text-lg leading-relaxed transition-all duration-300">
                     Full-service agency support with ongoing optimization and management capabilities tailored to your unique business needs.
                   </p>
                 </div>
@@ -454,7 +451,7 @@
                 <!-- Footer -->
                 <div>
                   <div class="w-16 h-0.5 bg-accent/50 mb-4"></div>
-                  <p id="sticky-footer" class="text-sand/80 text-sm transition-all duration-500">
+                  <p id="sticky-footer" class="text-sand/80 text-sm transition-all duration-300">
                     Every project begins with a comprehensive strategy session to ensure alignment with your business objectives and target audience.
                   </p>
                   
@@ -613,15 +610,15 @@
           rel="noopener noreferrer"
         >
           <div
-            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
             style="background-image:url('img/coycollective.png');"
           ></div>
-          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
-          <div class="relative h-full flex flex-col items-center justify-center text-center p-8">
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <h3 class="text-3xl md:text-4xl font-secondary mb-3">
               Coy Collective
             </h3>
-            <span class="text-sand opacity-0 group-hover:opacity-100 transition text-sm">
+            <span class="text-sand text-sm">
               View Project →
             </span>
           </div>
@@ -635,15 +632,15 @@
           rel="noopener noreferrer"
         >
           <div
-            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
             style="background-image:url('img/tmtv.png');"
           ></div>
-          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
-          <div class="relative h-full flex flex-col items-center justify-center text-center p-8">
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <h3 class="text-3xl md:text-4xl font-secondary mb-3">
               The Museum TV
             </h3>
-            <span class="text-sand opacity-0 group-hover:opacity-100 transition text-sm">
+            <span class="text-sand text-sm">
               View Project →
             </span>
           </div>
@@ -657,15 +654,15 @@
           rel="noopener noreferrer"
         >
           <div
-            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
             style="background-image:url('img/fouche.png');"
           ></div>
-          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
-          <div class="relative h-full flex flex-col items-center justify-center text-center p-8">
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <h3 class="text-3xl md:text-4xl font-secondary mb-3">
               The Law Offices of Joe Fouché
             </h3>
-            <span class="text-sand opacity-0 group-hover:opacity-100 transition text-sm">
+            <span class="text-sand text-sm">
               View Project →
             </span>
           </div>
@@ -679,15 +676,15 @@
           rel="noopener noreferrer"
         >
           <div
-            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
             style="background-image:url('img/nxtera.png');"
           ></div>
-          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
-          <div class="relative h-full flex flex-col items-center justify-center text-center p-8">
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <h3 class="text-3xl md:text-4xl font-secondary mb-3">
               NXT Era Panthers
             </h3>
-            <span class="text-sand opacity-0 group-hover:opacity-100 transition text-sm">
+            <span class="text-sand text-sm">
               View Project →
             </span>
           </div>
@@ -708,7 +705,7 @@
     </section>
 
     <!-- =========================
-         4. PROCESS (HOW IT WORKS)
+         4. PROCESS (HOW IT WORKS) - UPDATED WITH 5 TABS
     ========================== -->
     <section id="process" class="py-24 bg-dark text-light overflow-hidden">
       <div
@@ -733,29 +730,27 @@
             development process
           </h2>
 
-          <!-- Tabs -->
+          <!-- Tabs - Updated to include Scale tab -->
           <div class="flex gap-4 md:gap-8 border-b border-white/20 mb-8 md:mb-10 overflow-x-auto pb-1">
             <button class="process-tab active whitespace-nowrap" data-step="discover">Discover</button>
             <button class="process-tab whitespace-nowrap" data-step="design">Design</button>
             <button class="process-tab whitespace-nowrap" data-step="develop">Develop</button>
             <button class="process-tab whitespace-nowrap" data-step="deploy">Deploy</button>
+            <button class="process-tab whitespace-nowrap" data-step="scale">Scale</button>
           </div>
 
           <!-- Content -->
-          <div id="process-content" class="transition-all duration-500">
+          <div id="process-content" class="transition-all duration-300">
             <h3 class="text-2xl md:text-3xl font-secondary mb-4 md:mb-6 text-light" id="process-title">
               Discover
             </h3>
 
             <p class="mb-4 md:mb-6 text-base md:text-lg text-sand" id="process-text-1">
-              We'll audit your existing site, understand technical and performance
-              requirements, and explore your ambitions through research and
-              workshops.
+              We start by deeply understanding your business goals, target audience, and competitive landscape. Through workshops, audits, and research, we establish a clear foundation for success.
             </p>
 
             <p class="mb-8 md:mb-10 text-base md:text-lg text-sand" id="process-text-2">
-              This ensures the website is perfectly aligned with your business
-              goals before design begins.
+              This phase ensures every design and development decision is strategically aligned with your vision and measurable objectives.
             </p>
 
             <a
@@ -774,7 +769,7 @@
             id="process-image"
             src="./img/discover.jpg"
             alt="Process example"
-            class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl transition-all duration-700 opacity-100"
+            class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl transition-all duration-300 opacity-100"
             loading="lazy"
           />
         </div>
@@ -1125,32 +1120,38 @@
     });
   </script>
 
-  <!-- Process Section Script -->
+  <!-- Process Section Script - UPDATED WITH 5 STEPS -->
   <script>
     const processData = {
       discover: {
         title: "Discover",
-        text1: "We'll audit your existing site, understand technical and performance requirements, and explore your ambitions through research and workshops.",
-        text2: "This ensures the website is perfectly aligned with your business goals before design begins.",
+        text1: "We start by deeply understanding your business goals, target audience, and competitive landscape. Through workshops, audits, and research, we establish a clear foundation for success.",
+        text2: "This phase ensures every design and development decision is strategically aligned with your vision and measurable objectives.",
         image: "./img/discover.jpg"
       },
       design: {
         title: "Design",
-        text1: "We design intuitive, brand-aligned interfaces focused on clarity, usability, and conversion.",
-        text2: "Every decision is intentional, informed by research and validated through feedback.",
+        text1: "We craft intuitive, brand-aligned interfaces focused on clarity, usability, and conversion. Every design decision is intentional, informed by research and validated through user feedback.",
+        text2: "From wireframes to high-fidelity prototypes, we ensure the user experience is seamless and delightful across all devices.",
         image: "./img/design.jpg"
       },
       develop: {
         title: "Develop",
-        text1: "Your site is built using modern, reliable technologies with performance and scalability in mind.",
-        text2: "We test across devices and browsers to ensure stability and speed.",
+        text1: "Your site is built using modern, reliable technologies with performance and scalability at the forefront. We implement best practices for code quality, security, and maintainability.",
+        text2: "We test across devices and browsers to ensure stability, speed, and accessibility for all users.",
         image: "./img/develop.jpg"
       },
       deploy: {
         title: "Deploy",
-        text1: "After final testing, we launch confidently with monitoring and support in place.",
-        text2: "You'll receive documentation and guidance to manage your site going forward.",
+        text1: "After rigorous testing and optimization, we launch with confidence, monitoring performance and user feedback. We ensure a smooth transition with minimal disruption to your business.",
+        text2: "You'll receive comprehensive documentation and training to manage your site effectively going forward.",
         image: "./img/deploy.jpg"
+      },
+      scale: {
+        title: "Scale",
+        text1: "We don't just launch and leave. We provide ongoing support, analytics, and optimization to help your digital presence grow alongside your business.",
+        text2: "From performance monitoring to feature enhancements, we're your long-term partner in digital success.",
+        image: "./img/scale.jpg"
       }
     };
 
@@ -1167,23 +1168,24 @@
 
         const step = processData[tab.dataset.step];
 
-        // Animate text out
-        title.classList.add("opacity-0", "translate-y-4");
-        text1.classList.add("opacity-0", "translate-y-4");
-        text2.classList.add("opacity-0", "translate-y-4");
+        // FAST TRANSITION: Animate out immediately
+        title.classList.add("opacity-0", "translate-y-2");
+        text1.classList.add("opacity-0", "translate-y-2");
+        text2.classList.add("opacity-0", "translate-y-2");
         image.classList.add("opacity-0");
 
+        // VERY FAST DELAY: Changed to 50ms for instant feel
         setTimeout(() => {
           title.textContent = step.title;
           text1.textContent = step.text1;
           text2.textContent = step.text2;
           image.src = step.image;
 
-          title.classList.remove("opacity-0", "translate-y-4");
-          text1.classList.remove("opacity-0", "translate-y-4");
-          text2.classList.remove("opacity-0", "translate-y-4");
+          title.classList.remove("opacity-0", "translate-y-2");
+          text1.classList.remove("opacity-0", "translate-y-2");
+          text2.classList.remove("opacity-0", "translate-y-2");
           image.classList.remove("opacity-0");
-        }, 300);
+        }, 50); // Ultra-fast transition
       });
     });
 
