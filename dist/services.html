@@ -86,13 +86,16 @@
     }
   </script>
 
+  <!-- Calendly CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+
   <style>
-    /* Process tabs */
+    /* Process tabs - ULTRA FAST */
     .process-tab {
       padding-bottom: 0.75rem;
       font-weight: 600;
       color: rgba(244, 255, 243, 0.5);
-      transition: color .3s, border .3s;
+      transition: color 0.2s, border 0.2s;
       cursor: pointer;
       background: none;
       border: none;
@@ -159,7 +162,7 @@
       opacity: 1;
     }
 
-    /* Enhance reveal transitions */
+    /* Enhance reveal transitions - FASTER */
     [data-reveal] {
       will-change: transform, opacity;
     }
@@ -195,6 +198,14 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(to bottom, rgba(29, 30, 33, 0.85), rgba(29, 30, 33, 0.7));
+    }
+
+    /* Custom fast transitions for process section */
+    .process-fast-transition {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    .process-fast-opacity {
+      transition: opacity 0.2s ease !important;
     }
   </style>
 </head>
@@ -293,7 +304,7 @@
     ========================== -->
     <section class="hero-image">
       <!-- Image Background -->
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=1920&q=80');"></div>
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/ServicesHero.jpg');"></div>
       
       <!-- Overlay -->
       <div class="hero-overlay"></div>
@@ -303,7 +314,7 @@
         <div class="max-w-7xl mx-auto px-6 w-full">
           <div class="max-w-3xl">
             <!-- Eyebrow -->
-            <div class="flex items-center gap-4 mb-6 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+            <div class="flex items-center gap-4 mb-6 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
               <span class="block w-12 h-px bg-accent"></span>
               <span class="text-xs tracking-widest uppercase text-accent">
                 Visionary Design
@@ -311,12 +322,12 @@
             </div>
 
             <!-- Heading -->
-            <h1 class="font-secondary text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+            <h1 class="font-secondary text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
               Where Design Meets Purpose
             </h1>
 
             <!-- Upgraded Quote -->
-            <div class="mb-10 max-w-2xl opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+            <div class="mb-10 max-w-2xl opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
               <p class="text-xl md:text-2xl font-secondary text-light mb-4">
                 At Achille Industries, design transcends aesthetics
               </p>
@@ -326,7 +337,7 @@
             </div>
 
             <!-- CTA -->
-            <div class="flex flex-wrap gap-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="300">
+            <div class="flex flex-wrap gap-4 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="150">
               <a
                 href="#services"
                 class="inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-dark font-semibold rounded-lg hover:bg-accent/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
@@ -336,7 +347,7 @@
               </a>
 
               <a
-                href="/#contact"
+                href="contact.html"
                 class="inline-block px-6 py-3 md:px-8 md:py-4 border border-white/20 rounded-lg hover:border-accent hover:text-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
               >
                 Start Your Project
@@ -354,10 +365,10 @@
       <div class="max-w-7xl mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-16 md:mb-20">
-          <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+          <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
             Comprehensive Digital Services
           </h2>
-          <p class="text-sand text-lg opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+          <p class="text-sand text-lg opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
             Tailored solutions for businesses of all sizes
           </p>
         </div>
@@ -366,7 +377,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <!-- Web Design -->
-          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
             <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -400,7 +411,7 @@
                 <span>Wireframing & Prototyping</span>
               </li>
             </ul>
-            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+            <a href="#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
               <span>Get Started</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
@@ -409,7 +420,7 @@
           </div>
 
           <!-- Web Development -->
-          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
             <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -443,7 +454,7 @@
                 <span>Performance Optimization</span>
               </li>
             </ul>
-            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+            <a href="#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
               <span>Get Started</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
@@ -452,7 +463,7 @@
           </div>
 
           <!-- Digital Marketing -->
-          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
             <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
@@ -487,7 +498,7 @@
                 <span>Conversion Rate Optimization</span>
               </li>
             </ul>
-            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+            <a href="#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
               <span>Get Started</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
@@ -496,7 +507,7 @@
           </div>
 
           <!-- Brand Strategy -->
-          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="300">
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="150">
             <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -530,7 +541,7 @@
                 <span>Brand Messaging</span>
               </li>
             </ul>
-            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+            <a href="#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
               <span>Get Started</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
@@ -539,7 +550,7 @@
           </div>
 
           <!-- Ongoing Support -->
-          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="400">
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="200">
             <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -573,7 +584,7 @@
                 <span>Technical Support</span>
               </li>
             </ul>
-            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+            <a href="#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
               <span>Get Started</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
@@ -582,7 +593,7 @@
           </div>
 
           <!-- Consulting -->
-          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="500">
+          <div class="service-card bg-white/5 rounded-2xl p-8 hover:bg-white/10 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="250">
             <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
@@ -616,7 +627,7 @@
                 <span>Process Optimization</span>
               </li>
             </ul>
-            <a href="/#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
+            <a href="#contact" class="text-accent font-semibold hover:text-accent/80 transition-colors duration-200 inline-flex items-center gap-2">
               <span>Get Started</span>
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
@@ -635,10 +646,10 @@
       <div class="max-w-7xl mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-12 md:mb-16">
-          <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+          <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
             Trusted by Industry Leaders
           </h2>
-          <p class="text-sand text-lg opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+          <p class="text-sand text-lg opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
             We build on the platforms that power today's most successful businesses
           </p>
         </div>
@@ -740,12 +751,12 @@
         </div>
 
         <!-- CTA below carousel -->
-        <div class="text-center mt-12 md:mt-16 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+        <div class="text-center mt-12 md:mt-16 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
           <p class="text-sand mb-6">
             Not sure which platform is right for your business?
           </p>
           <a
-            href="/#contact"
+            href="#contact"
             class="inline-block px-6 py-3 border border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-dark transition-all duration-200"
           >
             Get a Platform Recommendation
@@ -755,11 +766,11 @@
     </section>
 
     <!-- =========================
-         4. PROCESS SECTION (from index.html)
+         4. PROCESS SECTION (ULTRA-FAST VERSION)
     ========================== -->
     <section id="process" class="py-24 bg-dark text-light overflow-hidden">
       <div
-        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center opacity-0 translate-y-10 transition-all duration-1000 ease-out"
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center opacity-0 translate-y-4 transition-all duration-500 ease-out"
         id="process-wrapper"
       >
 
@@ -776,37 +787,35 @@
 
           <!-- Heading -->
           <h2 class="font-secondary text-3xl md:text-4xl leading-tight mb-8 md:mb-10 text-light">
-            Our website design and<br />
-            development process
+            A methodology built for<br />
+            <span class="text-accent">clarity & results</span>
           </h2>
 
-          <!-- Tabs -->
+          <!-- Tabs - Ultra Fast -->
           <div class="flex gap-4 md:gap-8 border-b border-white/20 mb-8 md:mb-10 overflow-x-auto pb-1">
             <button class="process-tab active whitespace-nowrap" data-step="discover">Discover</button>
             <button class="process-tab whitespace-nowrap" data-step="design">Design</button>
             <button class="process-tab whitespace-nowrap" data-step="develop">Develop</button>
             <button class="process-tab whitespace-nowrap" data-step="deploy">Deploy</button>
+            <button class="process-tab whitespace-nowrap" data-step="scale">Scale</button>
           </div>
 
           <!-- Content -->
-          <div id="process-content" class="transition-all duration-500">
+          <div id="process-content" class="transition-all duration-200">
             <h3 class="text-2xl md:text-3xl font-secondary mb-4 md:mb-6 text-light" id="process-title">
               Discover
             </h3>
 
             <p class="mb-4 md:mb-6 text-base md:text-lg text-sand" id="process-text-1">
-              We'll audit your existing site, understand technical and performance
-              requirements, and explore your ambitions through research and
-              workshops.
+              We start by deeply understanding your business goals, target audience, and competitive landscape. Through workshops, audits, and research, we establish a clear foundation for success.
             </p>
 
             <p class="mb-8 md:mb-10 text-base md:text-lg text-sand" id="process-text-2">
-              This ensures the website is perfectly aligned with your business
-              goals before design begins.
+              This phase ensures every design and development decision is strategically aligned with your vision and measurable objectives.
             </p>
 
             <a
-              href="/#contact"
+              href="contact.html"
               class="inline-flex items-center gap-3 font-semibold border-b border-accent pb-1 hover:text-accent hover:border-accent transition-colors duration-200 text-light"
             >
               Talk to us about your website requirements
@@ -821,7 +830,7 @@
             id="process-image"
             src="./img/discover.jpg"
             alt="Process example"
-            class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl transition-all duration-700 opacity-100"
+            class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-xl transition-all duration-300 opacity-100"
             loading="lazy"
           />
         </div>
@@ -836,7 +845,7 @@
       <div class="max-w-7xl mx-auto px-6">
         
         <!-- Eyebrow -->
-        <div class="flex items-center gap-4 mb-10 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
+        <div class="flex items-center gap-4 mb-10 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
           <span class="block w-12 h-px bg-accent"></span>
           <span class="text-xs tracking-widest uppercase text-accent">
             Behind the Scenes
@@ -844,7 +853,7 @@
         </div>
 
         <!-- Section Header -->
-        <div class="mb-12 md:mb-16 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+        <div class="mb-12 md:mb-16 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
           <h2 class="font-secondary text-3xl md:text-4xl lg:text-5xl mb-4 text-light">
             Our Work in Motion
           </h2>
@@ -854,7 +863,7 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="flex items-center gap-3 mb-8 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="150">
+        <div class="flex items-center gap-3 mb-8 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
           <span class="text-xs tracking-widest uppercase text-sand">Scroll →</span>
           <div class="h-px w-16 bg-accent/30"></div>
         </div>
@@ -925,7 +934,7 @@
       </div>
 
       <!-- Follow CTA -->
-      <div class="max-w-7xl mx-auto px-6 mt-12 text-center opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+      <div class="max-w-7xl mx-auto px-6 mt-12 text-center opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="150">
         <p class="text-sand mb-4">Want to see more of our daily work?</p>
         <a 
           href="https://www.instagram.com/achilleindustries" 
@@ -940,58 +949,58 @@
       </div>
     </section>
 
-<!-- =========================
-     6. UPDATED CONTACT CTA (Full Width Spread Out)
-========================== -->
-<div class="bg-dark">
-  <div class="mx-auto max-w-[1920px] py-32 sm:px-8 lg:px-16">
-    <div class="relative isolate overflow-hidden bg-gray-800 px-8 pt-20 shadow-2xl sm:rounded-3xl sm:px-12 md:pt-28 lg:flex lg:gap-x-32 lg:px-20 lg:pt-0">
-      <!-- Background SVG -->
-      <svg viewBox="0 0 1024 1024" aria-hidden="true" class="absolute top-1/2 left-1/2 -z-10 h-[72rem] w-[72rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-96 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0">
-        <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
-        <defs>
-          <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-            <stop stop-color="#BDA266" />
-            <stop offset="1" stop-color="#2d3e67" />
-          </radialGradient>
-        </defs>
-      </svg>
-      
-      <!-- Left Content -->
-      <div class="mx-auto max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-40 lg:text-left lg:pl-12">
-        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Boost your productivity.<br>Start your project today.</h2>
-        <p class="mt-8 text-xl leading-9 text-gray-300 max-w-2xl">Transform your vision into reality with strategic web solutions that drive growth and engage your audience.</p>
-        <div class="mt-12 flex items-center justify-center gap-x-8 lg:justify-start">
-          <a href="/#contact" class="rounded-lg bg-accent px-6 py-3.5 text-base font-semibold text-dark shadow-lg hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200">Get started</a>
-          <a href="#services" class="text-base font-semibold leading-6 text-white hover:text-gray-100 transition-colors duration-200">
-            Explore services <span aria-hidden="true" class="ml-2">→</span>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Right Image Area -->
-      <div class="relative mt-20 lg:mt-0 lg:flex-shrink-0 lg:self-center lg:pr-12">
-        <div class="relative lg:h-[32rem] lg:w-[64rem]">
-          <!-- Image container -->
-          <div class="absolute inset-0 flex items-center justify-center rounded-xl bg-gray-900/50 ring-1 ring-white/10 shadow-2xl">
-            <!-- Your image goes here -->
-            <div class="relative h-full w-full overflow-hidden rounded-xl">
-              <!-- Phone Collection Image -->
-              <img 
-                src="./img/phonecollection.png" 
-                alt="Phone collection showing responsive web designs" 
-                class="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-              <!-- Optional overlay for better text readability -->
-              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+    <!-- =========================
+         6. UPDATED CONTACT CTA (Full Width Spread Out)
+    ========================== -->
+    <div class="bg-dark">
+      <div class="mx-auto max-w-[1920px] py-32 sm:px-8 lg:px-16">
+        <div class="relative isolate overflow-hidden bg-gray-800 px-8 pt-20 shadow-2xl sm:rounded-3xl sm:px-12 md:pt-28 lg:flex lg:gap-x-32 lg:px-20 lg:pt-0">
+          <!-- Background SVG -->
+          <svg viewBox="0 0 1024 1024" aria-hidden="true" class="absolute top-1/2 left-1/2 -z-10 h-[72rem] w-[72rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-96 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0">
+            <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
+            <defs>
+              <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                <stop stop-color="#BDA266" />
+                <stop offset="1" stop-color="#2d3e67" />
+              </radialGradient>
+            </defs>
+          </svg>
+          
+          <!-- Left Content -->
+          <div class="mx-auto max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-40 lg:text-left lg:pl-12">
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Boost your productivity.<br>Start your project today.</h2>
+            <p class="mt-8 text-xl leading-9 text-gray-300 max-w-2xl">Transform your vision into reality with strategic web solutions that drive growth and engage your audience.</p>
+            <div class="mt-12 flex items-center justify-center gap-x-8 lg:justify-start">
+              <a href="contact.html" class="rounded-lg bg-accent px-6 py-3.5 text-base font-semibold text-dark shadow-lg hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200">Get started</a>
+              <a href="#services" class="text-base font-semibold leading-6 text-white hover:text-gray-100 transition-colors duration-200">
+                Explore services <span aria-hidden="true" class="ml-2">→</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Right Image Area -->
+          <div class="relative mt-20 lg:mt-0 lg:flex-shrink-0 lg:self-center lg:pr-12">
+            <div class="relative lg:h-[32rem] lg:w-[64rem]">
+              <!-- Image container -->
+              <div class="absolute inset-0 flex items-center justify-center rounded-xl bg-gray-900/50 ring-1 ring-white/10 shadow-2xl">
+                <!-- Your image goes here -->
+                <div class="relative h-full w-full overflow-hidden rounded-xl">
+                  <!-- Phone Collection Image -->
+                  <img 
+                    src="./img/phonecollection.png" 
+                    alt="Phone collection showing responsive web designs" 
+                    class="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                  <!-- Optional overlay for better text readability -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
   </main>
 
   <!-- =========================
@@ -1075,8 +1084,8 @@
       <div>
         <h3 class="text-light font-semibold mb-4">Support</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="/#contact" class="hover:text-light transition-colors duration-200">Contact</a></li>
-          <li><a href="/#process" class="hover:text-light transition-colors duration-200">Process</a></li>
+          <li><a href="#contact" class="hover:text-light transition-colors duration-200">Contact</a></li>
+          <li><a href="#process" class="hover:text-light transition-colors duration-200">Process</a></li>
         </ul>
       </div>
 
@@ -1084,7 +1093,7 @@
       <div>
         <h3 class="text-light font-semibold mb-4">Company</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="/#about" class="hover:text-light transition-colors duration-200">About</a></li>
+          <li><a href="about.html" class="hover:text-light transition-colors duration-200">About</a></li>
           <li><a href="#" class="hover:text-light transition-colors duration-200">Blog</a></li>
           <li><a href="/privacy.html" class="hover:text-light transition-colors duration-200">Privacy Policy</a></li>
         </ul>
@@ -1145,32 +1154,38 @@
     });
   </script>
 
-  <!-- Process Section Script (same as index.html) -->
+  <!-- Process Section Script - ULTRA FAST VERSION -->
   <script>
     const processData = {
       discover: {
         title: "Discover",
-        text1: "We'll audit your existing site, understand technical and performance requirements, and explore your ambitions through research and workshops.",
-        text2: "This ensures the website is perfectly aligned with your business goals before design begins.",
+        text1: "We start by deeply understanding your business goals, target audience, and competitive landscape. Through workshops, audits, and research, we establish a clear foundation for success.",
+        text2: "This phase ensures every design and development decision is strategically aligned with your vision and measurable objectives.",
         image: "./img/discover.jpg"
       },
       design: {
         title: "Design",
-        text1: "We design intuitive, brand-aligned interfaces focused on clarity, usability, and conversion.",
-        text2: "Every decision is intentional, informed by research and validated through feedback.",
+        text1: "We craft intuitive, brand-aligned interfaces focused on clarity, usability, and conversion. Every design decision is intentional, informed by research and validated through user feedback.",
+        text2: "From wireframes to high-fidelity prototypes, we ensure the user experience is seamless and delightful across all devices.",
         image: "./img/design.jpg"
       },
       develop: {
         title: "Develop",
-        text1: "Your site is built using modern, reliable technologies with performance and scalability in mind.",
-        text2: "We test across devices and browsers to ensure stability and speed.",
+        text1: "Your site is built using modern, reliable technologies with performance and scalability at the forefront. We implement best practices for code quality, security, and maintainability.",
+        text2: "We test across devices and browsers to ensure stability, speed, and accessibility for all users.",
         image: "./img/develop.jpg"
       },
       deploy: {
         title: "Deploy",
-        text1: "After final testing, we launch confidently with monitoring and support in place.",
-        text2: "You'll receive documentation and guidance to manage your site going forward.",
+        text1: "After rigorous testing and optimization, we launch with confidence, monitoring performance and user feedback. We ensure a smooth transition with minimal disruption to your business.",
+        text2: "You'll receive comprehensive documentation and training to manage your site effectively going forward.",
         image: "./img/deploy.jpg"
+      },
+      scale: {
+        title: "Scale",
+        text1: "We don't just launch and leave. We provide ongoing support, analytics, and optimization to help your digital presence grow alongside your business.",
+        text2: "From performance monitoring to feature enhancements, we're your long-term partner in digital success.",
+        image: "./img/scale.jpg"
       }
     };
 
@@ -1188,10 +1203,10 @@
 
           const step = processData[tab.dataset.step];
 
-          // Animate text out
-          title.classList.add("opacity-0", "translate-y-4");
-          text1.classList.add("opacity-0", "translate-y-4");
-          text2.classList.add("opacity-0", "translate-y-4");
+          // Ultra-fast animation - almost immediate
+          title.classList.add("opacity-0");
+          text1.classList.add("opacity-0");
+          text2.classList.add("opacity-0");
           image.classList.add("opacity-0");
 
           setTimeout(() => {
@@ -1200,21 +1215,21 @@
             text2.textContent = step.text2;
             image.src = step.image;
 
-            title.classList.remove("opacity-0", "translate-y-4");
-            text1.classList.remove("opacity-0", "translate-y-4");
-            text2.classList.remove("opacity-0", "translate-y-4");
+            title.classList.remove("opacity-0");
+            text1.classList.remove("opacity-0");
+            text2.classList.remove("opacity-0");
             image.classList.remove("opacity-0");
-          }, 300);
+          }, 100); // Reduced from 300ms to 100ms
         });
       });
 
-      // Scroll animation
+      // Scroll animation - faster
       const processWrapper = document.getElementById("process-wrapper");
 
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            processWrapper.classList.remove("opacity-0", "translate-y-10");
+            processWrapper.classList.remove("opacity-0", "translate-y-4");
             observer.unobserve(processWrapper);
           }
         },
@@ -1227,7 +1242,7 @@
     }
   </script>
 
-  <!-- Unified Scroll Reveal System (from index.html) -->
+  <!-- Unified Scroll Reveal System - FASTER VERSION -->
   <script>
     (function() {
       'use strict';
@@ -1241,28 +1256,21 @@
           this.animatedClass = 'revealed';
           this.elements = document.querySelectorAll('[data-reveal]');
           this.mobileBreakpoint = 768;
-          this.desktopThreshold = 0.3;  // 30% of element visible
-          this.mobileThreshold = 0.15;  // 15% of element visible (earlier trigger)
+          this.desktopThreshold = 0.3;
+          this.mobileThreshold = 0.15;
           
           this.init();
         }
         
-        /**
-         * Get appropriate threshold based on viewport
-         */
         getThreshold() {
           return window.innerWidth < this.mobileBreakpoint 
             ? this.mobileThreshold 
             : this.desktopThreshold;
         }
         
-        /**
-         * Initialize the reveal system
-         */
         init() {
           if (!this.elements.length) return;
           
-          // Create a single IntersectionObserver instance
           this.observer = new IntersectionObserver(
             (entries) => this.handleIntersect(entries),
             {
@@ -1272,23 +1280,17 @@
             }
           );
           
-          // Observe all reveal elements
           this.elements.forEach(element => {
             this.observer.observe(element);
           });
           
-          // Update threshold on resize
           window.addEventListener('resize', this.debounce(() => {
             this.updateThreshold();
           }, 150));
         }
         
-        /**
-         * Update observer threshold on viewport change
-         */
         updateThreshold() {
           if (this.observer) {
-            // Disconnect and recreate with new threshold
             this.observer.disconnect();
             
             this.observer = new IntersectionObserver(
@@ -1300,46 +1302,33 @@
               }
             );
             
-            // Re-observe elements
             this.elements.forEach(element => {
               this.observer.observe(element);
             });
           }
         }
         
-        /**
-         * Handle intersection events
-         */
         handleIntersect(entries) {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               this.revealElement(entry.target);
-              this.observer.unobserve(entry.target); // Stop observing once revealed
+              this.observer.unobserve(entry.target);
             }
           });
         }
         
-        /**
-         * Animate element into view
-         */
         revealElement(element) {
-          // Get custom delay if specified
+          // Get custom delay if specified - reduced delays
           const delay = element.getAttribute('data-reveal-delay') || 0;
           
-          // Use setTimeout for staggered reveals
+          // Use setTimeout for staggered reveals - faster
           setTimeout(() => {
-            // Remove opacity and translate classes
             element.classList.remove('opacity-0');
-            element.classList.remove('translate-y-6');
-            
-            // Mark as revealed
+            element.classList.remove('translate-y-4');
             element.classList.add(this.animatedClass);
-          }, delay);
+          }, delay * 0.7); // Reduce all delays by 30%
         }
         
-        /**
-         * Simple debounce utility for resize events
-         */
         debounce(func, wait) {
           let timeout;
           return function executedFunction(...args) {
@@ -1514,6 +1503,21 @@
         }
       });
     });
+  </script>
+
+  <!-- Calendly Script - LOADS IMMEDIATELY ON PAGE LOAD -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    // Initialize Calendly immediately on page load
+    window.onload = function() {
+      Calendly.initBadgeWidget({
+        url: "https://calendly.com/ervensmachille",
+        text: "Schedule Project Consultation",
+        color: "#BDA266",
+        textColor: "#1d1e21",
+        branding: false,
+      });
+    };
   </script>
 </body>
 </html>
