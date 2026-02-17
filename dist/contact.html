@@ -353,6 +353,7 @@
                 Netlify Forms Configuration:
                 - method="POST": Required for Netlify form processing
                 - data-netlify="true": Tells Netlify to process this form
+                - action="/thank-you/": Redirects to custom thank you page after submission
                 - netlify-honeypot: Spam protection (hidden from users, visible to bots)
                 - data-netlify-recaptcha: Optional CAPTCHA (only shown when necessary)
                 - hidden form-name input: Required by Netlify to identify form submissions
@@ -363,6 +364,7 @@
                 method="POST" 
                 data-netlify="true" 
                 data-netlify-recaptcha="true"
+                action="/thank-you/"
                 class="space-y-4 md:space-y-6"
                 netlify-honeypot="bot-field"
               >
@@ -895,20 +897,14 @@
     });
   </script>
 
-  <!-- Form Submission -->
+  <!-- Form Submission - SIMPLIFIED -->
   <script>
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
-      // NETLIFY FORM HANDLING - REMOVED CLIENT-SIDE SUBMISSION
-      // Netlify will handle the form submission automatically
-      // when the site is deployed to Netlify
-      
-      // We're keeping the alert for user feedback, but Netlify will
-      // redirect to a success page or show inline success message
+      // Netlify handles the form submission and redirect automatically
+      // We just show a loading state for better UX
       contactForm.addEventListener('submit', async (e) => {
-        // Netlify handles the submission automatically
-        // We'll just show a loading state for better UX
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         
@@ -916,15 +912,17 @@
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        // Netlify will handle the actual submission
-        // The form will redirect to Netlify's success page
-        // or show inline success based on Netlify configuration
+        // Note: The form will redirect to /thank-you/ automatically
+        // This is handled by Netlify due to the action="/thank-you/" attribute
         
-        // Reset button after a timeout (in case submission fails)
+        // Reset button after a timeout in case something goes wrong
         setTimeout(() => {
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        }, 5000);
+          // Check if the page is still here (meaning redirect didn't happen)
+          if (document.body.contains(submitBtn)) {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }
+        }, 10000); // 10 second timeout
       });
     }
   </script>
