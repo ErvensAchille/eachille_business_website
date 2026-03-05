@@ -4,6 +4,7 @@
   <!-- =========================
        META / SEO
   ========================== -->
+  <meta name="google-site-verification" content="xla4OHMax_U1234RIzdh2bu8vdR-GMf39AAyX7NClVk" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Achille Industries | Web & Software Studio in Boston, MA</title>
@@ -308,13 +309,15 @@
       muted
       autoplay
       loop
-      preload="metadata"
-      poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      preload="auto"
       aria-hidden="true"
       disablepictureinpicture
       disableremoteplayback
+      controlslist="nodownload nofullscreen noremoteplayback"
     >
       <source src="./img/hero-bg.mp4" type="video/mp4">
+      <!-- Fallback text if video doesn't load -->
+      Your browser does not support the video tag.
     </video>
     <!-- Lighter gradient overlay for better visibility -->
     <div class="absolute inset-0 bg-gradient-to-r from-dark/40 via-dark/30 to-dark/20"></div>
@@ -1419,14 +1422,27 @@
   <!-- Video play functionality -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const videoPlayButton = document.querySelector('.sticky-video-container button');
-      if (videoPlayButton) {
-        videoPlayButton.addEventListener('click', function() {
-          // This is where you would integrate your actual video
-          // For now, we'll just show an alert
-          alert('Video player would open here. In production, integrate with YouTube, Vimeo, or a custom video player.');
+      const video = document.getElementById('hero-video');
+      
+      if (!video) return;
+      
+      // Try to play the video
+      const playPromise = video.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          // Auto-play was prevented
+          console.log("Video autoplay prevented:", error);
+          // Fall back to just showing the gradient
+          video.style.opacity = '0.2';
         });
       }
+      
+      // If video errors or doesn't load
+      video.addEventListener('error', function() {
+        console.log("Video failed to load");
+        video.style.display = 'none';
+      });
     });
   </script>
 
@@ -1585,23 +1601,18 @@
     })();
   </script>
 
-  <!-- Simple Video Fallback Script -->
+  <!-- Simple Video Fallback Script - REMOVED HIDING ON MOBILE -->
   <script>
+    // This script has been simplified - no mobile hiding
     document.addEventListener('DOMContentLoaded', function() {
       const video = document.getElementById('hero-video');
-      const fallback = document.getElementById('video-fallback');
       
-      if (!video || !fallback) return;
+      if (!video) return;
       
-      // If video errors or doesn't load, fallback div will show (it's behind video by default)
-      video.addEventListener('error', function() {
-        video.style.display = 'none';
+      // Ensure video plays on all devices
+      video.play().catch(e => {
+        console.log("Autoplay prevented, but video will still be visible");
       });
-      
-      // On mobile, skip video for performance
-      if (window.innerWidth < 768) {
-        video.style.display = 'none';
-      }
     });
   </script>
 </body>

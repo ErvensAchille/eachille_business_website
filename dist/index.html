@@ -4,6 +4,7 @@
   <!-- =========================
        META / SEO
   ========================== -->
+  <meta name="google-site-verification" content="xla4OHMax_U1234RIzdh2bu8vdR-GMf39AAyX7NClVk" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Achille Industries | Web & Software Studio in Boston, MA</title>
@@ -203,6 +204,17 @@
       transform: translateY(-5px) scale(1.1);
       filter: drop-shadow(0 10px 15px rgba(189, 162, 102, 0.2));
     }
+
+    /* Hide video on desktop, show on mobile */
+    .hero-video {
+      display: none;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-video {
+        display: block;
+      }
+    }
   </style>
 </head>
 
@@ -295,28 +307,30 @@
   <main id="main-content">
     
 <!-- =========================
-     1. HERO SECTION WITH VIDEO BACKGROUND
+     1. HERO SECTION WITH VIDEO BACKGROUND (MOBILE ONLY)
 ========================== -->
 <section class="relative min-h-screen flex items-center pt-16 md:pt-0 overflow-hidden">
-  <!-- Video Background -->
+  <!-- Video Background - Hidden on desktop, visible on mobile -->
   <div class="absolute inset-0 z-0 bg-dark">
-    <!-- Optimized video for all devices -->
+    <!-- Optimized video for mobile devices -->
     <video 
       id="hero-video"
-      class="absolute inset-0 w-full h-full object-cover opacity-40"
+      class="hero-video absolute inset-0 w-full h-full object-cover opacity-40"
       playsinline
       muted
       autoplay
       loop
-      preload="metadata"
-      poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      preload="auto"
       aria-hidden="true"
       disablepictureinpicture
       disableremoteplayback
+      controlslist="nodownload nofullscreen noremoteplayback"
     >
       <source src="./img/hero-bg.mp4" type="video/mp4">
+      <!-- Fallback text if video doesn't load -->
+      Your browser does not support the video tag.
     </video>
-    <!-- Lighter gradient overlay for better visibility -->
+    <!-- Gradient overlay for better visibility -->
     <div class="absolute inset-0 bg-gradient-to-r from-dark/40 via-dark/30 to-dark/20"></div>
   </div>
 
@@ -363,12 +377,12 @@
       </p>
     </div>
 
-    <!-- Right (hidden on mobile for cleaner video background) -->
-    <div class="hidden md:flex justify-center md:justify-end md:items-start md:pt-6 lg:pt-0">
+    <!-- Right - Logo visible on all devices now (moved from hidden class) -->
+    <div class="flex justify-center md:justify-end md:items-start md:pt-6 lg:pt-0">
       <img
-        src="./img/logo.svg"
+        src="./img/navLogo.svg"
         alt="Achille Industries brand mark"
-        class="w-72 md:w-[420px] lg:w-[480px] opacity-95"
+        class="w-48 md:w-[420px] lg:w-[480px] opacity-95"
         loading="lazy"
       />
     </div>
@@ -1416,17 +1430,31 @@
     });
   </script>
 
-  <!-- Video play functionality -->
+  <!-- Video play functionality - Now only for mobile -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const videoPlayButton = document.querySelector('.sticky-video-container button');
-      if (videoPlayButton) {
-        videoPlayButton.addEventListener('click', function() {
-          // This is where you would integrate your actual video
-          // For now, we'll just show an alert
-          alert('Video player would open here. In production, integrate with YouTube, Vimeo, or a custom video player.');
-        });
+      const video = document.getElementById('hero-video');
+      
+      if (!video) return;
+      
+      // Only attempt to play on mobile (where video is visible)
+      if (window.innerWidth <= 768) {
+        const playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+          playPromise.catch(error => {
+            console.log("Mobile video autoplay prevented:", error);
+            // Fall back to just showing the gradient
+            video.style.opacity = '0.2';
+          });
+        }
       }
+      
+      // If video errors or doesn't load
+      video.addEventListener('error', function() {
+        console.log("Video failed to load");
+        video.style.display = 'none';
+      });
     });
   </script>
 
@@ -1583,26 +1611,6 @@
       });
       
     })();
-  </script>
-
-  <!-- Simple Video Fallback Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const video = document.getElementById('hero-video');
-      const fallback = document.getElementById('video-fallback');
-      
-      if (!video || !fallback) return;
-      
-      // If video errors or doesn't load, fallback div will show (it's behind video by default)
-      video.addEventListener('error', function() {
-        video.style.display = 'none';
-      });
-      
-      // On mobile, skip video for performance
-      if (window.innerWidth < 768) {
-        video.style.display = 'none';
-      }
-    });
   </script>
 </body>
 </html>
