@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =========================
+         META / SEO
+    ========================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy | Achille Industries</title>
+
+    <meta name="description"
+    content="Privacy Policy for Achille Industries. Learn how we collect, use, and protect your personal information when you visit our website." />
+
+    <meta name="robots" content="noindex, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Privacy Policy — Achille Industries" />
+    <meta property="og:description"
+    content="Privacy Policy for Achille Industries. Learn how we collect, use, and protect your personal information." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- =========================
+         FONTS
+    ========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'" />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap"
+        rel="stylesheet" />
+    </noscript>
+
+    <!-- =========================
+         TAILWIND CDN
+    ========================== -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2d3e67',
+                        dark: '#1d1e21',
+                        light: '#f4fff3',
+                        accent: '#BDA266',
+                        sand: '#f8e9db'
+                    },
+                    fontFamily: {
+                        primary: ['Inter', 'sans-serif'],
+                        secondary: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* --- Base --- */
+        body {
+            background-color: #1d1e21;
+            color: #f4fff3;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Policy content --- */
+        .policy-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #f4fff3;
+        }
+
+        .policy-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            color: #f4fff3;
+        }
+
+        .policy-content h3 {
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #f4fff3;
+        }
+
+        .policy-content p {
+            color: #f8e9db;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .policy-content ul,
+        .policy-content ol {
+            color: #f8e9db;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .policy-content ul li,
+        .policy-content ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-content ul li::marker {
+            color: #BDA266;
+        }
+
+        .policy-content ol li::marker {
+            color: #BDA266;
+            font-weight: 600;
+        }
+
+        .policy-content a {
+            color: #BDA266;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.2s;
+        }
+
+        .policy-content a:hover {
+            color: #d4b87a;
+        }
+
+        .policy-content .effective-date {
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            border: 1px solid rgba(189, 162, 102, 0.3);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            color: #f8e9db;
+            margin-bottom: 2rem;
+        }
+
+        .policy-content .section-number {
+            display: inline-block;
+            min-width: 1.75rem;
+            color: #BDA266;
+            font-weight: 700;
+        }
+
+        /* --- Back link --- */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f8e9db;
+            font-weight: 500;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .back-link:hover {
+            color: #BDA266;
+        }
+
+        .back-link svg {
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover svg {
+            transform: translateX(-4px);
+        }
+
+        /* --- Mobile menu overrides --- */
+        #mobile-menu {
+            background: rgba(0, 0, 0, 0.97);
+            backdrop-filter: blur(8px);
+        }
+
+        /* --- Smooth reveal --- */
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        [data-reveal].revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Scrollbar --- */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1d1e21;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BDA266;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4b87a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         SKIP LINK
+    ========================== -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-accent focus:text-dark focus:rounded-lg">
+        Skip to main content
+    </a>
+
+    <!-- =========================
+         HEADER / NAV
+    ========================== -->
+    <header class="border-b border-white/10 relative z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-4" aria-label="Achille Industries home">
+                <img src="./img/logo.svg" alt="Achille Industries logo" class="h-10 w-10 md:h-12 md:w-12" />
+                <span class="font-semibold tracking-wide">
+                    Achille Industries
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex gap-8 text-sm font-semibold">
+                <li><a href="services.html" class="hover:text-accent transition-colors duration-200">Services</a></li>
+                <li><a href="about.html" class="hover:text-accent transition-colors duration-200">About</a></li>
+                <li><a href="contact.html" class="hover:text-accent transition-colors duration-200">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8" aria-label="Open menu" aria-expanded="false">
+                <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+                <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+                <span class="w-6 h-0.5 bg-current transition-all duration-300" aria-hidden="true"></span>
+            </button>
+        </nav>
+
+        <!-- Fullscreen Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 hidden bg-black/95 text-white transform transition-transform duration-300 ease-in-out -translate-x-full" aria-hidden="true">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+                <span class="font-semibold tracking-wide">Achille Industries</span>
+                <button id="close-menu" class="text-2xl p-2 hover:text-accent transition-colors duration-200" aria-label="Close menu">✕</button>
+            </div>
+            <nav class="flex flex-col items-center justify-center h-full gap-10 text-lg font-semibold">
+                <a href="services.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">Services</a>
+                <a href="about.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">About</a>
+                <a href="contact.html" class="hover:text-accent transition-colors duration-200" onclick="closeMobileMenu()">Contact</a>
+                <a href="contact.html" class="mt-6 inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-black hover:bg-accent/90 transition-colors duration-200" onclick="closeMobileMenu()" data-cta="mobile-consultation">
+                    Free Consultation
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main id="main-content">
+
+        <!-- =========================
+             HERO — Privacy Policy
+        ========================== -->
+        <section class="relative py-20 md:py-28 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/60 to-dark"></div>
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto px-6 policy-content">
+
+                <!-- Back link -->
+                <div class="mb-8" data-reveal>
+                    <a href="/" class="back-link text-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Back to Home
+                    </a>
+                </div>
+
+                <!-- Title -->
+                <h1 data-reveal data-reveal-delay="50">Privacy Policy</h1>
+
+                <!-- Effective date -->
+                <div class="effective-date" data-reveal data-reveal-delay="100">
+                    Effective date: July 22, 2026
+                </div>
+
+                <!-- Intro -->
+                <p data-reveal data-reveal-delay="150">
+                    Achille Industries ("we," "us," or "our") operates the website located at ervensachille.com (the "Site").
+                    This Privacy Policy explains what information we collect from visitors to the Site, how we use it,
+                    and the choices you have. It applies to this website only — it does not cover data we may process
+                    on behalf of clients under separate service agreements or statements of work.
+                </p>
+
+                <!-- ===== SECTION 1 ===== -->
+                <h2 data-reveal data-reveal-delay="200">
+                    <span class="section-number">1.</span> Information We Collect
+                </h2>
+                <p data-reveal data-reveal-delay="220">
+                    We collect information in the following ways:
+                </p>
+                <ul data-reveal data-reveal-delay="240">
+                    <li><strong>Contact form.</strong> When you submit our contact form, we collect your name, email address, company (optional), the service you're interested in, and your message.</li>
+                    <li><strong>Scheduling a consultation.</strong> If you book a call through our Calendly link, Calendly collects your name, email address, and any details you provide during scheduling, subject to Calendly's own privacy policy.</li>
+                    <li><strong>Direct email.</strong> If you email us directly, we receive whatever information you choose to include.</li>
+                    <li><strong>Automatically collected information.</strong> Like most websites, we may collect standard technical information such as your browser type, device type, IP address, referring page, and pages visited, typically through analytics tools.</li>
+                    <li><strong>Spam and abuse prevention.</strong> Our contact form uses Google reCAPTCHA and a hidden honeypot field to prevent automated submissions. reCAPTCHA may collect technical and usage data as described in Google's Privacy Policy.</li>
+                    <li><strong>CRM and marketing platform.</strong> We use a customer relationship management (CRM) and marketing platform to manage leads, store client and prospect records, schedule appointments, and send email and SMS communications. Information submitted through our forms, calendar, or provided during a call may be stored in our CRM and used to contact you as described in Section 4 below.</li>
+                    <li><strong>Phone number, if provided.</strong> If you provide a phone number — through a form, during a call, or when booking an appointment — we may use it to contact you by phone, text (SMS), or both.</li>
+                </ul>
+
+                <!-- ===== SECTION 2 ===== -->
+                <h2 data-reveal data-reveal-delay="260">
+                    <span class="section-number">2.</span> How We Use Information
+                </h2>
+                <p data-reveal data-reveal-delay="280">
+                    We use the information we collect to:
+                </p>
+                <ul data-reveal data-reveal-delay="300">
+                    <li>Respond to your inquiries and schedule consultations</li>
+                    <li>Communicate with you about a potential or active project</li>
+                    <li>Maintain records of client and prospect communications</li>
+                    <li>Improve the Site and understand how visitors use it</li>
+                    <li>Protect the Site against spam, abuse, and security threats</li>
+                    <li>Send appointment reminders, follow-ups, and — where you've provided consent — marketing communications by email and/or SMS, as described in Section 4</li>
+                </ul>
+
+                <!-- ===== SECTION 3 ===== -->
+                <h2 data-reveal data-reveal-delay="320">
+                    <span class="section-number">3.</span> How We Share Information
+                </h2>
+                <p data-reveal data-reveal-delay="340">
+                    We do not sell your information. We share information only with the following categories of service providers,
+                    solely to operate the Site and our business:
+                </p>
+                <ul data-reveal data-reveal-delay="360">
+                    <li>Google (reCAPTCHA, and analytics if enabled)</li>
+                    <li>Our CRM and marketing platform (scheduling, email, and SMS communications)</li>
+                    <li>Calendly, if still in use alongside or prior to our CRM's scheduling tools</li>
+                    <li>Our website hosting and email service providers</li>
+                </ul>
+                <p data-reveal data-reveal-delay="380">
+                    These providers process data under their own privacy policies and only to the extent needed to provide
+                    their service to us. We may also disclose information if required by law, or in connection with a merger,
+                    acquisition, or sale of business assets.
+                </p>
+
+                <!-- ===== SECTION 4 ===== -->
+                <h2 data-reveal data-reveal-delay="400">
+                    <span class="section-number">4.</span> Marketing Communications, Email &amp; SMS
+                </h2>
+                <p data-reveal data-reveal-delay="420">
+                    If you provide your email address or phone number through our forms, calendar, or during a conversation
+                    with us, we may use it to send you:
+                </p>
+                <ul data-reveal data-reveal-delay="440">
+                    <li>Transactional messages, such as appointment confirmations and reminders</li>
+                    <li>Follow-up communications related to your inquiry or project</li>
+                    <li>Marketing emails and text messages about our services, where you have opted in or otherwise consented</li>
+                </ul>
+                <p data-reveal data-reveal-delay="460">
+                    <strong>Email.</strong> Every marketing email includes an unsubscribe link. You can opt out of marketing
+                    emails at any time; we may still send you transactional or account-related emails necessary to service
+                    an active project.
+                </p>
+                <p data-reveal data-reveal-delay="480">
+                    <strong>SMS/text messaging.</strong> By providing your phone number, you consent to receive text messages
+                    from Achille Industries, including appointment reminders and marketing messages, sent via our CRM and
+                    communications platform. Message frequency varies. Message and data rates may apply. Consent to receive
+                    texts is not a condition of purchasing any service. You can opt out at any time by replying STOP, or
+                    get help by replying HELP. We are not responsible for delays or failures in message delivery caused by
+                    your wireless carrier.
+                </p>
+                <p data-reveal data-reveal-delay="500">
+                    Phone numbers and consent records collected for SMS purposes are not shared with third parties for their
+                    own marketing use.
+                </p>
+
+                <!-- ===== SECTION 5 ===== -->
+                <h2 data-reveal data-reveal-delay="520">
+                    <span class="section-number">5.</span> Cookies
+                </h2>
+                <p data-reveal data-reveal-delay="540">
+                    The Site may use cookies or similar technologies for basic functionality, analytics, and — if enabled
+                    through our CRM and marketing platform — form and appointment tracking. You can control cookies through
+                    your browser settings; disabling them may affect some Site functionality.
+                </p>
+
+                <!-- ===== SECTION 6 ===== -->
+                <h2 data-reveal data-reveal-delay="560">
+                    <span class="section-number">6.</span> Data Retention
+                </h2>
+                <p data-reveal data-reveal-delay="580">
+                    We retain contact form submissions, emails, scheduling information, and CRM records (including SMS
+                    consent records) for as long as reasonably necessary to respond to your inquiry, maintain an active
+                    client relationship, keep required business records, or as required by law. You may request deletion
+                    at any time (see Section 8), and you may opt out of marketing emails or texts independently of a full
+                    data deletion request.
+                </p>
+
+                <!-- ===== SECTION 7 ===== -->
+                <h2 data-reveal data-reveal-delay="600">
+                    <span class="section-number">7.</span> Children's Privacy
+                </h2>
+                <p data-reveal data-reveal-delay="620">
+                    The Site is not directed to children under 13, and we do not knowingly collect personal information
+                    from children under 13.
+                </p>
+
+                <!-- ===== SECTION 8 ===== -->
+                <h2 data-reveal data-reveal-delay="640">
+                    <span class="section-number">8.</span> Your Rights and Choices
+                </h2>
+                <p data-reveal data-reveal-delay="660">
+                    Depending on where you live, you may have the right to request access to, correction of, or deletion of
+                    your personal information, or to opt out of certain uses, including marketing emails and SMS. To make a
+                    request, contact us at <a href="mailto:ervensmachille@gmail.com">ervensmachille@gmail.com</a>.
+                    We will respond within a reasonable timeframe.
+                </p>
+
+                <!-- ===== SECTION 9 ===== -->
+                <h2 data-reveal data-reveal-delay="680">
+                    <span class="section-number">9.</span> Client and Project Data
+                </h2>
+                <p data-reveal data-reveal-delay="700">
+                    This policy covers visitor and lead data collected through the ervensachille.com website and our related
+                    CRM and communications tools only. Data we process while performing web design, development, or software
+                    work for clients — including data belonging to a client's own users or customers — is governed by the
+                    applicable service agreement or statement of work with that client, not by this policy.
+                </p>
+
+                <!-- ===== SECTION 10 ===== -->
+                <h2 data-reveal data-reveal-delay="720">
+                    <span class="section-number">10.</span> Changes to This Policy
+                </h2>
+                <p data-reveal data-reveal-delay="740">
+                    We may update this Privacy Policy from time to time. The "Effective date" above reflects the most recent
+                    revision. Continued use of the Site after changes take effect constitutes acceptance of the updated policy.
+                </p>
+
+                <!-- ===== SECTION 11 ===== -->
+                <h2 data-reveal data-reveal-delay="760">
+                    <span class="section-number">11.</span> Contact Us
+                </h2>
+                <p data-reveal data-reveal-delay="780">
+                    If you have questions about this Privacy Policy, contact us at:
+                </p>
+                <p data-reveal data-reveal-delay="800" class="!mb-0">
+                    <strong>Achille Industries</strong><br />
+                    Boston, Massachusetts, United States<br />
+                    <a href="mailto:ervensmachille@gmail.com">ervensmachille@gmail.com</a>
+                </p>
+
+                <!-- Bottom spacer -->
+                <div class="h-16"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="bg-dark text-sand border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
+
+            <!-- Company Mission -->
+            <div>
+                <h2 class="text-light text-xl font-semibold mb-4">
+                    Achille Industries
+                </h2>
+                <p class="text-sm mb-6 text-sand">
+                    Helping businesses stand out through thoughtful design,
+                    scalable development, and long-term digital strategy.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://github.com/ErvensAchille" target="_blank" aria-label="GitHub" rel="noopener noreferrer"
+                    class="text-sand hover:text-accent transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008.03 10.95c.58.1.79-.25.79-.56v-2.03c-3.27.71-3.96-1.57-3.96-1.57-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.7.08-.70 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.56-2.61-.3-5.36-1.3-5.36-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.53.12-3.18 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.88.12 3.18a4.5 4.5 0 011.2 3.15c0 4.52-2.75 5.5-5.38 5.8.42.36.78 1.07.78 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/ervens-achille-profile/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
+                class="text-sand hover:text-accent transition-colors duration-200">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4.98 3.5C3.33 3.5 2 4.82 2 6.48c0 1.64 1.33 2.98 2.98 2.98S7.97 8.12 7.97 6.48C7.97 4.82 6.63 3.5 4.98 3.5zM2.4 20h5.15V9.53H2.4V20zM9.75 9.53V20h5.15v-5.67c0-3.03 3.87-3.28 3.87 0V20H24v-6.64c0-6.56-7.13-6.31-8.99-3.09V9.53H9.75z" />
+                </svg>
+            </a>
+            <a href="mailto:ervensmachille@gmail.com" aria-label="Email"
+            class="text-sand hover:text-accent transition-colors duration-200">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13l8-6.99V6H4zm16 2.1l-7.5 5.24a1 1 0 01-1 0L4 8.1V18h16V8.1z" />
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/achilleindustries" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
+        class="text-sand hover:text-accent transition-colors duration-200">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1.5 1.5 0 11-3 .001A1.5 1.5 0 0117.5 6.5z" />
+        </svg>
+    </a>
+    <a href="https://x.com/achilleervens" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
+    class="text-sand hover:text-accent transition-colors duration-200">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+    </svg>
+</a>
+</div>
+</div>
+
+<!-- Solutions -->
+<div>
+    <h3 class="text-light font-semibold mb-4">Solutions</h3>
+    <ul class="space-y-2 text-sm">
+        <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Web Design</a></li>
+        <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Brand Systems</a></li>
+        <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Consulting</a></li>
+        <li><a href="/services.html" class="hover:text-light transition-colors duration-200">E-commerce</a></li>
+        <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Strategy</a></li>
+    </ul>
+</div>
+
+<!-- Support -->
+<div>
+    <h3 class="text-light font-semibold mb-4">Support</h3>
+    <ul class="space-y-2 text-sm">
+        <li><a href="/contact.html" class="hover:text-light transition-colors duration-200">Contact</a></li>
+        <li><a href="/#process" class="hover:text-light transition-colors duration-200">Process</a></li>
+    </ul>
+</div>
+
+<!-- Company -->
+<div>
+    <h3 class="text-light font-semibold mb-4">Company</h3>
+    <ul class="space-y-2 text-sm">
+        <li><a href="/about.html" class="hover:text-light transition-colors duration-200">About</a></li>
+        <li><a href="#" class="hover:text-light transition-colors duration-200">Blog</a></li>
+        <li><a href="/privacy.html" class="hover:text-light transition-colors duration-200">Privacy Policy</a></li>
+    </ul>
+</div>
+</div>
+
+<div class="border-t border-white/10 text-center text-sm py-4 px-6">
+    &copy; <span id="year"></span> Achille Industries · Boston, MA
+</div>
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<!-- Year -->
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Mobile Menu -->
+<script>
+    const openMenu = document.getElementById('menu-button');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('#mobile-menu a');
+
+    function openMobileMenu() {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => {
+            mobileMenu.classList.remove('-translate-x-full');
+        }, 10);
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        openMenu.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        mobileMenu.classList.add('-translate-x-full');
+        setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+        }, 300);
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        openMenu.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    openMenu.addEventListener('click', openMobileMenu);
+    closeMenu.addEventListener('click', closeMobileMenu);
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            closeMobileMenu();
+        }
+    });
+</script>
+
+<!-- Scroll Reveal -->
+<script>
+    (function() {
+        'use strict';
+
+        class ScrollReveal {
+            constructor() {
+                this.animatedClass = 'revealed';
+                this.elements = document.querySelectorAll('[data-reveal]');
+                this.mobileBreakpoint = 768;
+                this.desktopThreshold = 0.25;
+                this.mobileThreshold = 0.15;
+                this.init();
+            }
+
+            getThreshold() {
+                return window.innerWidth < this.mobileBreakpoint ?
+                    this.mobileThreshold :
+                    this.desktopThreshold;
+            }
+
+            init() {
+                if (!this.elements.length) return;
+
+                this.observer = new IntersectionObserver(
+                    (entries) => this.handleIntersect(entries), {
+                        root: null,
+                        rootMargin: '0px',
+                        threshold: this.getThreshold()
+                    }
+                );
+
+                this.elements.forEach(element => {
+                    this.observer.observe(element);
+                });
+
+                window.addEventListener('resize', this.debounce(() => {
+                    this.updateThreshold();
+                }, 150));
+            }
+
+            updateThreshold() {
+                if (this.observer) {
+                    this.observer.disconnect();
+                    this.observer = new IntersectionObserver(
+                        (entries) => this.handleIntersect(entries), {
+                            root: null,
+                            rootMargin: '0px',
+                            threshold: this.getThreshold()
+                        }
+                    );
+                    this.elements.forEach(element => {
+                        this.observer.observe(element);
+                    });
+                }
+            }
+
+            handleIntersect(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.revealElement(entry.target);
+                        this.observer.unobserve(entry.target);
+                    }
+                });
+            }
+
+            revealElement(element) {
+                const delay = parseInt(element.getAttribute('data-reveal-delay')) || 0;
+                setTimeout(() => {
+                    element.classList.remove('opacity-0');
+                    element.classList.remove('translate-y-6');
+                    element.classList.add(this.animatedClass);
+                }, delay);
+            }
+
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new ScrollReveal();
+        });
+    })();
+</script>
+
+<!-- Calendly Widget (loads immediately) -->
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async>
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        if (typeof Calendly !== 'undefined') {
+            Calendly.initBadgeWidget({
+                url: "https://calendly.com/ervensmachille",
+                text: "Schedule Project Consultation",
+                color: "#BDA266",
+                textColor: "#1d1e21",
+                branding: false,
+            });
+        }
+    };
+</script>
+
+</body>
+</html>
