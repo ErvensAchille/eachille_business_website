@@ -4,24 +4,139 @@
   <!-- =========================
        META / SEO
   ========================== -->
+  <meta name="google-site-verification" content="xla4OHMax_U1234RIzdh2bu8vdR-GMf39AAyX7NClVk" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Services | Web Design & Development | Achille Industries</title>
+  <link rel="canonical" href="https://www.ervensachille.com/services.html" />
+  
+  <title>Digital Growth & Creative Services in Boston | Achille Industries</title>
 
   <meta name="description"
-        content="Complete web design, development, and digital marketing services for businesses, nonprofits, and founders. Boston-based agency offering strategic solutions." />
+        content="Achille Industries is a Boston growth and media agency offering brand strategy, creative, web design, development, SEO, performance marketing, and AI automation." />
 
   <meta name="keywords"
-        content="web design services, web development services, digital marketing, SEO services, Boston web agency, e-commerce development" />
+        content="Boston digital agency, Boston digital marketing agency, Boston web design, Boston web development, digital growth agency, digital marketing strategy, web design and development, brand strategy, creative direction, performance marketing, SEO services, conversion-focused web design, AI automation, marketing automation, CRM automation" />
 
   <meta name="author" content="Achille Industries" />
+  
+  <!-- AI & Search Engine Rich Snippet Controls -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Our Services — Web Design & Development | Achille Industries" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Digital Growth & Creative Services in Boston | Achille Industries" />
   <meta property="og:description"
-        content="Strategic web design, development, and digital marketing solutions built for measurable results and long-term growth." />
+        content="Achille Industries is a Boston growth and media agency offering brand strategy, creative, web design, development, SEO, performance marketing, and AI automation." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ervensachille.com/services.html" />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Achille Industries" />
+  <!-- Optional: Add an og:image tag here when you have a dedicated services social share image -->
+  <!-- <meta property="og:image" content="https://www.ervensachille.com/img/services-og.jpg" /> -->
+
+  <!-- =========================
+       AI & LOCAL SEO SCHEMA (JSON-LD)
+  ========================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ervensachille.com/#website",
+        "url": "https://www.ervensachille.com",
+        "name": "Achille Industries",
+        "publisher": {
+          "@id": "https://www.ervensachille.com/#business"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.ervensachille.com/#business",
+        "name": "Achille Industries",
+        "description": "Achille Industries is a Boston-based growth and media agency helping ambitious organizations turn attention into measurable growth through brand strategy, cinematic creative, high-converting digital experiences, performance marketing, and intelligent automation.",
+        "url": "https://www.ervensachille.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Boston",
+          "addressRegion": "MA",
+          "addressCountry": "US"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Massachusetts"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Growth and Media Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Brand & Creative",
+                "description": "Brand strategy, creative direction, visual identity, campaign concepts, cinematic brand films, photography, video production, and creative assets."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Digital Experiences",
+                "description": "High-converting websites, landing pages, UX/UI design, digital platforms, SEO foundations, integrations, and scalable web architecture."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Performance & Growth",
+                "description": "Performance advertising, campaign strategy, lead generation, SEO, conversion optimization, audience targeting, analytics, and ongoing performance management."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Automation & Intelligence",
+                "description": "CRM architecture, marketing automation, AI-powered workflows, lead nurturing, integrations, reporting, and systems designed to connect marketing activity with business outcomes."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.ervensachille.com/services.html",
+        "url": "https://www.ervensachille.com/services.html",
+        "name": "Digital Growth & Creative Services in Boston | Achille Industries",
+        "description": "Achille Industries is a Boston growth and media agency offering brand strategy, creative, web design, development, SEO, performance marketing, and AI automation.",
+        "isPartOf": {
+          "@id": "https://www.ervensachille.com/#website"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.ervensachille.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.ervensachille.com/services.html"
+            }
+          ]
+        },
+        "mainEntity": {
+          "@id": "https://www.ervensachille.com/#business"
+        }
+      }
+    ]
+  }
+  </script>
 
   <!-- =========================
        FONTS
@@ -51,7 +166,7 @@
             dark: '#1d1e21',
             light: '#f4fff3',
             accent: '#BDA266',
-            sand: '#f8e9db'
+            white: '#ffffff'
           },
           fontFamily: {
             primary: ['Inter', 'sans-serif'],
@@ -143,11 +258,12 @@
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       background-size: cover;
       background-position: center;
-      border-radius: 16px;
       z-index: 1;
     }
     
-    .service-card:hover .mystery-image {
+    /* Reveal on hover OR when .is-revealed class is added (for mobile tap) */
+    .service-card:hover .mystery-image,
+    .service-card.is-revealed .mystery-image {
       opacity: 1;
       transform: scale(1);
     }
@@ -165,7 +281,16 @@
         rgba(29, 30, 33, 0.9) 0%,
         rgba(29, 30, 33, 0.7) 100%
       );
-      border-radius: 16px;
+      transition: background 0.4s ease;
+    }
+
+    .service-card:hover .mystery-image::after,
+    .service-card.is-revealed .mystery-image::after {
+      background: linear-gradient(
+        to bottom,
+        rgba(29, 30, 33, 0.85) 0%,
+        rgba(29, 30, 33, 0.6) 100%
+      );
     }
     
     /* Bring content to front and enhance readability */
@@ -175,24 +300,29 @@
       transition: all 0.3s ease;
     }
     
-    /* Change text color on hover for better contrast */
-    .service-card:hover .content-wrapper h3 {
+    /* Change text color on hover/reveal for better contrast */
+    .service-card:hover .content-wrapper h3,
+    .service-card.is-revealed .content-wrapper h3 {
       color: #f4fff3 !important;
     }
     
-    .service-card:hover .content-wrapper p {
+    .service-card:hover .content-wrapper p,
+    .service-card.is-revealed .content-wrapper p {
       color: #f4fff3 !important;
     }
     
-    .service-card:hover .content-wrapper li {
+    .service-card:hover .content-wrapper li,
+    .service-card.is-revealed .content-wrapper li {
       color: #f4fff3 !important;
     }
     
-    .service-card:hover .content-wrapper a {
+    .service-card:hover .content-wrapper a,
+    .service-card.is-revealed .content-wrapper a {
       color: #BDA266 !important;
     }
     
-    .service-card:hover .content-wrapper .icon-container {
+    .service-card:hover .content-wrapper .icon-container,
+    .service-card.is-revealed .content-wrapper .icon-container {
       background-color: #BDA266 !important;
       color: #1d1e21 !important;
     }
@@ -286,7 +416,7 @@
   </style>
 </head>
 
-<body class="bg-dark text-light font-primary antialiased">
+<body class="bg-dark text-white font-primary antialiased">
 
   <!-- Skip to main content link -->
   <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-accent focus:text-dark focus:rounded-lg">
@@ -306,23 +436,23 @@
           alt="Achille Industries logo"
           class="h-10 w-10 md:h-12 md:w-12"
         />
-        <span class="font-semibold tracking-wide">
+        <span class="font-semibold tracking-wide text-white">
           Achille Industries
         </span>
       </a>
 
       <!-- Desktop Navigation -->
       <ul class="hidden md:flex gap-8 text-sm font-semibold">
-        <li><a href="index.html" class="hover:text-accent transition-colors duration-200">Home</a></li>
+        <li><a href="index.html" class="hover:text-accent transition-colors duration-200 text-white">Home</a></li>
         <li><a href="services.html" class="hover:text-accent transition-colors duration-200 text-accent font-bold">Services</a></li>
-        <li><a href="about.html" class="hover:text-accent transition-colors duration-200">About</a></li>
-        <li><a href="contact.html" class="hover:text-accent transition-colors duration-200">Contact</a></li>
+        <li><a href="about.html" class="hover:text-accent transition-colors duration-200 text-white">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition-colors duration-200 text-white">Contact</a></li>
       </ul>
 
       <!-- Mobile Menu Button -->
       <button
         id="menu-button"
-        class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8"
+        class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8 text-white"
         aria-label="Open menu"
         aria-expanded="false"
       >
@@ -393,22 +523,19 @@
             <div class="flex items-center gap-4 mb-6 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
               <span class="block w-12 h-px bg-accent"></span>
               <span class="text-xs tracking-widest uppercase text-accent">
-                Visionary Design
+                SERVICES
               </span>
             </div>
 
             <!-- Heading -->
-            <h1 class="font-secondary text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
-              Where Design Meets Purpose
+            <h1 class="font-secondary text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 text-white opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
+              Built for Growth. Designed to Perform.
             </h1>
 
-            <!-- Upgraded Quote -->
+            <!-- Supporting Copy -->
             <div class="mb-10 max-w-2xl opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
-              <p class="text-xl md:text-2xl font-secondary text-light mb-4">
-                At Achille Industries, design transcends aesthetics
-              </p>
-              <p class="text-lg text-sand">
-                We create brands that resonate deeply, inspire action, and evolve alongside the communities they serve—transforming visions into enduring digital experiences.
+              <p class="text-xl md:text-2xl text-white">
+                We bring strategy, creative, technology, and performance together to build brands, digital experiences, and growth systems that move organizations forward.
               </p>
             </div>
 
@@ -424,9 +551,9 @@
 
               <a
                 href="contact.html"
-                class="inline-block px-6 py-3 md:px-8 md:py-4 border border-white/20 rounded-lg hover:border-accent hover:text-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
+                class="inline-block px-6 py-3 md:px-8 md:py-4 border border-white/20 text-white rounded-lg hover:border-accent hover:text-accent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
               >
-                Start Your Project
+                Start a Conversation
               </a>
             </div>
           </div>
@@ -435,360 +562,187 @@
     </section>
 
     <!-- =========================
-         2. SERVICES GRID (ENHANCED VERSION)
+         2. CORE CAPABILITIES (What We Do) - WITH ICONS & IMAGES
     ========================== -->
-    <section id="services" class="py-24 bg-dark/50">
+    <section id="services" class="py-24 bg-dark">
       <div class="max-w-7xl mx-auto px-6">
-        <!-- Section Header -->
         <div class="text-center mb-16 md:mb-20">
-          <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
-            Comprehensive Digital Services
+          <h2 class="font-secondary text-3xl md:text-4xl mb-4 text-white opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
+            What We Do
           </h2>
-          <p class="text-sand text-lg opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
-            Tailored solutions for businesses of all sizes
+          <p class="text-white text-lg opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
+            Four interconnected capabilities that drive modern growth.
           </p>
         </div>
 
-        <!-- ENHANCED SERVICES GRID WITH FULL-CARD HOVER REVEAL -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 gap-8">
           
-          <!-- Web Design Card -->
-          <div class="service-card group rounded-2xl p-8 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
-            <!-- Full Card Mystery Image -->
-            <div class="mystery-image" 
-                 style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
-            </div>
-            
-            <div class="content-wrapper">
-              <!-- Icon -->
-              <div class="icon-container w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6 transition-colors">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              
-              <!-- Content -->
-              <h3 class="text-2xl font-secondary mb-4 text-light">Web Design</h3>
-              <p class="text-sand mb-6">Custom, responsive designs that engage users and reflect your brand identity.</p>
-              
-              <ul class="space-y-2 mb-8">
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Custom UI/UX Design</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Brand Identity Integration</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Mobile-First Design</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Wireframing & Prototyping</span>
-                </li>
-              </ul>
-              
-              <a href="contact.html" class="text-accent font-semibold hover:text-accent/80 transition-colors inline-flex items-center gap-2">
-                <span>Get Started</span>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Web Development Card -->
-          <div class="service-card group rounded-2xl p-8 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
-            <!-- Full Card Mystery Image -->
-            <div class="mystery-image" 
-                 style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
-            </div>
-            
-            <div class="content-wrapper">
-              <div class="icon-container w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6 transition-colors">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              
-              <h3 class="text-2xl font-secondary mb-4 text-light">Web Development</h3>
-              <p class="text-sand mb-6">Robust, scalable websites and applications built with modern technologies.</p>
-              
-              <ul class="space-y-2 mb-8">
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Custom Web Applications</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>E-commerce Solutions</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>API Integration</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Performance Optimization</span>
-                </li>
-              </ul>
-              
-              <a href="contact.html" class="text-accent font-semibold hover:text-accent/80 transition-colors inline-flex items-center gap-2">
-                <span>Get Started</span>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Digital Marketing Card -->
-          <div class="service-card group rounded-2xl p-8 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
-            <!-- Full Card Mystery Image -->
-            <div class="mystery-image" 
-                 style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
-            </div>
-            
-            <div class="content-wrapper">
-              <div class="icon-container w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6 transition-colors">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-                </svg>
-              </div>
-              
-              <h3 class="text-2xl font-secondary mb-4 text-light">Digital Marketing</h3>
-              <p class="text-sand mb-6">Data-driven strategies to increase visibility, engagement, and conversions.</p>
-              
-              <ul class="space-y-2 mb-8">
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>SEO Optimization</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Content Strategy</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Social Media Marketing</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Conversion Rate Optimization</span>
-                </li>
-              </ul>
-              
-              <a href="contact.html" class="text-accent font-semibold hover:text-accent/80 transition-colors inline-flex items-center gap-2">
-                <span>Get Started</span>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Brand Strategy Card -->
-          <div class="service-card group rounded-2xl p-8 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="150">
-            <!-- Full Card Mystery Image -->
-            <div class="mystery-image" 
-                 style="background-image: url('https://images.unsplash.com/photo-1551836026-d5c2c500e713?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
-            </div>
-            
-            <div class="content-wrapper">
-              <div class="icon-container w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6 transition-colors">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              
-              <h3 class="text-2xl font-secondary mb-4 text-light">Brand Strategy</h3>
-              <p class="text-sand mb-6">Develop a cohesive brand identity that resonates with your target audience.</p>
-              
-              <ul class="space-y-2 mb-8">
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Brand Identity Development</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Market Research & Analysis</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Competitive Analysis</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Brand Messaging</span>
-                </li>
-              </ul>
-              
-              <a href="contact.html" class="text-accent font-semibold hover:text-accent/80 transition-colors inline-flex items-center gap-2">
-                <span>Get Started</span>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          
-          <!-- Ongoing Support Card -->
-          <div class="service-card group rounded-2xl p-8 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="200">
+          <!-- 01 Brand & Creative -->
+          <div class="service-card group rounded-2xl p-8 md:p-10 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
             <!-- Full Card Mystery Image -->
             <div class="mystery-image" 
                  style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
             </div>
             
-            <div class="content-wrapper">
-              <div class="icon-container w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6 transition-colors">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+            <div class="content-wrapper relative z-10">
+              <!-- Icon with Text -->
+              <div class="flex items-center gap-3 mb-4">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
+                <span class="text-accent font-semibold tracking-widest text-sm">BRAND & CREATIVE</span>
               </div>
               
-              <h3 class="text-2xl font-secondary mb-4 text-light">Ongoing Support</h3>
-              <p class="text-sand mb-6">Continuous maintenance, updates, and optimization to keep your site running smoothly.</p>
-              
-              <ul class="space-y-2 mb-8">
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Website Maintenance</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Security Updates</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Performance Monitoring</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Technical Support</span>
-                </li>
-              </ul>
-              
-              <a href="contact.html" class="text-accent font-semibold hover:text-accent/80 transition-colors inline-flex items-center gap-2">
-                <span>Get Started</span>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                </svg>
-              </a>
+              <h3 class="text-2xl md:text-3xl font-secondary mb-4 text-white">Build the foundation for everything that follows.</h3>
+              <p class="text-white mb-6 text-lg">We develop the strategy, identity, and creative direction that give your organization a distinct voice and make every subsequent marketing touchpoint more effective.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Brand Strategy</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Visual Identity</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Creative Direction</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Brand Films</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Commercial Video</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Performance Ad Creative</span>
+              </div>
+              <p class="text-white font-semibold border-t border-white/10 pt-6">Outcome: A distinctive brand with a clear voice, stronger credibility, and creative built to capture attention.</p>
             </div>
           </div>
-          
-          <!-- Consulting Card -->
-          <div class="service-card group rounded-2xl p-8 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="250">
+
+          <!-- 02 Digital Experiences -->
+          <div class="service-card group rounded-2xl p-8 md:p-10 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
             <!-- Full Card Mystery Image -->
             <div class="mystery-image" 
-                 style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                 style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
             </div>
             
-            <div class="content-wrapper">
-              <div class="icon-container w-14 h-14 flex items-center justify-center rounded-xl bg-accent/20 text-accent mb-6 transition-colors">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+            <div class="content-wrapper relative z-10">
+              <!-- Icon with Text -->
+              <div class="flex items-center gap-3 mb-4">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
+                <span class="text-accent font-semibold tracking-widest text-sm">DIGITAL EXPERIENCES</span>
               </div>
               
-              <h3 class="text-2xl font-secondary mb-4 text-light">Consulting</h3>
-              <p class="text-sand mb-6">Expert guidance to help you make informed decisions about your digital strategy.</p>
-              
-              <ul class="space-y-2 mb-8">
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Digital Strategy Sessions</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Technology Recommendations</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Marketing Strategy</span>
-                </li>
-                <li class="flex items-center gap-2 text-sm text-sand">
-                  <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                  <span>Process Optimization</span>
-                </li>
-              </ul>
-              
-              <a href="contact.html" class="text-accent font-semibold hover:text-accent/80 transition-colors inline-flex items-center gap-2">
-                <span>Get Started</span>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                </svg>
-              </a>
+              <h3 class="text-2xl md:text-3xl font-secondary mb-4 text-white">Turn attention into action.</h3>
+              <p class="text-white mb-6 text-lg">We design and develop high-performing digital experiences that make organizations easier to discover, understand, trust, and choose. As a Boston web design and development partner, we specialize in conversion-focused web design, custom web development, and mobile-first web development.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>UX/UI Design</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Custom Web Development</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>E-commerce Development</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Technical SEO</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>API Integrations</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Performance Optimization</span>
+              </div>
+              <p class="text-white font-semibold border-t border-white/10 pt-6">Outcome: Digital experiences that are fast, intuitive, credible, and built to convert.</p>
             </div>
           </div>
-          
+
+          <!-- 03 Performance & Growth -->
+          <div class="service-card group rounded-2xl p-8 md:p-10 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
+            <!-- Full Card Mystery Image -->
+            <div class="mystery-image" 
+                 style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+            </div>
+            
+            <div class="content-wrapper relative z-10">
+              <!-- Icon with Text -->
+              <div class="flex items-center gap-3 mb-4">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                </svg>
+                <span class="text-accent font-semibold tracking-widest text-sm">PERFORMANCE & GROWTH</span>
+              </div>
+              
+              <h3 class="text-2xl md:text-3xl font-secondary mb-4 text-white">Turn visibility into measurable growth.</h3>
+              <p class="text-white mb-6 text-lg">We build and manage growth strategies designed to attract the right audience, generate demand, and continuously improve performance. Our Boston digital marketing and SEO services are built on a foundation of data-driven digital marketing strategy and conversion optimization.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>SEO & Local SEO</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Performance Marketing</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Content Strategy</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Paid Advertising</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Analytics & Reporting</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Marketing Optimization</span>
+              </div>
+              <p class="text-white font-semibold border-t border-white/10 pt-6">Outcome: A growth engine designed to attract qualified audiences, generate demand, and improve performance over time.</p>
+            </div>
+          </div>
+
+          <!-- 04 Automation & Intelligence -->
+          <div class="service-card group rounded-2xl p-8 md:p-10 h-full opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="150">
+            <!-- Full Card Mystery Image -->
+            <div class="mystery-image" 
+                 style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+            </div>
+            
+            <div class="content-wrapper relative z-10">
+              <!-- Icon with Text -->
+              <div class="flex items-center gap-3 mb-4">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <span class="text-accent font-semibold tracking-widest text-sm">AUTOMATION & INTELLIGENCE</span>
+              </div>
+              
+              <h3 class="text-2xl md:text-3xl font-secondary mb-4 text-white">Make your systems work harder.</h3>
+              <p class="text-white mb-6 text-lg">We use automation, AI, CRM systems, and connected technology to reduce manual work, improve responsiveness, and create scalable digital infrastructure.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>AI Automation</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Marketing Automation</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>CRM Automation</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Workflow Automation</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>API Integrations</span>
+                <span class="text-white text-sm flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent"></span>AI Strategy</span>
+              </div>
+              <p class="text-white font-semibold border-t border-white/10 pt-6">Outcome: Less manual work, faster response times, better visibility, and systems that scale with your organization.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         3. PLATFORMS CAROUSEL (from index.html)
+         3. INTEGRATED GROWTH SYSTEM (NEW SECTION)
+    ========================== -->
+    <section class="py-24 bg-dark border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="font-secondary text-3xl md:text-5xl mb-8 text-white opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
+          Everything Works Better Together.
+        </h2>
+        <p class="text-white text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
+          Strategy informs the creative. Creative drives attention. Technology turns attention into action. Performance tells us what works. Automation helps the system scale.
+        </p>
+        
+        <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 font-semibold tracking-wide opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
+          <span class="px-4 py-2 border border-accent/30 rounded-full text-accent">Strategy</span>
+          <span class="text-white/30 hidden md:block">→</span>
+          <span class="px-4 py-2 border border-accent/30 rounded-full text-accent">Creative</span>
+          <span class="text-white/30 hidden md:block">→</span>
+          <span class="px-4 py-2 border border-accent/30 rounded-full text-accent">Technology</span>
+          <span class="text-white/30 hidden md:block">→</span>
+          <span class="px-4 py-2 border border-accent/30 rounded-full text-accent">Performance</span>
+          <span class="text-white/30 hidden md:block">→</span>
+          <span class="px-4 py-2 bg-accent text-dark rounded-full">Growth</span>
+        </div>
+        
+        <p class="mt-12 text-white/70 max-w-2xl mx-auto opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="150">
+          One connected growth system instead of disconnected vendors.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
+         4. PLATFORMS CAROUSEL (from index.html)
     ========================== -->
     <section id="platforms" class="py-24 bg-dark/50 border-t border-b border-white/5">
       <div class="max-w-7xl mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-12 md:mb-16">
           <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal>
-            Trusted by Industry Leaders
+            Built on the Right Technology
           </h2>
-          <p class="text-sand text-lg opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
-            We build on the platforms that power today's most successful businesses
+          <p class="text-white text-lg opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
+            We choose technology based on what your organization actually needs, not the other way around.
           </p>
         </div>
 
@@ -890,7 +844,7 @@
 
         <!-- CTA below carousel -->
         <div class="text-center mt-12 md:mt-16 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
-          <p class="text-sand mb-6">
+          <p class="text-white mb-6">
             Not sure which platform is right for your business?
           </p>
           <a
@@ -904,9 +858,9 @@
     </section>
 
     <!-- =========================
-         4. PROCESS SECTION (ULTRA-FAST VERSION)
+         5. PROCESS SECTION (UPDATED)
     ========================== -->
-    <section id="process" class="py-24 bg-dark text-light overflow-hidden">
+    <section id="process" class="py-24 bg-dark text-white overflow-hidden">
       <div
         class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center opacity-0 translate-y-4 transition-all duration-500 ease-out"
         id="process-wrapper"
@@ -917,46 +871,46 @@
 
           <!-- Eyebrow -->
           <div class="flex items-center gap-4 mb-6">
-            <span class="block w-12 h-px bg-light/40"></span>
-            <span class="text-xs tracking-widest uppercase text-sand">
-              How It Works
+            <span class="block w-12 h-px bg-white/40"></span>
+            <span class="text-xs tracking-widest uppercase text-white">
+              How We Work
             </span>
           </div>
 
           <!-- Heading -->
-          <h2 class="font-secondary text-3xl md:text-4xl leading-tight mb-8 md:mb-10 text-light">
+          <h2 class="font-secondary text-3xl md:text-4xl leading-tight mb-8 md:mb-10 text-white">
             A methodology built for<br />
             <span class="text-accent">clarity & results</span>
           </h2>
 
           <!-- Tabs - Ultra Fast -->
           <div class="flex gap-4 md:gap-8 border-b border-white/20 mb-8 md:mb-10 overflow-x-auto pb-1">
-            <button class="process-tab active whitespace-nowrap" data-step="discover">Discover</button>
-            <button class="process-tab whitespace-nowrap" data-step="design">Design</button>
-            <button class="process-tab whitespace-nowrap" data-step="develop">Develop</button>
-            <button class="process-tab whitespace-nowrap" data-step="deploy">Deploy</button>
-            <button class="process-tab whitespace-nowrap" data-step="scale">Scale</button>
+            <button class="process-tab active whitespace-nowrap" data-step="discover">01 — Discover</button>
+            <button class="process-tab whitespace-nowrap" data-step="strategize">02 — Strategize</button>
+            <button class="process-tab whitespace-nowrap" data-step="create">03 — Create</button>
+            <button class="process-tab whitespace-nowrap" data-step="activate">04 — Activate</button>
+            <button class="process-tab whitespace-nowrap" data-step="optimize">05 — Optimize</button>
           </div>
 
           <!-- Content -->
           <div id="process-content" class="transition-all duration-200">
-            <h3 class="text-2xl md:text-3xl font-secondary mb-4 md:mb-6 text-light" id="process-title">
-              Discover
+            <h3 class="text-2xl md:text-3xl font-secondary mb-4 md:mb-6 text-white" id="process-title">
+              01 — Discover
             </h3>
 
-            <p class="mb-4 md:mb-6 text-base md:text-lg text-sand" id="process-text-1">
-              We start by deeply understanding your business goals, target audience, and competitive landscape. Through workshops, audits, and research, we establish a clear foundation for success.
+            <p class="mb-4 md:mb-6 text-base md:text-lg text-white" id="process-text-1">
+              Understand the organization, audience, market, challenges, and growth objectives.
             </p>
 
-            <p class="mb-8 md:mb-10 text-base md:text-lg text-sand" id="process-text-2">
-              This phase ensures every design and development decision is strategically aligned with your vision and measurable objectives.
+            <p class="mb-8 md:mb-10 text-base md:text-lg text-white" id="process-text-2">
+              We start by deeply understanding your business goals to establish a clear foundation for success.
             </p>
 
             <a
               href="contact.html"
-              class="inline-flex items-center gap-3 font-semibold border-b border-accent pb-1 hover:text-accent hover:border-accent transition-colors duration-200 text-light"
+              class="inline-flex items-center gap-3 font-semibold border-b border-accent pb-1 hover:text-accent hover:border-accent transition-colors duration-200 text-white"
             >
-              Talk to us about your website requirements
+              Talk to us about your growth goals
               <span>→</span>
             </a>
           </div>
@@ -977,7 +931,7 @@
     </section>
 
     <!-- =========================
-         5. HORIZONTAL SCROLL CAROUSEL SECTION
+         6. HORIZONTAL SCROLL CAROUSEL SECTION
     ========================== -->
     <section class="py-24 bg-dark">
       <div class="max-w-7xl mx-auto px-6">
@@ -992,17 +946,17 @@
 
         <!-- Section Header -->
         <div class="mb-12 md:mb-16 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="50">
-          <h2 class="font-secondary text-3xl md:text-4xl lg:text-5xl mb-4 text-light">
+          <h2 class="font-secondary text-3xl md:text-4xl lg:text-5xl mb-4 text-white">
             Our Work in Motion
           </h2>
-          <p class="text-sand text-lg max-w-2xl">
+          <p class="text-white text-lg max-w-2xl">
             Scroll horizontally to explore our latest projects and behind-the-scenes moments
           </p>
         </div>
 
         <!-- Scroll Indicator -->
         <div class="flex items-center gap-3 mb-8 opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="100">
-          <span class="text-xs tracking-widest uppercase text-sand">Scroll →</span>
+          <span class="text-xs tracking-widest uppercase text-white">Scroll →</span>
           <div class="h-px w-16 bg-accent/30"></div>
         </div>
 
@@ -1073,7 +1027,7 @@
 
       <!-- Follow CTA -->
       <div class="max-w-7xl mx-auto px-6 mt-12 text-center opacity-0 translate-y-4 transition-all duration-500 ease-out" data-reveal data-reveal-delay="150">
-        <p class="text-sand mb-4">Want to see more of our daily work?</p>
+        <p class="text-white mb-4">Want to see more of our daily work?</p>
         <a 
           href="https://www.instagram.com/achilleindustries" 
           target="_blank" 
@@ -1088,7 +1042,7 @@
     </section>
 
     <!-- =========================
-         6. UPDATED CONTACT CTA (Full Width Spread Out)
+         7. UPDATED CONTACT CTA (Full Width Spread Out)
     ========================== -->
     <div class="bg-dark">
       <div class="mx-auto max-w-[1920px] py-32 sm:px-8 lg:px-16">
@@ -1144,15 +1098,15 @@
   <!-- =========================
        FOOTER (from index.html)
   ========================== -->
-  <footer class="bg-dark text-sand border-t border-white/10">
+  <footer class="bg-dark text-white border-t border-white/10">
     <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
 
       <!-- Company Mission -->
       <div>
-        <h2 class="text-light text-xl font-semibold mb-4">
+        <h2 class="text-white text-xl font-semibold mb-4">
           Achille Industries
         </h2>
-        <p class="text-sm mb-6 text-sand">
+        <p class="text-sm mb-6 text-white">
           Helping businesses stand out through thoughtful design,
           scalable development, and long-term digital strategy.
         </p>
@@ -1161,7 +1115,7 @@
         <div class="flex gap-4">
           <!-- GitHub -->
           <a href="https://github.com/ErvensAchille" target="_blank" aria-label="GitHub" rel="noopener noreferrer"
-             class="text-sand hover:text-accent transition-colors duration-200">
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008.03 10.95c.58.1.79-.25.79-.56v-2.03c-3.27.71-3.96-1.57-3.96-1.57-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.7.08-.70 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.56-2.61-.3-5.36-1.3-5.36-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.53.12-3.18 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.88.12 3.18a4.5 4.5 0 011.2 3.15c0 4.52-2.75 5.5-5.38 5.8.42.36.78 1.07.78 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
@@ -1169,8 +1123,8 @@
           </a>
 
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/ervens-achille-profile/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
-             class="text-sand hover:text-accent transition-colors duration-200">
+          <a href="https://www.linkedin.com/company/achille-industries?trk=public_post_feed-actor-name" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M4.98 3.5C3.33 3.5 2 4.82 2 6.48c0 1.64 1.33 2.98 2.98 2.98S7.97 8.12 7.97 6.48C7.97 4.82 6.63 3.5 4.98 3.5zM2.4 20h5.15V9.53H2.4V20zM9.75 9.53V20h5.15v-5.67c0-3.03 3.87-3.28 3.87 0V20H24v-6.64c0-6.56-7.13-6.31-8.99-3.09V9.53H9.75z" />
@@ -1179,7 +1133,7 @@
 
           <!-- Email -->
           <a href="mailto:ervensmachille@gmail.com" aria-label="Email"
-             class="text-sand hover:text-accent transition-colors duration-200">
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13l8-6.99V6H4zm16 2.1l-7.5 5.24a1 1 0 01-1 0L4 8.1V18h16V8.1z" />
@@ -1188,7 +1142,7 @@
 
           <!-- Instagram -->
           <a href="https://www.instagram.com/achilleindustries" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
-             class="text-sand hover:text-accent transition-colors duration-200">
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1.5 1.5 0 11-3 .001A1.5 1.5 0 0117.5 6.5z" />
@@ -1197,7 +1151,7 @@
 
           <!-- Twitter -->
           <a href="https://x.com/achilleervens" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
-             class="text-sand hover:text-accent transition-colors duration-200">
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
@@ -1208,37 +1162,36 @@
 
       <!-- Solutions -->
       <div>
-        <h3 class="text-light font-semibold mb-4">Solutions</h3>
+        <h3 class="text-white font-semibold mb-4">Solutions</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="/services.html" class="hover:text-light transition-colors duration-200 text-accent font-bold">Web Design</a></li>
-          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Brand Systems</a></li>
-          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Consulting</a></li>
-          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">E-commerce</a></li>
-          <li><a href="/services.html" class="hover:text-light transition-colors duration-200">Strategy</a></li>
+          <li><a href="/services.html" class="hover:text-white transition-colors duration-200 text-accent font-bold">Brand & Creative</a></li>
+          <li><a href="/services.html" class="hover:text-white transition-colors duration-200">Digital Experiences</a></li>
+          <li><a href="/services.html" class="hover:text-white transition-colors duration-200">Performance & Growth</a></li>
+          <li><a href="/services.html" class="hover:text-white transition-colors duration-200">Automation & Intelligence</a></li>
         </ul>
       </div>
 
       <!-- Support -->
       <div>
-        <h3 class="text-light font-semibold mb-4">Support</h3>
+        <h3 class="text-white font-semibold mb-4">Support</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="contact.html" class="hover:text-light transition-colors duration-200">Contact</a></li>
-          <li><a href="#process" class="hover:text-light transition-colors duration-200">Process</a></li>
+          <li><a href="contact.html" class="hover:text-white transition-colors duration-200">Contact</a></li>
+          <li><a href="#process" class="hover:text-white transition-colors duration-200">Process</a></li>
         </ul>
       </div>
 
       <!-- Company -->
       <div>
-        <h3 class="text-light font-semibold mb-4">Company</h3>
+        <h3 class="text-white font-semibold mb-4">Company</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="about.html" class="hover:text-light transition-colors duration-200">About</a></li>
-          <li><a href="#" class="hover:text-light transition-colors duration-200">Blog</a></li>
-          <li><a href="/privacy.html" class="hover:text-light transition-colors duration-200">Privacy Policy</a></li>
+          <li><a href="about.html" class="hover:text-white transition-colors duration-200">About</a></li>
+          <li><a href="#" class="hover:text-white transition-colors duration-200">Blog</a></li>
+          <li><a href="/privacy.html" class="hover:text-white transition-colors duration-200">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="border-t border-white/10 text-center text-sm py-4 px-6">
+    <div class="border-t border-white/10 text-center text-sm py-4 px-6 text-white">
       &copy; <span id="year"></span> Achille Industries · Boston, MA
     </div>
   </footer>
@@ -1296,32 +1249,32 @@
   <script>
     const processData = {
       discover: {
-        title: "Discover",
-        text1: "We start by deeply understanding your business goals, target audience, and competitive landscape. Through workshops, audits, and research, we establish a clear foundation for success.",
-        text2: "This phase ensures every design and development decision is strategically aligned with your vision and measurable objectives.",
+        title: "01 — Discover",
+        text1: "Understand the organization, audience, market, challenges, and growth objectives.",
+        text2: "We start by deeply understanding your business goals to establish a clear foundation for success.",
         image: "./img/discover.jpg"
       },
-      design: {
-        title: "Design",
-        text1: "We craft intuitive, brand-aligned interfaces focused on clarity, usability, and conversion. Every design decision is intentional, informed by research and validated through user feedback.",
-        text2: "From wireframes to high-fidelity prototypes, we ensure the user experience is seamless and delightful across all devices.",
+      strategize: {
+        title: "02 — Strategize",
+        text1: "Define the positioning, opportunities, channels, and systems required to achieve the objective.",
+        text2: "Every design and development decision is strategically aligned with your vision and measurable objectives.",
         image: "./img/design.jpg"
       },
-      develop: {
-        title: "Develop",
-        text1: "Your site is built using modern, reliable technologies with performance and scalability at the forefront. We implement best practices for code quality, security, and maintainability.",
-        text2: "We test across devices and browsers to ensure stability, speed, and accessibility for all users.",
+      create: {
+        title: "03 — Create",
+        text1: "Develop the brand, creative, content, and digital experiences that bring the strategy to life.",
+        text2: "From wireframes to high-fidelity prototypes, we ensure the user experience is seamless and delightful.",
         image: "./img/develop.jpg"
       },
-      deploy: {
-        title: "Deploy",
-        text1: "After rigorous testing and optimization, we launch with confidence, monitoring performance and user feedback. We ensure a smooth transition with minimal disruption to your business.",
-        text2: "You'll receive comprehensive documentation and training to manage your site effectively going forward.",
+      activate: {
+        title: "04 — Activate",
+        text1: "Launch campaigns, digital experiences, automation, and growth systems.",
+        text2: "We ensure a smooth transition with minimal disruption, monitoring performance and user feedback.",
         image: "./img/deploy.jpg"
       },
-      scale: {
-        title: "Scale",
-        text1: "We don't just launch and leave. We provide ongoing support, analytics, and optimization to help your digital presence grow alongside your business.",
+      optimize: {
+        title: "05 — Optimize",
+        text1: "Measure performance, identify opportunities, and continuously improve.",
         text2: "From performance monitoring to feature enhancements, we're your long-term partner in digital success.",
         image: "./img/scale.jpg"
       }
@@ -1617,6 +1570,24 @@
       });
       
     })();
+  </script>
+
+  <!-- Mobile tap to reveal for service cards -->
+  <script>
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        // Prevent triggering if clicking a link inside the card
+        if (e.target.closest('a')) return;
+        
+        // Remove revealed state from other service cards
+        document.querySelectorAll('.service-card').forEach(c => {
+          if (c !== this) c.classList.remove('is-revealed');
+        });
+        
+        // Toggle revealed state on clicked card
+        this.classList.toggle('is-revealed');
+      });
+    });
   </script>
 
   <!-- Smooth scrolling for anchor links -->

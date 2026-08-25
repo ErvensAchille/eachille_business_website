@@ -7,22 +7,87 @@
   <meta name="google-site-verification" content="xla4OHMax_U1234RIzdh2bu8vdR-GMf39AAyX7NClVk" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Achille Industries | Web & Software Studio in Boston, MA</title>
+  <title>Achille Industries | Growth & Media Agency in Boston, MA</title>
 
   <meta name="description"
-        content="Achille Industries is a Boston-based web and software studio helping businesses, nonprofits, and founders build reliable, scalable digital platforms." />
+        content="Achille Industries is a Boston-based growth and media agency helping ambitious organizations turn attention into measurable growth through brand strategy, digital experiences, performance marketing, and intelligent automation." />
 
   <meta name="keywords"
-        content="Boston web design agency, Boston marketing agency, graphic design Boston, software development Boston, Achille Industries" />
+        content="Boston growth agency, Boston media agency, brand strategy Boston, digital experiences, performance marketing, marketing automation, Achille Industries" />
 
   <meta name="author" content="Achille Industries" />
+  
+  <!-- AI & Search Engine Rich Snippet Controls -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Achille Industries — Web & Software Studio" />
+  <meta property="og:title" content="Achille Industries — Growth & Media Agency" />
   <meta property="og:description"
-        content="Founder-led web and software solutions built for clarity, performance, and long-term growth." />
+        content="Founder-led growth and media solutions built for clarity, performance, and long-term scalable growth." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ervensachille.com" />
   <meta property="og:locale" content="en_US" />
+
+  <!-- =========================
+       AI & LOCAL SEO SCHEMA (JSON-LD)
+  ========================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "name": "Achille Industries",
+    "description": "Achille Industries is a Boston-based growth and media agency helping ambitious organizations turn attention into measurable growth through brand strategy, cinematic creative, high-converting digital experiences, performance marketing, and intelligent automation.",
+    "url": "https://www.ervensachille.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Massachusetts"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Growth and Media Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Brand & Creative",
+            "description": "Brand strategy, creative direction, visual identity, campaign concepts, cinematic brand films, photography, video production, and creative assets."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Experiences",
+            "description": "High-converting websites, landing pages, UX/UI design, digital platforms, SEO foundations, integrations, and scalable web architecture."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Performance & Demand",
+            "description": "Performance advertising, campaign strategy, lead generation, SEO, conversion optimization, audience targeting, analytics, and ongoing performance management."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Growth Systems",
+            "description": "CRM architecture, marketing automation, AI-powered workflows, lead nurturing, integrations, reporting, and systems designed to connect marketing activity with business outcomes."
+          }
+        }
+      ]
+    }
+  }
+  </script>
 
   <!-- =========================
        FONTS
@@ -205,20 +270,56 @@
       filter: drop-shadow(0 10px 15px rgba(189, 162, 102, 0.2));
     }
 
-    /* Hide video on desktop, show on mobile */
-    .hero-video {
-      display: none;
+    /* Video container styles */
+    .video-container {
+      position: relative;
+      background: #000;
     }
-    
-    @media (max-width: 768px) {
-      .hero-video {
-        display: block;
-      }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: rgba(189, 162, 102, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .play-button:hover {
+      background: rgba(189, 162, 102, 1);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .play-button svg {
+      width: 30px;
+      height: 30px;
+      fill: #1d1e21;
+      margin-left: 5px;
+    }
+
+    .video-container.playing .play-button {
+      opacity: 0;
+      pointer-events: none;
     }
   </style>
 </head>
 
-<body class="bg-dark text-light font-primary antialiased">
+<!-- Added overflow-x-hidden to prevent any horizontal scroll issues -->
+<body class="bg-dark text-light font-primary antialiased overflow-x-hidden">
 
   <!-- Skip to main content link -->
   <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-accent focus:text-dark focus:rounded-lg">
@@ -302,20 +403,19 @@
   </header>
 
   <!-- =========================
-       MAIN CONTENT - CONVERSION OPTIMIZED FLOW
+       MAIN CONTENT - 
   ========================== -->
   <main id="main-content">
     
 <!-- =========================
-     1. HERO SECTION WITH VIDEO BACKGROUND (MOBILE ONLY)
+     1. HERO SECTION WITH VIDEO BACKGROUND
 ========================== -->
 <section class="relative min-h-screen flex items-center pt-16 md:pt-0 overflow-hidden">
-  <!-- Video Background - Hidden on desktop, visible on mobile -->
+  <!-- Video Background -->
   <div class="absolute inset-0 z-0 bg-dark">
-    <!-- Optimized video for mobile devices -->
     <video 
       id="hero-video"
-      class="hero-video absolute inset-0 w-full h-full object-cover opacity-40"
+      class="absolute inset-0 w-full h-full object-cover opacity-40"
       playsinline
       muted
       autoplay
@@ -327,36 +427,50 @@
       controlslist="nodownload nofullscreen noremoteplayback"
     >
       <source src="./img/hero-bg.mp4" type="video/mp4">
-      <!-- Fallback text if video doesn't load -->
       Your browser does not support the video tag.
     </video>
-    <!-- Gradient overlay for better visibility -->
-    <div class="absolute inset-0 bg-gradient-to-r from-dark/40 via-dark/30 to-dark/20"></div>
+
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-dark/50 via-dark/35 to-dark/20"></div>
   </div>
 
   <!-- Content -->
   <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center w-full">
+
     <!-- Left -->
     <div>
-      <h1 class="font-secondary text-4xl md:text-5xl lg:text-6xl leading-tight opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
-        Fuel Your Growth.<br class="hidden sm:block" />
-        Dominate Your Market.
+      <!-- Headline -->
+      <h1
+        class="font-secondary text-4xl md:text-5xl lg:text-6xl leading-[1.08] opacity-0 translate-y-6 transition-all duration-700 ease-out"
+        data-reveal
+      >
+        We Build Brands That Captivate.
+        <br class="hidden sm:block" />
+        Systems That Convert.
       </h1>
 
-      <p class="mt-6 text-lg text-sand max-w-xl opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="150">
-        Achille Industries is a Boston-based web and software studio helping
-        businesses, nonprofits, and founders build reliable digital platforms
-        that scale with clarity and confidence.
+      <!-- Subheadline -->
+      <p
+        class="mt-6 text-lg md:text-xl text-white max-w-2xl leading-relaxed opacity-0 translate-y-6 transition-all duration-700 ease-out"
+        data-reveal
+        data-reveal-delay="150"
+      >
+        We help ambitious organizations turn attention into measurable growth through strategy, creative, digital experiences, and intelligent automation
       </p>
 
-      <div class="mt-10 flex flex-wrap gap-4 md:gap-6 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="300">
+      <!-- CTAs -->
+      <div
+        class="mt-10 flex flex-wrap gap-4 md:gap-6 opacity-0 translate-y-6 transition-all duration-700 ease-out"
+        data-reveal
+        data-reveal-delay="300"
+      >
         <a
           href="#contact"
           class="inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-dark font-semibold rounded-lg hover:bg-accent/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark"
           data-cta="hero-consultation"
           data-event="conversion"
         >
-          Schedule a Free Consultation
+          Schedule a Free Strategy Session
         </a>
 
         <a
@@ -367,136 +481,143 @@
           View Our Work
         </a>
       </div>
-
-      <!-- Animated Quote -->
-      <p
-        id="hero-quote"
-        class="mt-10 text-xl md:text-2xl font-secondary text-sand max-w-xl opacity-0 translate-y-6 transition-all duration-700 ease-out"
-      >
-        We Build Brands & Demand: Strategy, Design, and Results.
-      </p>
     </div>
 
-    <!-- Right - Logo visible on all devices now (moved from hidden class) -->
-    <div class="flex justify-center md:justify-end md:items-start md:pt-6 lg:pt-0">
+    <!-- Right -->
+    <div class="hidden md:flex justify-center md:justify-end md:items-start md:pt-6 lg:pt-0">
       <img
-        src="./img/navLogo.svg"
+        src="./img/logo.svg"
         alt="Achille Industries brand mark"
-        class="w-48 md:w-[420px] lg:w-[480px] opacity-95"
+        class="w-72 md:w-[420px] lg:w-[480px] opacity-95"
         loading="lazy"
       />
     </div>
+
   </div>
 </section>
 
     <!-- =========================
-         2. SERVICES (WHAT WE DO)
+         2. SERVICES / GROWTH SYSTEM
     ========================== -->
     <section id="what-we-do" class="py-24 bg-dark text-light">
       <div class="max-w-7xl mx-auto px-6">
 
         <!-- Header -->
-        <div class="max-w-3xl mx-auto text-center mb-20">
-          <h2 class="font-secondary text-4xl mb-4 text-light">
-            Why Partner With Us for Your Business?
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h2 class="font-secondary text-4xl md:text-5xl mb-5 text-light">
+            Growth Doesn't Happen in Silos.
           </h2>
-          <p class="text-lg text-sand">
-            We design, build, and optimize websites that turn visitors into customers and scale with your business.
-          </p>
+
+          <p class="text-lg md:text-xl text-white leading-relaxed">
+We bring strategy, creative, technology, and performance together under one system, so your brand doesn't just look better. It works harder to attract the right audience, convert demand, and drive measurable growth.          </p>
         </div>
 
-        <!-- Mobile Image Card (visible only on mobile) -->
+        <!-- Capability / Proof Bar -->
+        <div
+          class="mb-20 py-6 border-y border-white/10 opacity-0 translate-y-6 transition-all duration-700 ease-out"
+          data-reveal
+          data-reveal-delay="150"
+        >
+          <p class="text-xs md:text-sm uppercase tracking-[0.18em] text-white/50 text-center mb-4">
+            Our Capabilities
+          </p>
+
+          <div class="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-sm md:text-base text-white/80 text-center">
+            <span>Strategy</span>
+            <span class="text-accent">•</span>
+            <span>Creative</span>
+            <span class="text-accent">•</span>
+            <span>Media</span>
+            <span class="text-accent">•</span>
+            <span>Digital</span>
+            <span class="text-accent">•</span>
+            <span>Performance</span>
+            <span class="text-accent">•</span>
+            <span>Automation</span>
+            <span class="text-accent">•</span>
+            <span>Analytics</span>
+          </div>
+        </div>
+
+        <!-- Mobile Image Card - CLEAN VERSION (NO OVERLAY) -->
         <div class="lg:hidden mb-12">
           <div class="w-full rounded-2xl shadow-xl border border-white/10 overflow-hidden h-[400px] relative">
-            
-            <!-- Dynamic Background Image -->
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('img/phonecollection.png');"></div>
 
-            <!-- Content (hidden on mobile, visible on desktop) -->
-            <div class="relative p-8 flex flex-col h-full justify-between hidden lg:flex">
-              <!-- Icon -->
-              <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center">
-                <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              
-              <!-- Main Text -->
-              <div>
-                <h3 class="text-2xl font-secondary mb-4 text-light leading-tight">
-                  Discover our website design and development services
-                </h3>
-                
-                <p class="text-sand text-lg leading-relaxed">
-                  Full-service agency support with ongoing optimization and management capabilities tailored to your unique business needs.
-                </p>
-              </div>
+            <!-- Background Image Only -->
+            <div
+              class="absolute inset-0 bg-cover bg-center"
+              style="background-image:url('img/phonecollection.png');"
+            ></div>
 
-              <!-- Footer -->
-              <div>
-                <div class="w-16 h-0.5 bg-accent/50 mb-4"></div>
-                <p class="text-sand/80 text-sm">
-                  Every project begins with a comprehensive strategy session to ensure alignment with your business objectives and target audience.
-                </p>
-                
-                <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-accent hover:text-accent/80 transition-colors duration-200 mt-6 group">
-                  <span>Start your project</span>
-                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 
         <!-- Content Grid -->
         <div class="grid lg:grid-cols-2 gap-16 items-start">
 
-          <!-- LEFT: Sticky Image Card (hidden on mobile) -->
+          <!-- LEFT: Sticky Image Card (SIMPLIFIED) -->
           <div class="hidden lg:block lg:sticky lg:top-12 flex items-start">
             <div class="w-full rounded-2xl shadow-xl border border-white/10 overflow-hidden h-[75vh] relative">
-              
+
               <!-- Dynamic Background Image -->
-              <div id="sticky-image" class="absolute inset-0 bg-cover bg-center transition-all duration-500" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');"></div>
+              <div
+                id="sticky-image"
+                class="absolute inset-0 bg-cover bg-center transition-all duration-500"
+                style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80');"
+              ></div>
 
               <!-- Overlay -->
               <div class="absolute inset-0 bg-dark/70"></div>
 
-              <!-- Content -->
+              <!-- Content - Simplified: just icon, footer statement, and CTA -->
               <div class="relative p-8 flex flex-col h-full justify-between">
+
                 <!-- Icon -->
                 <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center">
-                  <svg id="sticky-icon" class="w-8 h-8 text-accent transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    id="sticky-icon"
+                    class="w-8 h-8 text-accent transition-all duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
-                </div>
-                
-                <!-- Main Text -->
-                <div>
-                  <h3 id="sticky-title" class="text-2xl md:text-3xl font-secondary mb-4 text-light leading-tight transition-all duration-300">
-                    Discover our website design and development services
-                  </h3>
-                  
-                  <p id="sticky-description" class="text-sand text-lg leading-relaxed transition-all duration-300">
-                    Full-service agency support with ongoing optimization and management capabilities tailored to your unique business needs.
-                  </p>
                 </div>
 
                 <!-- Footer -->
                 <div>
                   <div class="w-16 h-0.5 bg-accent/50 mb-4"></div>
-                  <p id="sticky-footer" class="text-sand/80 text-sm transition-all duration-300">
-                    Every project begins with a comprehensive strategy session to ensure alignment with your business objectives and target audience.
+
+                  <p
+                    id="sticky-footer"
+                    class="text-white/80 text-sm transition-all duration-300"
+                  >
+                    Strategy and creative direction provide the foundation for
+                    everything that follows.
                   </p>
-                  
-                  <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-accent hover:text-accent/80 transition-colors duration-200 mt-6 group">
-                    <span>Start your project</span>
-                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
+
+                  <a
+                    href="#contact"
+                    class="inline-flex items-center gap-2 font-semibold text-accent hover:text-accent/80 transition-colors duration-200 mt-6 group"
+                  >
+                    <span>Start a conversation</span>
+
+                    <svg
+                      class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                     </svg>
                   </a>
                 </div>
+
               </div>
             </div>
           </div>
@@ -504,115 +625,232 @@
           <!-- RIGHT: Scrolling Content -->
           <div id="features-column" class="space-y-0">
 
-            <!-- Feature 1: User-Centric Design -->
+            <!-- Feature 1: Brand & Creative -->
             <div class="feature-section" data-feature="design">
               <div class="flex gap-6 items-start p-6 rounded-xl transition-all duration-300 hover:bg-white/5">
+
                 <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/20 text-accent flex-shrink-0">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    />
                   </svg>
                 </div>
+
                 <div>
-                  <h3 class="font-semibold text-xl mb-3 text-light">User-Centric Design</h3>
+                  <h3 class="font-semibold text-xl mb-3 text-light">
+                    Brand & Creative
+                  </h3>
+
                   <div class="space-y-3">
+
                     <div>
-                      <p class="text-light/80 text-sm font-medium mb-1">What We Deliver</p>
-                      <p class="text-sand">
-                        Expert-led UX/UI design, brand integration, responsive frameworks, and accessibility compliance that creates seamless experiences across all devices.
+                      <p class="text-white/80 text-sm font-medium mb-1">
+                        What We Deliver
+                      </p>
+
+                      <p class="text-white">
+                        Brand strategy, creative direction, visual identity,
+                        campaign concepts, cinematic brand films, photography,
+                        video production, and creative assets designed around your
+                        business objectives.
                       </p>
                     </div>
+
                     <div>
-                      <p class="text-light/80 text-sm font-medium mb-1">Your Benefit</p>
-                      <p class="text-sand">
-                        A beautiful, functional website that resonates with your audience, builds trust, and converts visitors into loyal customers.
+                      <p class="text-white/80 text-sm font-medium mb-1">
+                        Your Benefit
+                      </p>
+
+                      <p class="text-white">
+                        A clear, compelling brand that earns attention, builds
+                        credibility, and gives your organization a consistent
+                        voice across every channel.
                       </p>
                     </div>
+
                   </div>
                 </div>
+
               </div>
             </div>
 
-            <!-- Feature 2: Strategic Development -->
+            <!-- Feature 2: Digital Experiences -->
             <div class="feature-section" data-feature="development">
               <div class="flex gap-6 items-start p-6 rounded-xl transition-all duration-300 hover:bg-white/5">
+
                 <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/20 text-accent flex-shrink-0">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    />
                   </svg>
                 </div>
+
                 <div>
-                  <h3 class="font-semibold text-xl mb-3 text-light">Strategic Development</h3>
+                  <h3 class="font-semibold text-xl mb-3 text-light">
+                    Digital Experiences
+                  </h3>
+
                   <div class="space-y-3">
+
                     <div>
-                      <p class="text-light/80 text-sm font-medium mb-1">What We Deliver</p>
-                      <p class="text-sand">
-                        Platform selection (WordPress, Shopify, Wix, custom solutions), full migration, comprehensive testing, and seamless deployment with zero downtime.
+                      <p class="text-white/80 text-sm font-medium mb-1">
+                        What We Deliver
+                      </p>
+
+                      <p class="text-white">
+                        High-converting websites, landing pages, UX/UI design,
+                        digital platforms, SEO foundations, integrations, and
+                        scalable web architecture built around the customer journey.
                       </p>
                     </div>
+
                     <div>
-                      <p class="text-light/80 text-sm font-medium mb-1">Your Benefit</p>
-                      <p class="text-sand">
-                        A fast, secure, and scalable website built on the right foundation, delivered efficiently and ready to grow with your business.
+                      <p class="text-white/80 text-sm font-medium mb-1">
+                        Your Benefit
+                      </p>
+
+                      <p class="text-white">
+                        A digital experience that doesn't just look good—it
+                        communicates your value, builds trust, and moves visitors
+                        toward action.
                       </p>
                     </div>
+
                   </div>
                 </div>
+
               </div>
             </div>
 
-            <!-- Feature 3: Growth & Support -->
+            <!-- Feature 3: Performance & Demand -->
             <div class="feature-section" data-feature="growth">
               <div class="flex gap-6 items-start p-6 rounded-xl transition-all duration-300 hover:bg-white/5">
+
                 <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/20 text-accent flex-shrink-0">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    />
                   </svg>
                 </div>
+
                 <div>
-                  <h3 class="font-semibold text-xl mb-3 text-light">Growth & Support</h3>
+                  <h3 class="font-semibold text-xl mb-3 text-light">
+                    Performance & Demand
+                  </h3>
+
                   <div class="space-y-3">
+
                     <div>
-                      <p class="text-light/80 text-sm font-medium mb-1">What We Deliver</p>
-                      <p class="text-sand">
-                        SEO optimization, conversion rate optimization, performance analytics, comprehensive CMS training, and dedicated technical support when you need it.
+                      <p class="text-white/80 text-sm font-medium mb-1">
+                        What We Deliver
+                      </p>
+
+                      <p class="text-white">
+                        Performance advertising, campaign strategy, lead
+                        generation, SEO, conversion optimization, audience
+                        targeting, analytics, and ongoing performance management.
                       </p>
                     </div>
+
                     <div>
-                      <p class="text-light/80 text-sm font-medium mb-1">Your Benefit</p>
-                      <p class="text-sand">
-                        A high-performing digital asset that drives measurable results, with expert guidance for continuous improvement and growth.
+                      <p class="text-white/80 text-sm font-medium mb-1">
+                        Your Benefit
+                      </p>
+
+                      <p class="text-white">
+                        A measurable demand engine designed to turn attention into
+                        qualified opportunities, customers, enrollments, or revenue.
                       </p>
                     </div>
+
                   </div>
                 </div>
+
               </div>
             </div>
 
-            <!-- Feature 4: Full-Service Partner -->
+            <!-- Feature 4: Growth Systems -->
             <div class="feature-section" data-feature="partner">
               <div class="flex gap-6 items-start p-6 rounded-xl transition-all duration-300 hover:bg-white/5">
+
                 <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/20 text-accent flex-shrink-0">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                    />
                   </svg>
                 </div>
+
                 <div>
-                  <h3 class="font-semibold text-xl mb-3 text-light">Full-Service Partner</h3>
+                  <h3 class="font-semibold text-xl mb-3 text-light">
+                    Growth Systems
+                  </h3>
+
                   <div class="space-y-3">
+
                     <div>
-                      <p class="text-light/80 text-sm font-medium mb-1">What We Deliver</p>
-                      <p class="text-sand">
-                        From competitor analysis and UX research to content creation, conversion rate optimization, performance monitoring, SEO strategies, and ongoing maintenance.
+                      <p class="text-white/80 text-sm font-medium mb-1">
+                        What We Deliver
+                      </p>
+
+                      <p class="text-white">
+                        CRM architecture, marketing automation, AI-powered
+                        workflows, lead nurturing, integrations, reporting, and
+                        systems designed to connect marketing activity with
+                        business outcomes.
                       </p>
                     </div>
+
                     <div>
-                      <p class="text-light/80 text-sm font-medium mb-1">Your Benefit</p>
-                      <p class="text-sand">
-                        One trusted partner for all your digital needs, ensuring consistency, quality, and strategic alignment across every touchpoint.
+                      <p class="text-white/80 text-sm font-medium mb-1">
+                        Your Benefit
+                      </p>
+
+                      <p class="text-white">
+                        Less manual work, faster follow-up, better visibility, and
+                        a connected system that helps your organization scale with
+                        greater consistency.
                       </p>
                     </div>
+
                   </div>
                 </div>
+
               </div>
             </div>
 
@@ -621,7 +859,7 @@
       </div>
     </section>
 
-    <!-- =========================
+       <!-- =========================
          3. PORTFOLIO (SELECTED WORK)
     ========================== -->
     <section id="work" class="py-24 bg-dark/50">
@@ -629,59 +867,58 @@
         <h2 class="font-secondary text-3xl md:text-4xl mb-4 opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal>
           Selected Work
         </h2>
-        <p class="text-sand text-lg opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
+        <p class="text-white text-lg opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="100">
           Digital Solutions Tailored to Meet Your Goals
         </p>
       </div>
 
-      <!-- Proof Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2">
+      <!-- Proof Grid - New Layout: 1 on top, 2 on second row, 2 on bottom -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
 
-        <!-- Coy Collective -->
+        <!-- Row 1: Academy of the Pacific Rim Video (full width) -->
+        <div class="group relative overflow-hidden min-h-[60vh] video-container md:col-span-2" id="video-container-1">
+          <video 
+            class="w-full h-full"
+            preload="metadata"
+            poster="./img/academy-pacific-rim-poster.jpg"
+            playsinline
+            loop
+            controls
+          >
+            <source src="./img/APR-School-Film-3-min-Final-16x9.mp4" type="video/mp4">
+          </video>
+          
+          <!-- Play Button -->
+          <div class="play-button" id="play-btn-1" onclick="toggleVideo('video-container-1', 'play-btn-1')">
+            <svg viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Row 2, Item 1: Academy of the Pacific Rim Ads (photo) -->
         <a
-          href="https://coycollective.com"
+          href="https://www.instagram.com/p/DV9gLaxFPPA/?igsi=MWE1NHlqem5oZGd0Zg=="
           target="_blank"
           class="group relative overflow-hidden min-h-[60vh]"
           rel="noopener noreferrer"
         >
           <div
             class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-            style="background-image:url('img/coycollective.png');"
+            style="background-image:url('img/academy-pacific-rim-ads.png');"
           ></div>
           <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <h3 class="text-3xl md:text-4xl font-secondary mb-3">
-              Coy Collective
+            <h3 class="text-3xl md:text-4xl font-secondary mb-3 text-white">
+              Academy of the Pacific Rim
             </h3>
-            <span class="text-sand text-sm">
-              View Project →
+            <span class="text-white text-sm">
+              View Campaign →
             </span>
           </div>
         </a>
 
-        <!-- TM TV World -->
-        <a
-          href="https://tmtv.world"
-          target="_blank"
-          class="group relative overflow-hidden min-h-[60vh]"
-          rel="noopener noreferrer"
-        >
-          <div
-            class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-            style="background-image:url('img/tmtv.png');"
-          ></div>
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <h3 class="text-3xl md:text-4xl font-secondary mb-3">
-              The Museum TV
-            </h3>
-            <span class="text-sand text-sm">
-              View Project →
-            </span>
-          </div>
-        </a>
-
-        <!-- Joe Fouché -->
+        <!-- Row 2, Item 2: The Law Offices of Joe Fouché -->
         <a
           href="https://fouchelawfirm.com/"
           target="_blank"
@@ -694,32 +931,54 @@
           ></div>
           <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <h3 class="text-3xl md:text-4xl font-secondary mb-3">
+            <h3 class="text-3xl md:text-4xl font-secondary mb-3 text-white">
               The Law Offices of Joe Fouché
             </h3>
-            <span class="text-sand text-sm">
+            <span class="text-white text-sm">
               View Project →
             </span>
           </div>
         </a>
 
-        <!-- NXT Era Panthers -->
+        <!-- Row 3, Item 1: The Museum TV -->
         <a
-          href="https://nxterapanthers.com"
+          href="https://tmtv.world"
           target="_blank"
           class="group relative overflow-hidden min-h-[60vh]"
           rel="noopener noreferrer"
         >
           <div
             class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-            style="background-image:url('img/nxtera.png');"
+            style="background-image:url('img/tmtv.png');"
           ></div>
           <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <h3 class="text-3xl md:text-4xl font-secondary mb-3">
-              NXT Era Panthers
+            <h3 class="text-3xl md:text-4xl font-secondary mb-3 text-white">
+              The Museum TV
             </h3>
-            <span class="text-sand text-sm">
+            <span class="text-white text-sm">
+              View Project →
+            </span>
+          </div>
+        </a>
+
+        <!-- Row 3, Item 2: Coy Collective -->
+        <a
+          href="https://coycollective.com"
+          target="_blank"
+          class="group relative overflow-hidden min-h-[60vh]"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+            style="background-image:url('img/coycollective.png');"
+          ></div>
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative h-full flex flex-col items-center justify-center text-center p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <h3 class="text-3xl md:text-4xl font-secondary mb-3 text-white">
+              Coy Collective
+            </h3>
+            <span class="text-white text-sm">
               View Project →
             </span>
           </div>
@@ -754,7 +1013,7 @@
           <!-- Eyebrow -->
           <div class="flex items-center gap-4 mb-6">
             <span class="block w-12 h-px bg-light/40"></span>
-            <span class="text-xs tracking-widest uppercase text-sand">
+            <span class="text-xs tracking-widest uppercase text-white">
               How It Works
             </span>
           </div>
@@ -780,11 +1039,11 @@
               Discover
             </h3>
 
-            <p class="mb-4 md:mb-6 text-base md:text-lg text-sand" id="process-text-1">
+            <p class="mb-4 md:mb-6 text-base md:text-lg text-white" id="process-text-1">
               We start by deeply understanding your business goals, target audience, and competitive landscape. Through workshops, audits, and research, we establish a clear foundation for success.
             </p>
 
-            <p class="mb-8 md:mb-10 text-base md:text-lg text-sand" id="process-text-2">
+            <p class="mb-8 md:mb-10 text-base md:text-lg text-white" id="process-text-2">
               This phase ensures every design and development decision is strategically aligned with your vision and measurable objectives.
             </p>
 
@@ -792,7 +1051,7 @@
               href="#contact"
               class="inline-flex items-center gap-3 font-semibold border-b border-accent pb-1 hover:text-accent hover:border-accent transition-colors duration-200 text-light"
             >
-              Talk to us about your website requirements
+              Talk to us about your growth goals.
               <span>→</span>
             </a>
           </div>
@@ -838,11 +1097,8 @@
             </h2>
 
             <!-- Body -->
-            <p class="text-sand text-lg leading-relaxed max-w-xl opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
-              Achille Industries is a founder-led digital studio that helps organizations
-              turn complex ideas into clear, high-performing websites and software.
-              Our work spans strategy, design, and development — always focused on outcomes,
-              not vanity.
+            <p class="text-white text-lg leading-relaxed max-w-xl opacity-0 translate-y-6 transition-all duration-700 ease-out" data-reveal data-reveal-delay="200">
+              Achille Industries is a growth and media agency that brings strategy, creative, technology, and performance together to help ambitious organizations grow. We turn complex challenges into clear brands, compelling digital experiences, and connected systems designed to attract attention, convert opportunities, and drive measurable results.
             </p>
 
             <!-- About Page Button -->
@@ -877,7 +1133,7 @@
               8+ years' experience
             </h3>
 
-            <p class="text-sand text-sm leading-relaxed">
+            <p class="text-white text-sm leading-relaxed">
               Founded with a focus on clarity and execution, we've spent the last
               eight years helping businesses grow through thoughtful digital systems
               that adapt as they scale.
@@ -898,7 +1154,7 @@
               National clients
             </h3>
 
-            <p class="text-sand text-sm leading-relaxed">
+            <p class="text-white text-sm leading-relaxed">
               We partner with organizations across the U.S. — from nonprofits
               to professional services and emerging brands — delivering consistent,
               reliable results regardless of location.
@@ -919,7 +1175,7 @@
               Service excellence
             </h3>
 
-            <p class="text-sand text-sm leading-relaxed">
+            <p class="text-white text-sm leading-relaxed">
               We're known for direct communication, honest guidance, and a hands-on
               approach that treats your project like a long-term investment —
               not a one-off deliverable.
@@ -973,7 +1229,7 @@
     
             <!-- Supporting copy -->
             <p
-              class="text-sand text-lg leading-relaxed mb-10 opacity-0 translate-y-6 transition-all duration-700 ease-out"
+              class="text-white text-lg leading-relaxed mb-10 opacity-0 translate-y-6 transition-all duration-700 ease-out"
             >
               Ready to talk about your project? Whether you need a new website,
               a redesign, or a long-term digital partner, we'd love to hear from you.
@@ -1007,7 +1263,7 @@
   <!-- =========================
        FOOTER
   ========================== -->
-  <footer class="bg-dark text-sand border-t border-white/10">
+  <footer class="bg-dark text-white border-t border-white/10">
     <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
 
       <!-- Company Mission -->
@@ -1015,7 +1271,7 @@
         <h2 class="text-light text-xl font-semibold mb-4">
           Achille Industries
         </h2>
-        <p class="text-sm mb-6 text-sand">
+        <p class="text-sm mb-6 text-white">
           Helping businesses stand out through thoughtful design,
           scalable development, and long-term digital strategy.
         </p>
@@ -1024,7 +1280,7 @@
         <div class="flex gap-4">
           <!-- GitHub -->
           <a href="https://github.com/ErvensAchille" target="_blank" aria-label="GitHub" rel="noopener noreferrer"
-             class="text-sand hover:text-accent transition-colors duration-200">
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008.03 10.95c.58.1.79-.25.79-.56v-2.03c-3.27.71-3.96-1.57-3.96-1.57-.53-1.35-1.29-1.71-1.29-1.71-1.05-.72.08-.7.08-.70 1.16.08 1.78 1.19 1.78 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.56-2.61-.3-5.36-1.3-5.36-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.53.12-3.18 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.88.12 3.18a4.5 4.5 0 011.2 3.15c0 4.52-2.75 5.5-5.38 5.8.42.36.78 1.07.78 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
@@ -1032,8 +1288,8 @@
           </a>
 
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/ervens-achille-profile/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
-             class="text-sand hover:text-accent transition-colors duration-200">
+          <a href="https://www.linkedin.com/company/achille-industries?trk=public_post_feed-actor-name" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M4.98 3.5C3.33 3.5 2 4.82 2 6.48c0 1.64 1.33 2.98 2.98 2.98S7.97 8.12 7.97 6.48C7.97 4.82 6.63 3.5 4.98 3.5zM2.4 20h5.15V9.53H2.4V20zM9.75 9.53V20h5.15v-5.67c0-3.03 3.87-3.28 3.87 0V20H24v-6.64c0-6.56-7.13-6.31-8.99-3.09V9.53H9.75z" />
@@ -1042,7 +1298,7 @@
 
           <!-- Email -->
           <a href="mailto:ervensmachille@gmail.com" aria-label="Email"
-             class="text-sand hover:text-accent transition-colors duration-200">
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13l8-6.99V6H4zm16 2.1l-7.5 5.24a1 1 0 01-1 0L4 8.1V18h16V8.1z" />
@@ -1051,7 +1307,7 @@
 
           <!-- Instagram -->
           <a href="https://www.instagram.com/achilleindustries" target="_blank" aria-label="Instagram" rel="noopener noreferrer"
-             class="text-sand hover:text-accent transition-colors duration-200">
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1.5 1.5 0 11-3 .001A1.5 1.5 0 0117.5 6.5z" />
@@ -1060,7 +1316,7 @@
 
           <!-- Twitter -->
           <a href="https://x.com/achilleervens" target="_blank" aria-label="Twitter" rel="noopener noreferrer"
-             class="text-sand hover:text-accent transition-colors duration-200">
+             class="text-white hover:text-accent transition-colors duration-200">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
@@ -1155,6 +1411,23 @@
     });
   </script>
 
+  <!-- Video Toggle Function -->
+  <script>
+    function toggleVideo(containerId, buttonId) {
+      const container = document.getElementById(containerId);
+      const video = container.querySelector('video');
+      const button = document.getElementById(buttonId);
+      
+      if (video.paused) {
+        video.play();
+        container.classList.add('playing');
+      } else {
+        video.pause();
+        container.classList.remove('playing');
+      }
+    }
+  </script>
+
   <!-- Process Section Script - UPDATED WITH 5 STEPS -->
   <script>
     const processData = {
@@ -1242,34 +1515,26 @@
     }
   </script>
 
-  <!-- What We Do Sticky Scroll Script -->
+  <!-- What We Do Sticky Scroll Script (SIMPLIFIED) -->
   <script>
-    // Feature content data for sticky section
+    // Feature content data for sticky section - simplified to just footer statements
     const featureContent = {
       design: {
-        title: "Beautiful, Intuitive User Experiences",
-        description: "We craft interfaces that not only look stunning but guide users naturally through their journey, creating memorable interactions that drive engagement.",
-        footer: "Every design decision is backed by research and testing to ensure it serves both your users and business goals.",
+        footer: "Strategy and creative direction provide the foundation for everything that follows.",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
         icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />`
       },
       development: {
-        title: "Built for Performance and Scale",
-        description: "Clean, efficient code built on modern frameworks that load fast, run smoothly, and handle growth seamlessly as your business expands.",
         footer: "We choose technologies based on your specific needs, not trends, ensuring long-term stability and maintainability.",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
         icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`
       },
       growth: {
-        title: "Continuous Optimization and Growth",
-        description: "Data-driven strategies that improve your site's performance over time, turning insights into actions that increase conversions and revenue.",
         footer: "Monthly analytics reviews and performance reports keep you informed and in control of your digital success.",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
         icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />`
       },
       partner: {
-        title: "Your Long-Term Digital Partner",
-        description: "More than just a vendor, we become an extension of your team, invested in your success and ready to tackle any digital challenge together.",
         footer: "Direct access to our team means faster decisions, clearer communication, and solutions that truly understand your business.",
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
         icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />`
@@ -1279,8 +1544,6 @@
     // Initialize sticky section functionality after DOM loads
     document.addEventListener('DOMContentLoaded', function() {
       const stickyImage = document.getElementById('sticky-image');
-      const stickyTitle = document.getElementById('sticky-title');
-      const stickyDescription = document.getElementById('sticky-description');
       const stickyFooter = document.getElementById('sticky-footer');
       const stickyIcon = document.getElementById('sticky-icon');
       const featureSections = document.querySelectorAll('.feature-section');
@@ -1290,30 +1553,24 @@
 
       // Update sticky content
       function updateStickyContent(feature) {
-        if (!stickyTitle || currentFeature === feature) return;
+        if (currentFeature === feature) return;
         
         currentFeature = feature;
         const content = featureContent[feature];
 
         // Fade out
-        stickyTitle.style.opacity = '0';
-        stickyDescription.style.opacity = '0';
         stickyFooter.style.opacity = '0';
         stickyIcon.style.opacity = '0';
         stickyImage.style.opacity = '0';
 
         // Update content after fade
         setTimeout(() => {
-          if (stickyTitle) stickyTitle.textContent = content.title;
-          if (stickyDescription) stickyDescription.textContent = content.description;
           if (stickyFooter) stickyFooter.textContent = content.footer;
           if (stickyImage) stickyImage.style.backgroundImage = `url('${content.image}')`;
           if (stickyIcon) stickyIcon.innerHTML = content.icon;
 
           // Fade in
           setTimeout(() => {
-            stickyTitle.style.opacity = '1';
-            stickyDescription.style.opacity = '1';
             stickyFooter.style.opacity = '1';
             stickyIcon.style.opacity = '1';
             stickyImage.style.opacity = '1';
@@ -1430,24 +1687,23 @@
     });
   </script>
 
-  <!-- Video play functionality - Now only for mobile -->
+  <!-- Video play functionality -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const video = document.getElementById('hero-video');
       
       if (!video) return;
       
-      // Only attempt to play on mobile (where video is visible)
-      if (window.innerWidth <= 768) {
-        const playPromise = video.play();
-        
-        if (playPromise !== undefined) {
-          playPromise.catch(error => {
-            console.log("Mobile video autoplay prevented:", error);
-            // Fall back to just showing the gradient
-            video.style.opacity = '0.2';
-          });
-        }
+      // Try to play the video
+      const playPromise = video.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          // Auto-play was prevented
+          console.log("Video autoplay prevented:", error);
+          // Fall back to just showing the gradient
+          video.style.opacity = '0.2';
+        });
       }
       
       // If video errors or doesn't load
@@ -1611,6 +1867,21 @@
       });
       
     })();
+  </script>
+
+  <!-- Simple Video Fallback Script - REMOVED HIDING ON MOBILE -->
+  <script>
+    // This script has been simplified - no mobile hiding
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.getElementById('hero-video');
+      
+      if (!video) return;
+      
+      // Ensure video plays on all devices
+      video.play().catch(e => {
+        console.log("Autoplay prevented, but video will still be visible");
+      });
+    });
   </script>
 </body>
 </html>
