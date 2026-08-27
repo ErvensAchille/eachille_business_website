@@ -875,25 +875,16 @@ We bring strategy, creative, technology, and performance together under one syst
       <!-- Proof Grid - New Layout: 1 on top, 2 on second row, 2 on bottom -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
 
-        <!-- Row 1: Academy of the Pacific Rim Video (full width) -->
-        <div class="group relative overflow-hidden min-h-[60vh] video-container md:col-span-2" id="video-container-1">
-          <video 
-            class="w-full h-full"
-            preload="metadata"
-            poster="./img/academy-pacific-rim-poster.jpg"
-            playsinline
-            loop
-            controls
-          >
-            <source src="./img/APR-School-Film-3-min-Final-16x9.mp4" type="video/mp4">
-          </video>
-          
-          <!-- Play Button -->
-          <div class="play-button" id="play-btn-1" onclick="toggleVideo('video-container-1', 'play-btn-1')">
-            <svg viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-          </div>
+        <!-- Row 1: Academy of the Pacific Rim Video (YouTube Embed) -->
+        <div class="relative w-full aspect-video min-h-[60vh] bg-black md:col-span-2">
+          <iframe 
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/rcF0odv_hBs?rel=0&modestbranding=1" 
+            title="Academy of the Pacific Rim Portfolio Video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
         </div>
 
         <!-- Row 2, Item 1: Academy of the Pacific Rim Ads (photo) -->
@@ -1411,23 +1402,6 @@ We bring strategy, creative, technology, and performance together under one syst
     });
   </script>
 
-  <!-- Video Toggle Function -->
-  <script>
-    function toggleVideo(containerId, buttonId) {
-      const container = document.getElementById(containerId);
-      const video = container.querySelector('video');
-      const button = document.getElementById(buttonId);
-      
-      if (video.paused) {
-        video.play();
-        container.classList.add('playing');
-      } else {
-        video.pause();
-        container.classList.remove('playing');
-      }
-    }
-  </script>
-
   <!-- Process Section Script - UPDATED WITH 5 STEPS -->
   <script>
     const processData = {
@@ -1867,21 +1841,6 @@ We bring strategy, creative, technology, and performance together under one syst
       });
       
     })();
-  </script>
-
-  <!-- Simple Video Fallback Script - REMOVED HIDING ON MOBILE -->
-  <script>
-    // This script has been simplified - no mobile hiding
-    document.addEventListener('DOMContentLoaded', function() {
-      const video = document.getElementById('hero-video');
-      
-      if (!video) return;
-      
-      // Ensure video plays on all devices
-      video.play().catch(e => {
-        console.log("Autoplay prevented, but video will still be visible");
-      });
-    });
   </script>
 </body>
 </html>
